@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "check_0.md",
+                "file": "class_note.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "check_0"
+              "title": "class_note"
             }
           }
         ],
@@ -186,8 +186,9 @@
   },
   "active": "876966b19d8bd644",
   "lastOpenFiles": [
-    "class_note.md",
     "check_0.md",
+    "class_note.md",
+    "Packet_Switching.gif",
     "Pasted image 20250902114801.png",
     "Pasted image 20250902114741.png",
     "Pasted image 20250901220412.png",
