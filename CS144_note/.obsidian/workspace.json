@@ -6,37 +6,47 @@
       {
         "id": "9b91a72adfe7a717",
         "type": "tabs",
+        "dimension": 83.60655737704919,
         "children": [
-          {
-            "id": "8f7143783f4ee729",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "class_note.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "class_note"
-            }
-          },
           {
             "id": "876966b19d8bd644",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "class_note.md",
+                "file": "check_0.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "class_note"
-            }
+              "title": "check_0"
+            },
+            "group": "8a0a4981a8aeca68"
           }
-        ],
-        "currentTab": 1
+        ]
+      },
+      {
+        "id": "1604ec1441101ca5",
+        "type": "tabs",
+        "dimension": 16.393442622950815,
+        "children": [
+          {
+            "id": "4ec1fa2ca4ef8feb",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "check_0.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "check_0 的大纲"
+            },
+            "group": "8a0a4981a8aeca68"
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -186,18 +196,17 @@
   },
   "active": "876966b19d8bd644",
   "lastOpenFiles": [
+    "class_note.md",
+    "check_0.md",
+    "Pasted image 20250908103039.png",
     "Pasted image 20250905111735.png",
     "Pasted image 20250905111602.png",
     "Pasted image 20250905110022.png",
     "Pasted image 20250905110009.png",
     "image-7.png",
-    "check_0.md",
-    "class_note.md",
     "Packet_Switching.gif",
     "Pasted image 20250902114801.png",
     "Pasted image 20250902114741.png",
-    "Pasted image 20250901220412.png",
-    "Pasted image 20250901212352.png",
-    "Pasted image 20250901211220.png"
+    "Pasted image 20250901220412.png"
   ]
 }
