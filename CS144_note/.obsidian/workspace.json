@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "check_0.md",
+                "file": "class_note.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "check_0"
+              "title": "class_note"
             },
             "group": "8a0a4981a8aeca68"
           }
@@ -36,13 +36,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "check_0.md",
+                "file": "class_note.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "check_0 的大纲"
+              "title": "class_note 的大纲"
             },
             "group": "8a0a4981a8aeca68"
           }
@@ -196,8 +196,10 @@
   },
   "active": "876966b19d8bd644",
   "lastOpenFiles": [
-    "class_note.md",
+    "Pasted image 20250909124206.png",
+    "Pasted image 20250909120836.png",
     "check_0.md",
+    "class_note.md",
     "Pasted image 20250908103039.png",
     "Pasted image 20250905111735.png",
     "Pasted image 20250905111602.png",
@@ -206,7 +208,6 @@
     "image-7.png",
     "Packet_Switching.gif",
     "Pasted image 20250902114801.png",
-    "Pasted image 20250902114741.png",
-    "Pasted image 20250901220412.png"
+    "Pasted image 20250902114741.png"
   ]
 }
