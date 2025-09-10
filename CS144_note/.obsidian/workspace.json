@@ -103,7 +103,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "805ad6c9850bdbec",
@@ -196,6 +197,7 @@
   },
   "active": "876966b19d8bd644",
   "lastOpenFiles": [
+    "Pasted image 20250910164055.png",
     "Pasted image 20250909124206.png",
     "Pasted image 20250909120836.png",
     "check_0.md",
@@ -207,7 +209,6 @@
     "Pasted image 20250905110009.png",
     "image-7.png",
     "Packet_Switching.gif",
-    "Pasted image 20250902114801.png",
-    "Pasted image 20250902114741.png"
+    "Pasted image 20250902114801.png"
   ]
 }
