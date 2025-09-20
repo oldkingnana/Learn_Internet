@@ -673,3 +673,10 @@ eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
 ![[Pasted image 20250911180315.png]]
 
 * 一般一个机器是否会获取一个`TCP/IP`的包,取决于这个包中的这四个东西,其中`Src Port`和`Dst Port`来自于`TCP Header`,而`Src IP`和`Dst IP`来自于`IP Header`,当然准确来说需要取决于五个东西,最后一个是`Protocol ID`,用于检查这个`IP`数据报中存放的是什么类型的`Transport`层协议
+
+
+#### 2.2 `UDP`
+
+
+
+
