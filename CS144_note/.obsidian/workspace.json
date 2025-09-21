@@ -6,7 +6,7 @@
       {
         "id": "9b91a72adfe7a717",
         "type": "tabs",
-        "dimension": 83.60655737704919,
+        "dimension": 78.6031042128603,
         "children": [
           {
             "id": "876966b19d8bd644",
@@ -20,8 +20,7 @@
               },
               "icon": "lucide-file",
               "title": "Lab0"
-            },
-            "group": "8a0a4981a8aeca68"
+            }
           },
           {
             "id": "88ec65e0e3e29135",
@@ -29,37 +28,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lab1.md",
+                "file": "class_note.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Lab1"
-            }
+              "title": "class_note"
+            },
+            "group": "724c43113e1ed9af"
           }
         ],
         "currentTab": 1
       },
       {
-        "id": "1604ec1441101ca5",
+        "id": "75da821a1fe00393",
         "type": "tabs",
-        "dimension": 16.393442622950815,
+        "dimension": 21.396895787139687,
         "children": [
           {
-            "id": "4ec1fa2ca4ef8feb",
+            "id": "b3c644bd6a920fa2",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lab0.md",
+                "file": "class_note.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Lab0 的大纲"
+              "title": "class_note 的大纲"
             },
-            "group": "8a0a4981a8aeca68"
+            "group": "724c43113e1ed9af"
           }
         ]
       }
@@ -211,19 +211,19 @@
   },
   "active": "88ec65e0e3e29135",
   "lastOpenFiles": [
+    "QQ图片20250921190757.png",
+    "Pasted image 20250921190323.png",
+    "Pasted image 20250921172153.png",
+    "Lab1.md",
     "Pasted image 20250920202319.png",
     "Pasted image 20250920202126.png",
     "Lab0.md",
-    "Lab1.md",
     "class_note.md",
     "Pasted image 20250911180315.png",
     "Pasted image 20250911175926.png",
     "Pasted image 20250910164055.png",
     "Pasted image 20250909124206.png",
     "Pasted image 20250909120836.png",
-    "Pasted image 20250908103039.png",
-    "Pasted image 20250905111735.png",
-    "Pasted image 20250905111602.png",
-    "Pasted image 20250905110022.png"
+    "Pasted image 20250908103039.png"
   ]
 }
