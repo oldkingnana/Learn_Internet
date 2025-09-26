@@ -118,7 +118,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "805ad6c9850bdbec",
@@ -211,6 +212,10 @@
   },
   "active": "88ec65e0e3e29135",
   "lastOpenFiles": [
+    "Pasted image 20250926193410.png",
+    "Pasted image 20250926192210.png",
+    "Tcp_state_diagram_fixed_new.svg.png",
+    "Pasted image 20250926190553.png",
     "QQ截图20250922180409.png",
     "QQ图片20250921190757.png",
     "Pasted image 20250921190323.png",
@@ -220,10 +225,6 @@
     "Pasted image 20250920202126.png",
     "Lab0.md",
     "class_note.md",
-    "Pasted image 20250911180315.png",
-    "Pasted image 20250911175926.png",
-    "Pasted image 20250910164055.png",
-    "Pasted image 20250909124206.png",
-    "Pasted image 20250909120836.png"
+    "Pasted image 20250911180315.png"
   ]
 }
