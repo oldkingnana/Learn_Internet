@@ -6,7 +6,7 @@
       {
         "id": "9b91a72adfe7a717",
         "type": "tabs",
-        "dimension": 91.36442141623489,
+        "dimension": 75.23866348448688,
         "children": [
           {
             "id": "876966b19d8bd644",
@@ -35,18 +35,18 @@
               "icon": "lucide-file",
               "title": "class_note"
             },
-            "group": "724c43113e1ed9af"
+            "group": "236954b1e3e83809"
           }
         ],
         "currentTab": 1
       },
       {
-        "id": "75da821a1fe00393",
+        "id": "af3da7f79f67d30d",
         "type": "tabs",
-        "dimension": 8.635578583765112,
+        "dimension": 24.761336515513126,
         "children": [
           {
-            "id": "b3c644bd6a920fa2",
+            "id": "2a7b2e729b3b918c",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -59,7 +59,7 @@
               "icon": "lucide-list",
               "title": "class_note 的大纲"
             },
-            "group": "724c43113e1ed9af"
+            "group": "236954b1e3e83809"
           }
         ]
       }
@@ -118,7 +118,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "805ad6c9850bdbec",
