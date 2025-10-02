@@ -6,7 +6,7 @@
       {
         "id": "9b91a72adfe7a717",
         "type": "tabs",
-        "dimension": 75.23866348448688,
+        "dimension": 77.94117647058823,
         "children": [
           {
             "id": "876966b19d8bd644",
@@ -35,18 +35,18 @@
               "icon": "lucide-file",
               "title": "class_note"
             },
-            "group": "236954b1e3e83809"
+            "group": "89ee425ea7f2c592"
           }
         ],
         "currentTab": 1
       },
       {
-        "id": "af3da7f79f67d30d",
+        "id": "40497583a6615eb4",
         "type": "tabs",
-        "dimension": 24.761336515513126,
+        "dimension": 22.058823529411764,
         "children": [
           {
-            "id": "2a7b2e729b3b918c",
+            "id": "bc338f3e4478a6af",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -59,7 +59,7 @@
               "icon": "lucide-list",
               "title": "class_note 的大纲"
             },
-            "group": "236954b1e3e83809"
+            "group": "89ee425ea7f2c592"
           }
         ]
       }
@@ -212,19 +212,19 @@
   },
   "active": "88ec65e0e3e29135",
   "lastOpenFiles": [
+    "Pasted image 20251002231247.png",
+    "Pasted image 20251002223038.png",
+    "Pasted image 20251002222817.png",
+    "Pasted image 20251002222744.png",
+    "Pasted image 20251002222619.png",
+    "Pasted image 20251002222608.png",
+    "Pasted image 20251002222533.png",
     "Pasted image 20250926193410.png",
     "Pasted image 20250926192210.png",
     "Tcp_state_diagram_fixed_new.svg.png",
     "Pasted image 20250926190553.png",
-    "QQ截图20250922180409.png",
-    "QQ图片20250921190757.png",
-    "Pasted image 20250921190323.png",
-    "Pasted image 20250921172153.png",
     "Lab1.md",
-    "Pasted image 20250920202319.png",
-    "Pasted image 20250920202126.png",
     "Lab0.md",
-    "class_note.md",
-    "Pasted image 20250911180315.png"
+    "class_note.md"
   ]
 }
