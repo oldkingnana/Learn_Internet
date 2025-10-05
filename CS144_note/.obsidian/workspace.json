@@ -35,18 +35,18 @@
               "icon": "lucide-file",
               "title": "class_note"
             },
-            "group": "89ee425ea7f2c592"
+            "group": "3fd5057dff319a70"
           }
         ],
         "currentTab": 1
       },
       {
-        "id": "40497583a6615eb4",
+        "id": "81a66ddd9ca60697",
         "type": "tabs",
         "dimension": 17.301038062283737,
         "children": [
           {
-            "id": "bc338f3e4478a6af",
+            "id": "9ded4e0574f5caaa",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -59,7 +59,7 @@
               "icon": "lucide-list",
               "title": "class_note 的大纲"
             },
-            "group": "89ee425ea7f2c592"
+            "group": "3fd5057dff319a70"
           }
         ]
       }
@@ -212,6 +212,8 @@
   },
   "active": "88ec65e0e3e29135",
   "lastOpenFiles": [
+    "asus-rt-ax3000-wifi-router-01.jpg",
+    "69079ede-7b3c-4f04-83e6-11265cb6a4fa.png",
     "Pasted image 20251004235134.png",
     "Pasted image 20251004235053.png",
     "Pasted image 20251003213816.png",
@@ -221,8 +223,6 @@
     "Pasted image 20251003211703.png",
     "Pasted image 20251003162158.png",
     "Pasted image 20251003161041.png",
-    "Pasted image 20251002231247.png",
-    "Pasted image 20251002223038.png",
     "Lab1.md",
     "Lab0.md",
     "class_note.md"
