@@ -6,6 +6,7 @@
       {
         "id": "9b91a72adfe7a717",
         "type": "tabs",
+        "dimension": 82.52595155709342,
         "children": [
           {
             "id": "876966b19d8bd644",
@@ -27,16 +28,54 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "class_note.md",
+                "file": "Lab1.md",
+                "mode": "preview",
+                "source": true
+              },
+              "icon": "lucide-file",
+              "title": "Lab1"
+            },
+            "group": "1d980dc9da6b3964"
+          },
+          {
+            "id": "2764b97389693674",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Lab2.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "class_note"
+              "title": "Lab2"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
+      },
+      {
+        "id": "bdbd912aae105302",
+        "type": "tabs",
+        "dimension": 17.474048442906582,
+        "children": [
+          {
+            "id": "3de654bcc0049c1f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Lab1.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Lab1 的大纲"
+            },
+            "group": "1d980dc9da6b3964"
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -93,8 +132,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "805ad6c9850bdbec",
@@ -185,8 +223,15 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "88ec65e0e3e29135",
+  "active": "2764b97389693674",
   "lastOpenFiles": [
+    "Lab1.md",
+    "Lab2.md",
+    "class_note.md",
+    "Lab2",
+    "Lab0.md",
+    "Pasted image 20251013100321.png",
+    "Pasted image 20251010121207.png",
     "Pasted image 20251008234848.png",
     "Pasted image 20251008234645.png",
     "Pasted image 20251008233258.png",
@@ -194,12 +239,6 @@
     "Pasted image 20251008232313.png",
     "Pasted image 20251008230942.png",
     "Pasted image 20251008224202.png",
-    "Pasted image 20251008223857.png",
-    "Pasted image 20251008143513.png",
-    "Pasted image 20251008142939.png",
-    "Pasted image 20251008142633.png",
-    "Lab1.md",
-    "Lab0.md",
-    "class_note.md"
+    "Pasted image 20251008223857.png"
   ]
 }
