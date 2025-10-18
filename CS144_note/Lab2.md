@@ -1,6 +1,9 @@
+### 1 吐槽
 
 * 那么,这里就是`Lab2`的内容了,有一说一,因为我是初学老外的课程,所以感觉老外的课程确实严谨很多,配套的东西是真全啊
 * 这个`Lab2`,我的体感会比`Lab1`好实现很多,主要是思路清晰,debug也很方便
+
+### 2 测试结果
 
 ```shell
 oldking@iZwz9b2bj2gor4d8h3rlx0Z:~/CS144-2024-winter-backup$ cmake --build build_check2_2 --target check2
@@ -71,6 +74,8 @@ Test project /home/oldking/CS144-2024-winter-backup/build_check2_2
 Total Test time (real) =  34.71 sec
 Built target check2
 ```
+
+### 3 源代码&注释
 
 ```CPP
 // src/wrapping_integers.hh
@@ -171,7 +176,7 @@ uint64_t Wrap32::unwrap( Wrap32 zero_point, uint64_t checkpoint ) const
 		uint64_t checkpoint_low_lwindow = (checkpoint_low > 0x80000000ULL) ? (checkpoint_low - 0x80000000ULL) : 0ULL;
         uint64_t checkpoint_low_rwindow = checkpoint_low + 0x80000000ULL;
 
-		
+		// 窗口修正
         if(checkpoint_low_rwindow <= left_low)
         {
                 checkpoint_low += 0xFFFFFFFFULL + 1ULL;
@@ -205,7 +210,7 @@ public:
   // Construct with given Reassembler
   explicit TCPReceiver( Reassembler&& reassembler ) 
           : reassembler_( std::move( reassembler ) ) 
-          , zero_point(100)
+          , zero_point(100) // 这里按理说应该搞一个随机值
           , checkpoint(0)
           , SYN(0)
           , SYN_before(0)
@@ -233,10 +238,10 @@ private:
 
         Wrap32 zero_point; // ISN
         uint64_t checkpoint; // stream index, When actually used, it should be used after the self-decrement operation
-        uint32_t SYN;
-        uint32_t SYN_before;
-        uint32_t FIN;
-        uint32_t need_FIN;
+        uint32_t SYN; // 记录当前是否建立通信
+        uint32_t SYN_before; // 记录曾经有没有过通信
+        uint32_t FIN; // 记录是否已经结束通信请求
+        uint32_t need_FIN; // 记录是否需要结束通信
 };
 
 ```
@@ -251,12 +256,16 @@ private:
 
 using namespace std;
 
+// 接收
 void TCPReceiver::receive( TCPSenderMessage message )
 {
+		// 如果一个包在没有建立连接的时候就发过来,且这个包也没有携带SYN,那么直接设置错误,因为这个包不合法
         if(message.SYN == false && SYN == 0)
                 reassembler_.reader().set_error();
+		// SYN初始化
         if(message.SYN && SYN == 0)
         {
+				// FIN与SYN重置
                 if(reassembler_.writer().is_closed() && FIN == 1 && SYN == 1)
                 {
                         FIN--;
@@ -265,21 +274,26 @@ void TCPReceiver::receive( TCPSenderMessage message )
                 zero_point = message.seqno;
                 SYN++;
         }
+		// SYN_before初始化
         if(message.SYN && SYN_before == 0)
                 SYN_before++;
         if(SYN)
         {
+				// 在这里,因为reassembler的封装问题,我们很难知道这个reassembler到底有没有完全接收所有字节,所以我们只能对比传输前和传输后的字节流状态
                 uint64_t old_bytes_pending = reassembler_.writer().bytes_pushed();
 //              cout << "first_index" << message.seqno.unwrap(zero_point, checkpoint) << endl;
 //              cout << "checkpoint" << checkpoint << endl;
+				// 如果SYN和有效数据一起发过来,我们就需要在绝对位置减去一个SYN的宽度,因为SYN不计入实际位置
                 if(message.SYN)
                         reassembler_.insert(message.seqno.unwrap(zero_point, checkpoint), message.payload, message.FIN);
                 else
                         reassembler_.insert(message.seqno.unwrap(zero_point, checkpoint) - SYN, message.payload, message.FIN);
                 uint64_t new_bytes_pending = reassembler_.writer().bytes_pushed();
                 checkpoint += new_bytes_pending - old_bytes_pending;
+				// 如果这个包已经说明了要结束了,我们就需要为此作准备,让need_FIN++,表示准备结束了,但因为不知道字节流有没有关闭,不知道所有字节是否已经传输完毕,所以我们要等待字节流关闭才能真正结束传输
                 if(message.FIN)
                         need_FIN++;
+				// 如果已经没有任何缓存的内容了,意味着不需要等待任何包了,也表示所有包已经传输完毕,那么此时就可以关闭连接了
                 if(reassembler_.bytes_pending() == 0 && FIN == 0 && need_FIN == 1)
                 {
                         FIN++;
@@ -288,24 +302,30 @@ void TCPReceiver::receive( TCPSenderMessage message )
         }
 }
 
+// 发送(回复)
 TCPReceiverMessage TCPReceiver::send() const
 {
+		// 初始化回复对象
         TCPReceiverMessage ret_msg;
-        ret_msg.window_size = reassembler_.writer().available_capacity() > UINT16_MAX ? UINT16_MAX : reassembler_.writer().available_capacity() ;
-        if(SYN_before)
+        // 初始化其窗口大小
+		ret_msg.window_size = reassembler_.writer().available_capacity() > UINT16_MAX ? UINT16_MAX : reassembler_.writer().available_capacity() ;
+        // 如果原来接收过SYN,那么可以允许返回一个有值的ackno,如果从来没有接收过SYN,那么返回一个空ackno
+		if(SYN_before)
                 ret_msg.ackno = Wrap32::wrap(checkpoint + SYN + FIN, zero_point);
         else 
                 ret_msg.ackno = {};
+		// 如果有err,把RST设置成1
         if(reassembler_.reader().has_error())
                 ret_msg.RST = 1;
         else 
                 ret_msg.RST = {};
+		// 返回对象
         return ret_msg;
 }
 ```
 
 
-### `checkpoint`的窗口
+###  5`checkpoint`的窗口问题
 
 * 我们先来看一个错误示例,这是我的最初版本,但是过不了测试用例
 ```CPP
@@ -360,7 +380,7 @@ checkpoint_low: 0 == 0
 
 * 在这个报错中,找到`left`对应的绝对位置处于的周期是一件比较困难的事情,因为我们做这些操作的目的其实就是为了找到他的绝对位置,而修正`checkpoint_low`同样也是一件比较困难的事情,因为我们很难把控应该在什么时机修正`checkpoint_low`,因为从相对位置看`left`在`checkpoint_low`的右边,我们无法判断他俩绝对位置的情况
 
-* [图片占位]
+![[Pasted image 20251018180231.png]]
 
 * 换句话说,我们没法仅通过`left`和`checkpoint_low`的左右位置来判断这个`checkpoint_low`是不是一个有效的`checkpoint_low`,我们迫切需要一种方式去判断这个`checkpoint_low`是否合法!!
 
@@ -373,7 +393,7 @@ checkpoint_low: 0 == 0
 uint64_t checkpoint_low_lwindow = (checkpoint_low > 0x80000000ULL) ? (checkpoint_low - 0x80000000ULL) : 0ULL;
 uint64_t checkpoint_low_rwindow = checkpoint_low + 0x80000000ULL;
 
-
+// 非法修正
 if(checkpoint_low_rwindow <= left_low)
 {
 		checkpoint_low += 0xFFFFFFFFULL + 1ULL;
@@ -388,38 +408,39 @@ else
 ```
 
 * 那么,我相信你一定会有亿点点问题,你肯定还是不理解为什么这么做就一定是对的??!!!
-* 老实说,我们这里的过程其实有一点点不符合逻辑,但是他的结果却正好是对的,下面我会讲两个例子(一个合法`checkpoint_low`一个不合法)来解释
+* 老实说,我们这里的过程其实有一点点不符合逻辑,但是他的结果却正好是对的,下面我会讲三个例子(两个合法`checkpoint_low`一个不合法)来解释
 
-* 
+* 第一个例子
+* 假设说我们想求这个点的绝对位置
 
+![[Pasted image 20251018180730.png]]
 
+* 那么因为`left`落在了`checkpoint_low`的窗口里,所以这个`checkpoint_low`是合法的,我们可以直接根据`checkpoint`和`checkpoint_low`的差值直接求出`result`位置(也就是绝对位置)
 
+* 第二个例子
 
+![[Pasted image 20251018181817.png]]
 
+* 这里一开始算出来`checkpoint_low`的左窗口可能会越过下限,所以需要做限制
+* 因为没有任何一个点落在窗口内,所以我们需要修正窗口
+* 然后重复第一个例子的步骤
 
+![[Pasted image 20251018181826.png]]
 
+* 第三个例子最为特殊,也是最令人匪夷所思的例子,也是这个方法最令人疑惑的地方
 
-* 我们来看看这个片段
-```CPP
-uint64_t checkpoint_low_lwindow = (checkpoint_low > 0x80000000ULL) ? (checkpoint_low - 0x80000000ULL) : 0ULL;
-uint64_t checkpoint_low_rwindow = checkpoint_low + 0x80000000ULL;
+![[Pasted image 20251018182125.png]]
 
+* 问题: 为什么这个例子中,完全不需要让`left`在`checkpoint_low`的左侧而`right`在`checkpoint_low`的右侧?看上去,这里的`right`似乎什么作用得没用上?!
 
-if(checkpoint_low_rwindow <= left_low)
-{
-		checkpoint_low += 0xFFFFFFFFULL + 1ULL;
-		checkpoint_low_lwindow = checkpoint_low - 0x80000000ULL;
-		checkpoint_low_rwindow = checkpoint_low + 0x80000000ULL;
-}
+* 按照第一个例子的步骤,得到的`result`应该在这里
+![[Pasted image 20251018182637.png]]
+* 那么原因很简单,这个地方虽然使用`left`和这个看似合法的`checkpoint_low`计算,但实际上我们计算的根本就不是他俩,实际上应该计算的是`right`和现在这个真正合法的`checkpoint_low`
 
-if(checkpoint_low_lwindow <= left_low && left_low < checkpoint_low_rwindow)
-		return left_low + (checkpoint > checkpoint_low ? (checkpoint - checkpoint_low) : 0);
-else
-		return right_low + (checkpoint > checkpoint_low ? (checkpoint - checkpoint_low) : 0);
+* 那为什么使用`left`的结果是对的?原因很简单,我们看个图就明白了
+![[Pasted image 20251018183346.png]]
 
-return {};
-```
+* 那么,`result == left + (checkpoint - checkpoint_low(不右移) ) == right + (checkpoint - checkpoint_low(右移) ) == left + 2^32 + (checkpoint - (checkpoint_low(不右移) + 2^32))`
 
-
-
+* 所以说,因为`left`和`right`存在距离且和两个`checkpoint_low`的距离抵消了,所以从结果来看,`left`实际上也是合法的!
 
