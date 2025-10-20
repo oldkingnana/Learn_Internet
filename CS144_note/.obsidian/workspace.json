@@ -6,7 +6,7 @@
       {
         "id": "9b91a72adfe7a717",
         "type": "tabs",
-        "dimension": 82.52595155709342,
+        "dimension": 72.49134948096886,
         "children": [
           {
             "id": "876966b19d8bd644",
@@ -34,8 +34,7 @@
               },
               "icon": "lucide-file",
               "title": "Lab1"
-            },
-            "group": "1d980dc9da6b3964"
+            }
           },
           {
             "id": "2764b97389693674",
@@ -43,37 +42,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Lab2.md",
+                "file": "class_note.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Lab2"
-            }
+              "title": "class_note"
+            },
+            "group": "34a6b54940d29ad4"
           }
         ],
         "currentTab": 2
       },
       {
-        "id": "bdbd912aae105302",
+        "id": "29cdcc17075745b8",
         "type": "tabs",
-        "dimension": 17.474048442906586,
+        "dimension": 27.508650519031143,
         "children": [
           {
-            "id": "3de654bcc0049c1f",
+            "id": "137b9c5b144839dd",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Lab1.md",
+                "file": "class_note.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Lab1 的大纲"
+              "title": "class_note 的大纲"
             },
-            "group": "1d980dc9da6b3964"
+            "group": "34a6b54940d29ad4"
           }
         ]
       }
@@ -132,7 +132,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "805ad6c9850bdbec",
@@ -223,8 +224,12 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "2764b97389693674",
+  "active": "137b9c5b144839dd",
   "lastOpenFiles": [
+    "Pasted image 20251020165318.png",
+    "Pasted image 20251020155828.png",
+    "Pasted image 20251020105242.png",
+    "Lab2.md",
     "Pasted image 20251018183346.png",
     "Pasted image 20251018182637.png",
     "Pasted image 20251018182605.png",
@@ -233,13 +238,9 @@
     "Pasted image 20251018181817.png",
     "Pasted image 20251018180730.png",
     "Pasted image 20251018180231.png",
-    "Pasted image 20251018180124.png",
     "Lab1.md",
-    "Lab2.md",
     "class_note.md",
     "Lab2",
-    "Lab0.md",
-    "Pasted image 20251013100321.png",
-    "Pasted image 20251010121207.png"
+    "Lab0.md"
   ]
 }
