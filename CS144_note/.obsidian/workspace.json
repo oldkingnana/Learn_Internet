@@ -6,7 +6,6 @@
       {
         "id": "9b91a72adfe7a717",
         "type": "tabs",
-        "dimension": 72.49134948096886,
         "children": [
           {
             "id": "876966b19d8bd644",
@@ -48,34 +47,10 @@
               },
               "icon": "lucide-file",
               "title": "class_note"
-            },
-            "group": "34a6b54940d29ad4"
+            }
           }
         ],
         "currentTab": 2
-      },
-      {
-        "id": "29cdcc17075745b8",
-        "type": "tabs",
-        "dimension": 27.508650519031143,
-        "children": [
-          {
-            "id": "137b9c5b144839dd",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "class_note.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "class_note 的大纲"
-            },
-            "group": "34a6b54940d29ad4"
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -224,8 +199,11 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "137b9c5b144839dd",
+  "active": "2764b97389693674",
   "lastOpenFiles": [
+    "Pasted image 20251022191829.png",
+    "Pasted image 20251022190855.png",
+    "Pasted image 20251022190256.png",
     "Pasted image 20251020165318.png",
     "Pasted image 20251020155828.png",
     "Pasted image 20251020105242.png",
@@ -235,9 +213,6 @@
     "Pasted image 20251018182605.png",
     "Pasted image 20251018182125.png",
     "Pasted image 20251018181826.png",
-    "Pasted image 20251018181817.png",
-    "Pasted image 20251018180730.png",
-    "Pasted image 20251018180231.png",
     "Lab1.md",
     "class_note.md",
     "Lab2",
