@@ -2097,3 +2097,198 @@ Timeout = 102.5 + 4 * 12.5 = 152.5ms
 
 * 这个工具其实就是用打洞实现P2P的
 
+
+##### 5.1.3 `NAT`回环
+
+* 有一种场景,如果我们引入`NAT`,可能会造成传输效率低下的问题
+
+![[Pasted image 20251107113234.png]]
+
+* 这里我们在内网搭建两台服务器,然后全部连接到一个交换机,并处于一个`NAT`后
+* 那么假设这两台服务器要交换数据,会怎么做?
+
+* 有两种可能性:
+	1. 某个内部设备试图通过公网IP访问另一个内部设备,那么`NAT`会把包发到公网,然后经过公网的包再跑回来回到`NAT`,最后被传给目的内网地址
+	2. 某个内部设备试图通过内网地址访问内网设备,那么`NAT`知道这是一个内网地址,他经过交换机发送包给那个内网设备
+
+* 这里我们只谈第一种情况
+* 你会发现,这里跑了一遍公网,这其实是完全没必要的步骤
+* 当然,关于这点我们暂且不谈
+
+* 换句话说,这个内网设备试图以访问公网`IP`的形式访问同一个内网服务器
+
+* 我们知道,一个`NAT`会修改包中`DST IP/Port`的地址为目的主机的内网`IP/Port`,这里我们举个例子:
+	1. 发送方是`B`,内网`IP`为`192.168.10.101`
+	2. 接收方是`A`,内网`IP`为`192.168.10.100`
+	3. 交换机称为`S`
+	4. `NAT`称为`N`,公网`IP`为`166.76.120.70`,映射:`192.168.10.100:1000`<-->`166.76.120.70:6000`
+* 那么`B`在端口`4000`发送一个包给`166.76.120.70:6000`:
+	1. 发包的时候,这个包的结构是:
+		1. `SRC`: `192.168.10.101:4000`
+		2. `DST`: `166.76.120.70:6000`
+	2. 这个包被`NAT`接收之后,`NAT`会修改包的目的地址,同时为设备`B`在`NAT`添加一个映射关系:
+		1. `SRC`: `192.168.10.101:4000`
+		2. `DST`: `192.168.10.100:1000`
+	3. `A`接收这个包之后,可能会回复一个包:
+		1. `SRC`: `192.168.10.100:1000`
+		2. `DST`: `192.168.10.101:4000`
+
+* 那么,问题来了,`A`回复的这个包还会走`NAT`吗??答案是不会!
+* 因为交换机会直接转发包给`B`,直接不走`NAT`了
+* 但是,`B`认为他之前在和`166.76.120.70:6000`交换数据,现在突然来了一个`192.168.10.100:1000`,这会被他直接识别为位置数据包,那么就直接丢弃
+* 所以,会产生一个现象:`B`可以发包给`A`,且能被`A`正常接收,但是`A`没法回复`B`
+
+* 所以解决这个问题也很简单
+* 要么我们需要让`NAT`实现一个功能,识别发送方和接收方是否都是当前内网的设备,如果两者都是内网设备,那么不再向公网转发,而是转而向内网交换机转发,同时还需要修改这个包的`SRC`和`DST`
+* 回到例子,`B`在端口`4000`发送一个包给`166.76.120.70:6000`:
+	1. 发包的时候,这个包的结构是:
+		1. `SRC`: `192.168.10.101:4000`
+		2. `DST`: `166.76.120.70:6000`
+	2. 这个包被`NAT`接收之后,`NAT`会修改包的目的地址和源地址,同时为设备`B`在`NAT`添加一个映射关系`192.168.10.101:4000`<-->`166.76.120.70:6001`:
+		1. `SRC`: `166.76.120.70:6001`
+		2. `DST`: `192.168.10.100:1000`
+	3. `A`接收这个包之后,可能会回复一个包:
+		1. `SRC`: `192.168.10.100:1000`
+		2. `DST`: `166.76.120.70:6001`
+	4. 同样经过`NAT`,同样修改`SRC`和`DST`:
+		1. `SRC`: `166.76.120.70:6000`
+		2. `DST`: `192.168.10.101:4000`
+	5. 回复包被`B`接收
+
+* 所以,你会发现,这两个设备似乎通过各自的公网`IP/Port`(当然是`NAT`虚拟出来的)和对方交流,双方都认为对方真的是一个公网设备
+
+##### 5.1.4 `NAT`产生的哲学问题
+
+* CS144中提到了一个哲学问题,在引入`NAT`之后,端到端思想还有效吗? 
+* 我的大致理解是,大致上,依旧是有效的,`NAT`只是精细了端的步骤,或者让端变得复杂了,但宏观上仍旧是端到端 
+* 另一个问题是,`NAT`的引入让定义新的互联网标准变得困难
+* 因为一旦引入一个新的互联网标准,那么NAT就应该重新设计以兼容新的标准 这似乎导致了现代所有的新协议都是基于UDP的原因
+
+* 我们知道,现在已经推出了`IPv6`地址了,你可以在运营商购买相对应的服务,但是问题来了,既然`NAT`技术是用于缓解`IPv4`协议不够的问题,那么为什么`IPv6`推出之后为什么`NAT`没有被立刻取代?
+
+* 如果坚持强的端到端原则,那么`NAT`就不应该存在,所有的安全防护都应该严格在端进行,我们且不论`NAT`本身会不会有安全检查,但事实是,`NAT`的安全性确实有一个点非常好使,即匿名上网
+* 毕竟`NAT`根本不会给你分配真实的`IP`地址,所以只要你的的网络环境通过了层层`NAT`,那么其实很难找到你的具体`IP`,或者说距离直接找到你这个人还留有一定空间,以至于你的具体`IP`信息不会被当作商品销售,当然只要你想,你也可以选择类似于`NAT66`之类的东西让`NAT`兼容你的`IPv6`地址
+* 所以我个人来说还是不选择站队,毕竟两者都有可取之处,同时,某种程度上讲,`NAT`在服务用户方面确实比`IPv6`要简单易维护
+* 老实说,我觉得这点有点像是`Linux`和`Windows`的关系,就像是在聊为什么`Linux`明明更加安全效率更高,但为什么大家都选择`Windows`?
+
+##### 5.1.5 `TCP`和`UDP`对`NAT`的要求
+
+* 就一句话,千万不要使用对称`NAT`!!!因为打洞真的很重要!换句话说实现P2P非常重要!
+
+
+#### 5.2 `HTTP`协议
+
+* `HTTP`即"超文本传输协议","HyperText Transfer Protocol"
+
+* 字面意思,这是一个用于传输"超文本"("HYperText")的协议
+* 那么什么是超文本?
+
+##### 5.2.1 `HTML`
+
+* `HTML`即"超文本标记语言","HyperText Markup Language"
+
+* 老实说,如果你接触过`Markdown`,你大致可以理解为`HTML`就是一个功能非常强大的`Markdown`,该语言使用`HyperText`进行书写
+
+* 浏览器通过`HTTP`协议获取一个`HTML`文件,并且将这个文件渲染出来,所以浏览器关于渲染方面的工作方式其实和`Markdown`阅读器很像,都是将获取到的文本文件渲染
+* 所以本质上,浏览器就是一个带有网络访问功能的渲染器
+
+* 所以,你可以在任意一个网页右键然后查看源码,你就可以看到这个网页具体是怎么写的
+
+* 比方说我在`www.bilibili.com`看到的源码大概是这样的
+
+```html
+<!DOCTYPE html>
+<html class="bili_dark" lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<title>哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</title>
+<meta
+name="description"
+content="哔哩哔哩（bilibili.com)是国内知名的视频弹幕网站，这里有及时的动漫新番，活跃的ACG氛围，有创意的Up主。大家可以在这里找到许多欢乐。"
+/>
+<meta
+name="keywords"
+content="bilibili,哔哩哔哩,哔哩哔哩动画,哔哩哔哩弹幕网,弹幕视频,B站,弹幕,字幕,AMV,MAD,MTV,ANIME,动漫,动漫音乐,游戏,游戏解说,二次元,游戏视频,ACG,galgame,动画,番组,新番,初音,洛天依,vocaloid,日本动漫,国产动漫,手机游戏,网络游戏,电子竞技,ACG燃曲,ACG神曲,追新番,新番动漫,新番吐槽,巡音,镜音双子,千本樱,初音MIKU,舞蹈MMD,MIKUMIKUDANCE,洛天依原创曲,洛天依翻唱曲,洛天依投食歌,洛天依MMD,vocaloid家族,OST,BGM,动漫歌曲,日本动漫音乐,宫崎骏动漫音乐,动漫音乐推荐,燃系mad,治愈系mad,MAD MOVIE,MAD高燃"
+/>
+//...
+```
+
+* 我们往下看看,你能看到这里`HTML`加载了很多图片以及`css`等资源,毕竟类似于图片这种资源,我们没法直接像`Word`一样插入到一个纯粹文本的内容中去,所以这里你可以看到都是网页路径,就和我们在`Markdown`中插入图片类似
+
+##### 5.2.2 `HTTP/1.0`
+* `HTML/1.0`不是`HTML`广泛使用的一个版本,所以实际上我们这个小节是为了给下一个小节做铺垫,因为我们必须得聊聊`HTTP/1.0`的缺陷
+
+* 首先需要明确的是,为`HTTP`协议提供服务的传输层协议是`TCP`
+
+* `HTTP/1.0`使用`TCP`协议时设计了一个非常致命的问题,这个问题在当时还不直观,但是现在其实缺点很明显
+* 就是效率太低
+
+* `HTTP`协议是这样做的
+* 对于每一个需要加载的资源来说,比方说图片,`css`这类资源,每次加载都算做一次单独的`TCP`连接
+* 这就造成了`TCP`需要握手的次数过多了,每次握手都会带来一次`RTT/2`的延迟,那么只要这类资源一多就会导致延迟非常高
+
+* 你能看到`www.bilibili.com`加载了这么一堆资源(以下这段代码也不全是这类资源)
+
+```html
+<link rel="dns-prefetch" href="[//s1.hdslb.com](https://s1.hdslb.com/)" />
+<link rel="apple-touch-icon" href="[https://i0.hdslb.com/bfs/static/jinkela/long/images/512.png](https://i0.hdslb.com/bfs/static/jinkela/long/images/512.png)" />
+<link rel="shortcut icon" href="[https://i0.hdslb.com/bfs/static/jinkela/long/images/favicon.ico](https://i0.hdslb.com/bfs/static/jinkela/long/images/favicon.ico)" />
+<link rel="canonical" href="[https://www.bilibili.com/](https://www.bilibili.com/)" />
+<link rel="alternate" media="only screen and (max-width: 640px)" href="[https://m.bilibili.com](https://m.bilibili.com/)" />
+<link rel="stylesheet" href="[//s1.hdslb.com/bfs/static/jinkela/long/fonts/harmonyos.css](https://s1.hdslb.com/bfs/static/jinkela/long/fonts/harmonyos.css)" media="print" onload="this.media='all'" />
+<link rel="stylesheet" href="[//s1.hdslb.com/bfs/svg-next/font/2024-11-04/laputahome-2moi75x0k8k.css](https://s1.hdslb.com/bfs/svg-next/font/2024-11-04/laputahome-2moi75x0k8k.css)" />
+<script>window._BiliGreyResult={"method":"gray","grayVersion":"170604"}</script><script data-inject-polyfill src="[https://www.bilibili.com/gentleman/polyfill.js?features=es2015%2Ces2016%2Ces2017%2Ces2018%2Ces2019%2Ces2020%2Ces2021%2Ces2022%2CglobalThis&flags=gated](https://www.bilibili.com/gentleman/polyfill.js?features=es2015%2Ces2016%2Ces2017%2Ces2018%2Ces2019%2Ces2020%2Ces2021%2Ces2022%2CglobalThis&flags=gated)"></script>
+<script type="text/javascript" src="[//s1.hdslb.com/bfs/seed/jinkela/short/bmg/register/fallback.js](https://s1.hdslb.com/bfs/seed/jinkela/short/bmg/register/fallback.js)"></script>
+
+<link rel="stylesheet" href="[//s1.hdslb.com/bfs/seed/jinkela/short/bili-theme/map.css](https://s1.hdslb.com/bfs/seed/jinkela/short/bili-theme/map.css)"/>
+<link rel="stylesheet" href="[//s1.hdslb.com/bfs/seed/jinkela/short/bili-theme/light_u.css](https://s1.hdslb.com/bfs/seed/jinkela/short/bili-theme/light_u.css)"/>
+<link id="__css-map__" rel="stylesheet" href="[//s1.hdslb.com/bfs/seed/jinkela/short/bili-theme/dark.css](https://s1.hdslb.com/bfs/seed/jinkela/short/bili-theme/dark.css)"/>
+```
+
+* 那么一次连接过程可能是这样的:
+	1. 用户和服务器三次握手.并在最后一次`ACK`的时候,用户会携带请求内容给服务器,比方说用户请求了两个资源,一个称作是`1`,另一个称作是`2`
+	2. 服务器回复`1`给用户,用户获得了两个关于资源`1`的包即`1a`和`1b`
+	3. 然后用户解析这个资源`1`发现这个资源`1`使用了其他资源,比方说一个图片`3`(那么这个资源`1`就可能是一个`HTML`文本)
+	4. 然后重新建立连接申请资源`3`
+	5. 在建立连接申请`3`的过程中,`2`也到了两个包,一个是`2a`一个是`2b`
+	6. 同样的,用户发现`2`里使用了资源`4`,于是也开始建立连接申请`4`,于是你会发现此时有两个连接在同时建立
+	7. 然后`3`会先到,然后才是`4`
+
+![[Pasted image 20251112115733.png]]
+
+* 所以你会发现,这里其实多了两次完全没必要的三次握手的过程,有至少大约`3/2 * RTT`的时间都浪费在了`TCP`连接上
+* 另一个造成的问题是,因为每次获取资源的都需要单独的一次`TCP`连接,所以实际上`TCP`拥塞窗口增长不了多少就没了,这就导致了拥塞窗口似乎变成了一个毫无意义的东西,所以如果一个网页的资源非常非常多的时候,我们如果能使用拥塞窗口给后续的资源加载提提速那就再好不过了,那么延迟还会更低
+
+* 我们来看看一个`HTTP/1.0`的请求字段是怎样写的,一个请求字段包含以下几个东西
+
+|名称|解释|
+| :---: | :---: |
+|请求行(`Request Line`)|你要对资源执行的操作,`URL`,`HTTP`版本,只能有一行|
+|请求头(`Request Header`)|附加的信息,比如说"状态",浏览器类型等等,可以有很多行|
+|请求体(`Request Body`)|这是可选的,一般用于配合请求行的特定操作传输文本量大的内容,比方说配合`POST`上传账号密码信息|
+
+* 那么一个`HTTP/1.0`的请求字段可能是这样的
+
+|行号|字段|解释|
+| :---: | :---: | :---: |
+|`1`|`GET /index.html HTTP/1.0`|请求一个`/index.html`页面,使用`HTTP/1.0`的版本|
+|`2`|`User-Agent: Mosaic/2.0`|表示一个客户端,这是一个早期的浏览器|
+|`3`|`Accept-Charset: utf-8`|表示能够接受的字符集|
+|`4`|`Accept: text/html, image/gif, image/png, image/jpeg`|需要接受的回应内容的类型|
+|`5`|`Connection: close`|连接类型为关闭,也就是资源数据传输完毕之后立刻关闭连接|
+|`6`|`空行`|表示请求体为空|
+
+###### 5.2.3 `HTTP/1.1`
+
+* `HTTP/1.1`修正了这个问题
+
+* `HTTP/1.1`在请求字段的`header`的关于`Connection`的字段引入了一个叫做`keep-alive`的字段,当然对应的,`HTTP/1.1`对于其请求字段有了一些新的规范,比方说必须使用`Host`这个字段什么的,具体可以查一下`wiki`
+
+* 一旦某个请求携带了这个字段,那么服务器和客户端都会认为这次连接需要保持比较长的时间,就不会有任何人主动断开连接,除非对方主动请求断开连接或者使用字段`close`
+
+* 自此,`HTTP/1.1`就实现了长时间的资源传输,极大的提高了用户体验,至少能减少一次`3/2 * RTT`造成的延迟,需要传输的资源越多,提升就越大,因为窗口现在可以增长了
+
+
+
+
+
