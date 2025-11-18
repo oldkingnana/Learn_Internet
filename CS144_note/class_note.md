@@ -2334,15 +2334,281 @@ content="bilibili,哔哩哔哩,哔哩哔哩动画,哔哩哔哩弹幕网,弹幕�
 
 * 另一个问题是,一些流媒体把用户的设备偷偷搞成类似于`PCDN`的设备,偷偷给别的用户上传资源以节省自己公司的服务器成本,然后这类不懂技术不懂`BT`的普通用户也遭殃,更是沟槽的,和迅雷坐一桌去
 
+#### 5.4 `DNS`("域名系统", "Domain Name System")
 
+* 一般来说,我们在`HTTP`协议中只要提供`IP`+端口号就可以访问对应的网页,但是这对大众其实极其不友好,你懂的,绝大部分广泛方便的技术最终都很可能会下放到消费用户这边
+* 那么用户肯定不可能直接手写`IP`+端口还有什么`HTTP`请求之类的访问一个网页,那么我们需要一种更为简单的方式,即通过域名访问一个网页
 
+* 如果你在浏览器输入这个`http://171.66.3.9`,然后你会发现你直接进入了斯坦福大学的网页的根地址了
+* 而如果你输入`http://www.scs.stanford.edu/`,那么结果也是一样的
+* 那么对于这一堆`IP`来说,那么域名显然是更加方便
 
+##### 5.4.1 网址拆解
 
+* 对于斯坦福这个例子,我们来拆解看一下,假设我们访问`http://www.scs.stanford.edu/labs/sc.html`(虽然现在这个文件已经访问不到了)
 
+|内容|解释|
+| :---: | :---: |
+|`http`|表示该网页使用`HTTP`协议,默认的端口号是`80`|
+|`www.scs.stanford.edu`|表示域名,将会转换成你要访问的`IP`地址|
+|`/labs/sc.html`|表示一个文件地址,表示我要访问这个`html`文件|
 
+* 但问题在于,浏览器怎么知道一串文字域名会对应哪个`IP`??
 
+##### 5.4.2 域名解析原理
 
+* 对于早期互联网而言,网络中的主机非常少,所以我们不需要一个非常庞大的系统解析域名得到`IP`,只需要修改一个文件,该文件使用类似于键值对存储一个域名对应的`IP`地址
 
+* 那么浏览器访问该域名的时候自动调用这个文件,然后找到键值对就行了
+* 关于文件位置:
+	1. `Windows`: `C:\windows\system32\drivers\etc\`
+	2. `Linux`: `/etc/`
 
+* 这里我用`Arch Linux`演示
+![[Pasted image 20251114163101.png]]
+
+* 不过你可以看到这里我的这个文件中什么都没有,只有一个本地`IP`
+* 这个`localhost`不是完全没用,如果你使用过`sunshine`这种串流服务端,你就知道你可以通过`https://localhost:[特定域名]`访问服务端的后台,这其实是相当于把前端页面写在`Web`端
+* 另外,如果你之前没办法用`git`上传代码到`github`的话,你或许尝试过直接在`hosts.txt`里直接填入`github`的多个`IP`,这样能规避`DNS`解析(后续会解释)
+* 但是,使用`hosts.txt`肯定是治标不治本的,毕竟这个文件需要你自己手动输入,当然你也可以拷贝别人的`hosts.txt`,甚至说后期可以通过某些服务更新这个`hosts.txt`,比方说通过`ARPAnet`的信息管理机构`NIC`("网络信息中心",来自斯坦福研究所,职责就是维护`hosts.txt`),但是之后的一些年内,互联网用户急剧增加,`NIC`最终很难扛住服务器压力,以及域名重名的问题,所以我们需要一个更加优雅的系统或者算法,来应对网络设备越来越多的情况
+* 于是传奇的`DNS`问世了
+
+* 如果你实际翻了一下`HOSTS.TXT`就知道这玩意如果东西很多的话是有多难维护
+* 基本上,`HOSTS.TXT`就几乎可以等于一个`vector<pair<name, IP>>`,那么查找效率其实也比较低
+* `DNS`做了一件事情,他把所有的域名全部归类,把域名都归属于顶级域下,诸如以下
+
+|类别|解释|举例|更多|
+| :---: | :---: | :---: | :---: |
+|`.com`|商业|`www.bilibili.com`|哔哩哔哩网页端|
+|`.net`|网络|`www.csdn.net`|`CSDN`论坛网页端|
+|`.org`|非营利组织|`wiki.archlinuxcn.org`|`Arch Linux`在中国的主页|
+|`.edu`|教育机构|`www.scs.stanford.edu`|斯坦福大学|
+|`.gov`|政府机构|`www.whitehouse.gov`|白宫主页|
+|`.int`|国际组织|`www.icao.int`|国际民航组织|
+|`.cn`|中国(有很多以国家缩写为本国独有的顶级域)|`www.limestart.cn`|青柠起始页,我很喜欢的浏览器启动页|
+|`.xyz`|一个通用域名|`abc.xyz`|属于Alphabet(google的母公司)的域名|
+|...|...|...|...|
+
+* 如果我想要访问一个域名,比方说`www.scs.stanford.edu`,那么设备首先会访问一个叫做`DNS`解析器的东西,这个东西可以在很多地方,比方说运营商,或者是学校,甚至是家用`NAT`
+
+* 解析器会帮你联系某几个固定的根服务器,这些根服务器维护着几乎所有顶级域的服务器地址:
+	1. 那么`DNS`解析器会向根服务器询问你知道到`www.scs.stanford.edu`的`IP`地址吗?根服务器说不知道,但你要访问一个`.edu`网站的话可以去`edu`的服务器问问,然后根服务器甩给`DNS`解析器一个地址
+	2. 然后`DNS`解析器向`edu`询问,同样的,`edu`服务器也不知道,但他知道`stanford.edu`的地址,于是甩给你一个他的地址
+	3. 然后`DNS`解析器向`stanford.edu`询问,同样的,他也甩给你一个`scs.stanford.edu`的地址
+	4. 然后`DNS`解析器向`scs.stanford.edu`询问,`scs.stanford.edu`回答我知道地址,他是我的一个子域名,然后返回一个地址给`DNS`解析器
+	5. 最后`DNS`解析器回答用户设备:"我搞到了那个域名的`IP`",然后返回一个`IP`
+
+* 值得一提的是,`DNS`一般用的是`UDP`,且长度有限制
+* 另外,`DNS`解析器并不会每次都向根服务器询问,因为人很多,太浪费网络资源了,所以对于常用的域名,`DNS`解析器一般会选择缓存一段时间
+
+* 那么我觉得我们需要详细了解一下"一次`DNS`解析"的全部过程
+* 那么这里我们拿`www.stanford.edu`举例,这里需要使用`dig`这个工具
+
+```text
+[oldking@kingarchlinux ~]$ dig www.bilibili.com
+
+; <<>> DiG 9.20.13 <<>> www.bilibili.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 64998
+;; flags: qr rd ra; QUERY: 1, ANSWER: 10, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;www.bilibili.com.              IN      A
+
+;; ANSWER SECTION:
+www.bilibili.com.       23      IN      CNAME   a.w.bilicdn1.com.
+a.w.bilicdn1.com.       14      IN      A       111.19.247.150
+a.w.bilicdn1.com.       14      IN      A       111.19.247.151
+a.w.bilicdn1.com.       14      IN      A       111.19.247.152
+a.w.bilicdn1.com.       14      IN      A       112.45.122.107
+a.w.bilicdn1.com.       14      IN      A       112.45.122.108
+a.w.bilicdn1.com.       14      IN      A       112.45.122.109
+a.w.bilicdn1.com.       14      IN      A       221.178.63.10
+a.w.bilicdn1.com.       14      IN      A       221.178.63.11
+a.w.bilicdn1.com.       14      IN      A       221.178.63.12
+
+;; Query time: 55 msec
+;; SERVER: 192.168.121.35#53(192.168.121.35) (UDP)
+;; WHEN: Tue Nov 18 13:14:17 CST 2025
+;; MSG SIZE  rcvd: 219
+```
+
+* 我们详细看这一部分:
+```text
+;; QUESTION SECTION:
+;www.bilibili.com.              IN      A
+
+;; ANSWER SECTION:
+www.bilibili.com.       23      IN      CNAME   a.w.bilicdn1.com.
+a.w.bilicdn1.com.       14      IN      A       111.19.247.150
+a.w.bilicdn1.com.       14      IN      A       111.19.247.151
+a.w.bilicdn1.com.       14      IN      A       111.19.247.152
+a.w.bilicdn1.com.       14      IN      A       112.45.122.107
+a.w.bilicdn1.com.       14      IN      A       112.45.122.108
+a.w.bilicdn1.com.       14      IN      A       112.45.122.109
+a.w.bilicdn1.com.       14      IN      A       221.178.63.10
+a.w.bilicdn1.com.       14      IN      A       221.178.63.11
+a.w.bilicdn1.com.       14      IN      A       221.178.63.12
+```
+
+* 详细说明:
+
+|字段|解释|
+| :--: | :--: |
+|`QUESTION SECTION`|询问字段|
+|`ANSWER SECTION`|结果字段|
+|`www.bilibili.com.`|询问的域名地址|
+|`IN`|表示该信息的类型属于互联网标准|
+|`A`|`IPv4`地址|
+|`CNAME`|结果是一个别名|
+|`23`/`14`|`TTL`|
+|`a.w.bilicdn1.com.`|别名,同时也是一个`CDN`服务器|
+|`111.19.247.150`|`CDN`服务器的地址|
+|`AAAA`|虽然这里没有显示这个字段,但这表示的是`IPv6`地址|
+
+* 那么这段的意思其实就是`DNS`解析器在询问`www.bilibili.com`的`IPv4`地址是什么
+```text
+;; QUESTION SECTION:
+;www.bilibili.com.              IN      A
+```
+
+* 那么这一段表示回复,表示`www.bilibili.com`其实会跳转到别名为`a.w.bilicdn1.com`的`CDN`服务器,现在能检索到的服务器有下面这一堆,而且全都是`IPv4`地址,并且`TTL`很短
+```text
+;; ANSWER SECTION:
+www.bilibili.com.       23      IN      CNAME   a.w.bilicdn1.com.
+a.w.bilicdn1.com.       14      IN      A       111.19.247.150
+a.w.bilicdn1.com.       14      IN      A       111.19.247.151
+a.w.bilicdn1.com.       14      IN      A       111.19.247.152
+a.w.bilicdn1.com.       14      IN      A       112.45.122.107
+a.w.bilicdn1.com.       14      IN      A       112.45.122.108
+a.w.bilicdn1.com.       14      IN      A       112.45.122.109
+a.w.bilicdn1.com.       14      IN      A       221.178.63.10
+a.w.bilicdn1.com.       14      IN      A       221.178.63.11
+a.w.bilicdn1.com.       14      IN      A       221.178.63.12
+```
+
+* 那我们可以试图复现一下`DNS`解析器做的事情,这里我们假设`DNS`解析器没有缓存地址`www.bilibili.com`,那么`DNS`解析器做的事情近似如下
+```shell
+[oldking@kingarchlinux ~]$ dig +trace www.bilibili.com. NS @a.root-servers.net.
+;; communications error to 198.41.0.4#53: timed out
+
+; <<>> DiG 9.20.13 <<>> +trace www.bilibili.com. NS @a.root-servers.net.
+;; global options: +cmd
+.                       518400  IN      NS      l.root-servers.net.
+.                       518400  IN      NS      j.root-servers.net.
+.                       518400  IN      NS      f.root-servers.net.
+.                       518400  IN      NS      h.root-servers.net.
+.                       518400  IN      NS      d.root-servers.net.
+.                       518400  IN      NS      b.root-servers.net.
+.                       518400  IN      NS      k.root-servers.net.
+.                       518400  IN      NS      i.root-servers.net.
+.                       518400  IN      NS      m.root-servers.net.
+.                       518400  IN      NS      e.root-servers.net.
+.                       518400  IN      NS      g.root-servers.net.
+.                       518400  IN      NS      c.root-servers.net.
+.                       518400  IN      NS      a.root-servers.net.
+.                       518400  IN      RRSIG   NS 8 0 518400 20251201050000 20251118040000 61809 . QTAU7lTykJteXtfb6Rx+w+d75i/6kmEBZYkKTevktqZbb+V4gRGnWnpm Q4WYXKIlmNV6ho/m7xI1BQMJ5DKN0JAoSowB4Nfeid3uU+taecXR+Eq1 86FCo4C8dp3u5PB2OV7PuvBLzHODUpfO1iWjdyX5vn1WJYpSWMMnRAhn EPWzS4NMq5rCHMa89wUjicNSpICVTpuOti6o9Dk3ur1rOnTRxeKS2bPA Li9e0Vskw5leSBp9myYlEliwoa1ZinwSPj+J/5ORACb/RIOvByWIUlK4 lp9YRVOgmx8yLh+ue5j+/aLcsL0zvmq3vggcO8zpW2BEys7pwk3FNfFJ VfgmeQ==
+;; Received 1097 bytes from 198.41.0.4#53(a.root-servers.net.) in 331 ms
+
+;; UDP setup with 2001:500:1::53#53(2001:500:1::53) for www.bilibili.com. failed: network unreachable.
+;; no servers could be reached
+;; UDP setup with 2001:500:1::53#53(2001:500:1::53) for www.bilibili.com. failed: network unreachable.
+com.                    172800  IN      NS      a.gtld-servers.net.
+com.                    172800  IN      NS      g.gtld-servers.net.
+com.                    172800  IN      NS      i.gtld-servers.net.
+com.                    172800  IN      NS      b.gtld-servers.net.
+com.                    172800  IN      NS      m.gtld-servers.net.
+com.                    172800  IN      NS      d.gtld-servers.net.
+com.                    172800  IN      NS      k.gtld-servers.net.
+com.                    172800  IN      NS      e.gtld-servers.net.
+com.                    172800  IN      NS      l.gtld-servers.net.
+com.                    172800  IN      NS      f.gtld-servers.net.
+com.                    172800  IN      NS      h.gtld-servers.net.
+com.                    172800  IN      NS      j.gtld-servers.net.
+com.                    172800  IN      NS      c.gtld-servers.net.
+com.                    86400   IN      DS      19718 13 2 8ACBB0CD28F41250A80A491389424D341522D946B0DA0C0291F2D3D7 71D7805A
+com.                    86400   IN      RRSIG   DS 8 1 86400 20251201050000 20251118040000 61809 . pQ61ohYDdud0drWAQI30BEDkHL75rTXTXN7tylHUGO4Qo1uyRCUJaepb v8nqUQDaqyAyf6frulLmrggJRf5KRNzZ/NRxtPJmU9MW3amxTLSe0TrB 0YtXD5IR/2TJTfaIpoh/6ztMfdd+qI7OtdOQ/CpBu55/nB/wTKxhink+ PxBu8hnpAZAxGjuZLmP3/R4Y7kB7wqbuGBO1YjvyCxT/U81VEBhsd97z wuhxIfM+D+5X6DfJ8mZ70qh83hg6XDUncWKudDzPa2XjTSkln2OKAQDz x9gNyycmCPbw3vMUytCe2CJ5TmgxnGsByzKFAOS/oKCgyfJAK7MjIRtX WGltkw==
+;; Received 1207 bytes from 192.36.148.17#53(i.root-servers.net) in 94 ms
+
+;; communications error to 192.26.92.30#53: timed out
+bilibili.com.           172800  IN      NS      ns3.dnsv5.com.
+bilibili.com.           172800  IN      NS      ns4.dnsv5.com.
+CK0POJMG874LJREF7EFN8430QVIT8BSM.com. 900 IN NSEC3 1 1 0 - CK0Q3UDG8CEKKAE7RUKPGCT1DVSSH8LL NS SOA RRSIG DNSKEY NSEC3PARAM
+CK0POJMG874LJREF7EFN8430QVIT8BSM.com. 900 IN RRSIG NSEC3 13 2 900 20251123002647 20251115231647 46539 com. GyeUYKPBDuHLVwfiBNB5J6WXh5bSS9m6dyvw5kmzP2ZYg0uoG1KwubxD Lm+3o1ZRcfegSC/r/MEyxyXxSRwzew==
+34N8HDRIDRS931JVPDDJA5QLVPMOGVUB.com. 900 IN NSEC3 1 1 0 - 34N8VR2QIA8E6FQT7AUGCM6FARONEELO NS DS RRSIG
+34N8HDRIDRS931JVPDDJA5QLVPMOGVUB.com. 900 IN RRSIG NSEC3 13 2 900 20251125012702 20251118001702 46539 com. qhGi1ORVCcjW9qsStFFPcwCFp6nooEGHlZKZn2ul4PuWh2l9VYmBWdu1 d0VZMjnwIkXxytsP8zcNeLBAbsiyCQ==
+;; Received 788 bytes from 192.52.178.30#53(k.gtld-servers.net) in 120 ms
+
+www.bilibili.com.       300     IN      CNAME   a.w.bilicdn1.com.
+;; Received 75 bytes from 220.196.136.52#53(ns3.dnsv5.com) in 80 ms
+```
+
+* `dig +trace www.bilibili.com. NS @a.root-servers.net.`的大致意思其实是"以`a.root-servers.net.`为起点做迭代查询,且查询的内容是下一次查询的权威服务器"
+* 那么结果很明显:
+	1. 第一次查询到的权威服务器是根服务器的权威服务器,也就是`X.root-servers.net.`
+	2. 第二次查询到的权威服务器是`com.`这个顶级域名的权威服务器,也就是`X.gtld-servers.net.`,是通过询问根服务器得到的结果
+	3. 第三次查询到的权威服务器是`bilibili.com`这个域名的权威服务器,也就是`nsX.dnsv5.com.`,是通过询问`com.`这个顶级域名的权威服务器得到的结果
+	4. 第四次询问`www.bilibili.com.`查询到的服务器是`a.w.bilicdn1.com.`,因为`nsX.dnsv5.com.`这个权威服务器直接记录了`www.bilibili.com.`的别名是`a.w.bilicdn1.com.`,所以可以直接查询到,但是,注意了!这里`nsX.dnsv5.com.`这个权威服务器不会返回`a.w.bilicdn1.com.`的地址,所以我们还需要再次查询一次`a.w.bilicdn1.com.`才可以真正访问到地址
+
+* 我们可以做第二次解析,解析一下`a.w.bilicdn1.com.`
+```shell
+[oldking@kingarchlinux ~]$ dig +trace a.w.bilicdn1.com.
+
+; <<>> DiG 9.20.13 <<>> +trace a.w.bilicdn1.com.
+;; global options: +cmd
+.                       1684    IN      NS      f.root-servers.net.
+.                       1684    IN      NS      g.root-servers.net.
+.                       1684    IN      NS      h.root-servers.net.
+.                       1684    IN      NS      i.root-servers.net.
+.                       1684    IN      NS      j.root-servers.net.
+.                       1684    IN      NS      k.root-servers.net.
+.                       1684    IN      NS      l.root-servers.net.
+.                       1684    IN      NS      m.root-servers.net.
+.                       1684    IN      NS      a.root-servers.net.
+.                       1684    IN      NS      b.root-servers.net.
+.                       1684    IN      NS      c.root-servers.net.
+.                       1684    IN      NS      d.root-servers.net.
+.                       1684    IN      NS      e.root-servers.net.
+;; Received 431 bytes from 218.202.152.130#53(218.202.152.130) in 9 ms
+
+com.                    172800  IN      NS      e.gtld-servers.net.
+com.                    172800  IN      NS      a.gtld-servers.net.
+com.                    172800  IN      NS      g.gtld-servers.net.
+com.                    172800  IN      NS      i.gtld-servers.net.
+com.                    172800  IN      NS      k.gtld-servers.net.
+com.                    172800  IN      NS      d.gtld-servers.net.
+com.                    172800  IN      NS      l.gtld-servers.net.
+com.                    172800  IN      NS      b.gtld-servers.net.
+com.                    172800  IN      NS      f.gtld-servers.net.
+com.                    172800  IN      NS      m.gtld-servers.net.
+com.                    172800  IN      NS      h.gtld-servers.net.
+com.                    172800  IN      NS      j.gtld-servers.net.
+com.                    172800  IN      NS      c.gtld-servers.net.
+com.                    86400   IN      DS      19718 13 2 8ACBB0CD28F41250A80A491389424D341522D946B0DA0C0291F2D3D7 71D7805A
+com.                    86400   IN      RRSIG   DS 8 1 86400 20251201050000 20251118040000 61809 . pQ61ohYDdud0drWAQI30BEDkHL75rTXTXN7tylHUGO4Qo1uyRCUJaepb v8nqUQDaqyAyf6frulLmrggJRf5KRNzZ/NRxtPJmU9MW3amxTLSe0TrB 0YtXD5IR/2TJTfaIpoh/6ztMfdd+qI7OtdOQ/CpBu55/nB/wTKxhink+ PxBu8hnpAZAxGjuZLmP3/R4Y7kB7wqbuGBO1YjvyCxT/U81VEBhsd97z wuhxIfM+D+5X6DfJ8mZ70qh83hg6XDUncWKudDzPa2XjTSkln2OKAQDz x9gNyycmCPbw3vMUytCe2CJ5TmgxnGsByzKFAOS/oKCgyfJAK7MjIRtX WGltkw==
+;; Received 1179 bytes from 193.0.14.129#53(k.root-servers.net) in 464 ms
+
+bilicdn1.com.           172800  IN      NS      ns3.dnsv5.com.
+bilicdn1.com.           172800  IN      NS      ns4.dnsv5.com.
+CK0POJMG874LJREF7EFN8430QVIT8BSM.com. 900 IN NSEC3 1 1 0 - CK0Q3UDG8CEKKAE7RUKPGCT1DVSSH8LL NS SOA RRSIG DNSKEY NSEC3PARAM
+CK0POJMG874LJREF7EFN8430QVIT8BSM.com. 900 IN RRSIG NSEC3 13 2 900 20251123002647 20251115231647 46539 com. GyeUYKPBDuHLVwfiBNB5J6WXh5bSS9m6dyvw5kmzP2ZYg0uoG1KwubxD Lm+3o1ZRcfegSC/r/MEyxyXxSRwzew==
+78IDM0IHS4CDNOV640I6R1U47SK3C09Q.com. 900 IN NSEC3 1 1 0 - 78IDQK3QMV76V38C9KSJGFKOBD79LTIK NS DS RRSIG
+78IDM0IHS4CDNOV640I6R1U47SK3C09Q.com. 900 IN RRSIG NSEC3 13 2 900 20251124025811 20251117014811 46539 com. EpMk8tvLxiMh+Z88JFW55ACg1vLADRbvWKFh6sJ1LzJ4T2uAUKLEBQtJ louC+KyJKm+5/uHnYZ2hTHZ3A3rUAw==
+;; Received 788 bytes from 192.35.51.30#53(f.gtld-servers.net) in 250 ms
+
+a.w.bilicdn1.com.       90      IN      A       111.19.247.151
+a.w.bilicdn1.com.       90      IN      A       111.19.247.152
+a.w.bilicdn1.com.       90      IN      A       112.45.122.107
+a.w.bilicdn1.com.       90      IN      A       112.45.122.108
+a.w.bilicdn1.com.       90      IN      A       112.45.122.109
+a.w.bilicdn1.com.       90      IN      A       221.178.63.10
+a.w.bilicdn1.com.       90      IN      A       221.178.63.11
+a.w.bilicdn1.com.       90      IN      A       221.178.63.12
+a.w.bilicdn1.com.       90      IN      A       111.19.247.150
+;; Received 189 bytes from 112.80.181.106#53(ns4.dnsv5.com) in 73 ms
+```
 
 
