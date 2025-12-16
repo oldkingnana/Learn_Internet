@@ -1,66 +1,24 @@
 {
   "main": {
-    "id": "0afe44a0fb17f503",
+    "id": "bc482f3c074cba4b",
     "type": "split",
     "children": [
       {
-        "id": "c4b494e137e0559c",
+        "id": "d838515e659b77a2",
         "type": "tabs",
         "children": [
           {
-            "id": "dd614136b3624c3e",
+            "id": "af5e40e9ec496f4c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "class_note.md",
+                "file": "note.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "class_note"
-            }
-          },
-          {
-            "id": "c748d8fbddecf313",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Lab1.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Lab1"
-            }
-          },
-          {
-            "id": "a7c96d890b0a5f6b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Lab2.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Lab2"
-            }
-          },
-          {
-            "id": "21a0b015f1218717",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Lab3.md",
-                "mode": "source",
-                "source": true
-              },
-              "icon": "lucide-file",
-              "title": "Lab3"
+              "title": "note"
             }
           }
         ]
@@ -69,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "32bbd4b5a612fa8b",
+    "id": "2c3209baa760528c",
     "type": "split",
     "children": [
       {
-        "id": "15a86c9265ef436f",
+        "id": "210c9a3b18eeb695",
         "type": "tabs",
         "children": [
           {
-            "id": "e0a2da8bcfed4b96",
+            "id": "694f5288e8314cd7",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -90,7 +48,7 @@
             }
           },
           {
-            "id": "abcd05aa67529990",
+            "id": "95d49da1c809e48a",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -107,7 +65,7 @@
             }
           },
           {
-            "id": "b23ef81e431fe35e",
+            "id": "79c4731ff595ed1a",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -120,23 +78,24 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300,
+    "collapsed": true
   },
   "right": {
-    "id": "805ad6c9850bdbec",
+    "id": "34b1e050087d2578",
     "type": "split",
     "children": [
       {
-        "id": "ab14b9e0cecbe9a1",
+        "id": "24d35b2cfdc6dc35",
         "type": "tabs",
         "children": [
           {
-            "id": "2315de50d63c2c41",
+            "id": "fb98cd6a26fe59ae",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "check0.md",
+                "file": "note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -146,25 +105,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "check0 的反向链接列表"
+              "title": "note 的反向链接列表"
             }
           },
           {
-            "id": "da2371058d7f3669",
+            "id": "a80eafa344427474",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "check0.md",
+                "file": "note.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "check0 的出链列表"
+              "title": "note 的出链列表"
             }
           },
           {
-            "id": "3d72a61cc2842df3",
+            "id": "bf1d7e6fb432081e",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -179,18 +138,32 @@
             }
           },
           {
-            "id": "4600102dc5339c8e",
+            "id": "9e7a30aa5acdf0c3",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "6cf16e0a447889cd",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "check0.md",
+                "file": "note.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "check0 的大纲"
+              "title": "note 的大纲"
             }
           }
         ]
@@ -211,23 +184,6 @@
       "bases:创建新数据库": false
     }
   },
-  "active": "dd614136b3624c3e",
-  "lastOpenFiles": [
-    "Lab3.md",
-    "Lab2.md",
-    "Packet_Switching.gif",
-    "class_note.md",
-    "Lab0.md",
-    "Lab1.md",
-    "image-7.png",
-    "Pasted image 20251114163101.png",
-    "Pasted image 20251112115733.png",
-    "Pasted image 20251107113234.png",
-    "hole-punching.png",
-    "Pasted image 20251104225357.png",
-    "Pasted image 20251104224655.png",
-    "Pasted image 20251104224632.png",
-    "Pasted image 20251104224617.png",
-    "Lab2"
-  ]
+  "active": "af5e40e9ec496f4c",
+  "lastOpenFiles": []
 }
