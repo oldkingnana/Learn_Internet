@@ -58,7 +58,7 @@ const oldking::UdpClient& oldking::UdpClient::operator<<(const std::string& msg)
 		return *this;
 	}
 
-	sendto(sockfd_, msg.c_str(), sizeof(msg.c_str()) - 1, 0, (struct sockaddr *)&server_, sizeof(server_));
+	sendto(sockfd_, msg.c_str(), msg.size(), 0, (struct sockaddr *)&server_, sizeof(server_));
 
 	oldking::MyEasyLog::GetInstance().WriteLog(LOG_FATAL, "UdpClient", "input aka '<<' finish");
 
@@ -80,6 +80,7 @@ const oldking::UdpClient& oldking::UdpClient::operator>>(std::string& msg)
 	sockaddr_in server;
 	bzero(&server, sizeof(server));
 	socklen_t server_len;
+	bzero(&server_len, sizeof(server_len));
 
 	int16_t recv_len = recvfrom(sockfd_, buffer, sizeof(buffer) - 1, 0, (struct sockaddr *)&server, &server_len);	
 	if(recv_len > 0)
