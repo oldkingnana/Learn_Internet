@@ -54,8 +54,7 @@ void oldking::UdpServer::start()
 		struct sockaddr_in peer;
 		socklen_t peer_len = sizeof(peer);
 
-		int16_t recv_len = recvfrom(socket_fd_, buff, sizeof(buff), 0, (struct sockaddr *)&peer, (socklen_t *)&peer_len);
-
+		int16_t recv_len = recvfrom(socket_fd_, buff, sizeof(buff) - 1, 0, (struct sockaddr *)&peer, (socklen_t *)&peer_len);
 
 		if(recv_len > 0)
 		{
@@ -63,10 +62,11 @@ void oldking::UdpServer::start()
 			oldking::MyEasyLog::GetInstance().WriteLog(LOG_INFO, "UdpServer", "peer ip: " + std::string(inet_ntoa(peer.sin_addr)) + " peer port: " + std::to_string(peer_port));
 			
 			// func
+			buff[recv_len] = 0;
 			std::string msg = buff;
 			std::string result = func_(msg);
 			// send back
-			sendto(socket_fd_, result.c_str(), sizeof(result.c_str()), 0, (struct sockaddr *)&peer, peer_len);
+			sendto(socket_fd_, result.c_str(), sizeof(result.c_str()) - 1, 0, (struct sockaddr *)&peer, peer_len);
 		}
 		else 
 		{
