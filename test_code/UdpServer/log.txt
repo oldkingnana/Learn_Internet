@@ -71,3 +71,24 @@
 [time]:2025-12-20 18:21:1 [level]:INFO [filename]:UdpServer [pid]:1827213 [tid]:135654527256384 [line]:NONE [message]:peer ip: 36.187.97.20 peer port: -15085 
 [time]:2025-12-20 18:21:1 [level]:FATAL [filename]:test [pid]:1827213 [tid]:135654527256384 [line]:NONE [message]:in func 
 [time]:2025-12-20 18:21:1 [level]:FATAL [filename]:UdpServer [pid]:1827213 [tid]:135654527256384 [line]:NONE [message]:waiting! 
+[time]:2025-12-20 18:24:1 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:UdpServer constructer 
+[time]:2025-12-20 18:24:1 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:init begin 
+[time]:2025-12-20 18:24:1 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:init finish 
+[time]:2025-12-20 18:24:1 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:start begin 
+[time]:2025-12-20 18:24:1 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:waiting! 
+[time]:2025-12-20 18:24:2 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:recv! 
+[time]:2025-12-20 18:24:2 [level]:INFO [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:peer ip: 36.187.97.20 peer port: -30697 
+[time]:2025-12-20 18:24:2 [level]:FATAL [filename]:test [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:in func 
+[time]:2025-12-20 18:24:2 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:waiting! 
+[time]:2025-12-20 18:24:2 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:recv! 
+[time]:2025-12-20 18:24:2 [level]:INFO [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:peer ip: 36.187.97.20 peer port: -30697 
+[time]:2025-12-20 18:24:2 [level]:FATAL [filename]:test [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:in func 
+[time]:2025-12-20 18:24:2 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:waiting! 
+[time]:2025-12-20 18:55:3 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:recv! 
+[time]:2025-12-20 18:55:3 [level]:INFO [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:peer ip: 36.187.97.20 peer port: -30697 
+[time]:2025-12-20 18:55:3 [level]:FATAL [filename]:test [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:in func 
+[time]:2025-12-20 18:55:3 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:waiting! 
+[time]:2025-12-20 18:55:4 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:recv! 
+[time]:2025-12-20 18:55:4 [level]:INFO [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:peer ip: 36.187.97.20 peer port: -30697 
+[time]:2025-12-20 18:55:4 [level]:FATAL [filename]:test [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:in func 
+[time]:2025-12-20 18:55:4 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:waiting! 
