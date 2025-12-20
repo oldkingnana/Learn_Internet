@@ -19,7 +19,7 @@ std::string func(std::string msg)
 
 int main()
 {
-	oldking::UdpServer server(1080, func);
+	oldking::UdpServer server(7777, func);
 	if(server.init() == false)
 	{
 		return -1;
