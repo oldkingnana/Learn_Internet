@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
 	std::string output_buf;
 	while(1)
 	{
-		std::cin >> input_buf;
+		std::getline(std::cin, input_buf);
 		if(input_buf != "quit")
 		{
 			client << input_buf;
