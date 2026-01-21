@@ -1,5 +1,6 @@
 #include "TcpServer.hh"
 #include <iostream>
+#include <ostream>
 #include <string>
 
 std::string func(std::string msg)
@@ -30,6 +31,10 @@ int main(int argc, char *argv[])
 
 	ip_str = ip_str.substr(4);
 	port_str = port_str.substr(6);
+
+	std::cout << "ip -> " << ip_str << std::endl;
+	std::cout << "port -> " << port_str << std::endl;
+
 
 	oldking::TcpServer tcp(ip_str, std::stoi(port_str), func);
 	if(!tcp.init())
