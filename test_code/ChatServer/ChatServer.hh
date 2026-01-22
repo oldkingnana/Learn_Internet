@@ -6,7 +6,8 @@
 #include <string>
 #include <memory>
 #include <queue>
-#include <map>
+#include <list>
+#include <utility>
 
 namespace oldking 
 {
@@ -37,7 +38,8 @@ namespace oldking
 		void send_msg_(const std::string& msg, const std::string& ip, const int16_t port);
 
 		static void* send_task_(void* arg);
-		
+	
+		// 任务参数 
 		struct task_arg
 		{
 			ChatServer* self;	
@@ -48,9 +50,9 @@ namespace oldking
 
 	private:
 		std::unique_ptr<UdpServer> Udp_;	
-		std::queue<std::pair<std::string, std::string>> waiting_queue_;
+		std::queue<std::tuple<std::string, std::string, int16_t>> waiting_queue_;
 		oldking::MyThreadPool TP_;
-		std::map<std::string, int16_t> client_map_;
+		std::list<std::pair<std::string, int16_t>> client_list_;
 	};
 }
 

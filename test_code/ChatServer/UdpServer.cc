@@ -92,6 +92,10 @@ void oldking::UdpServer::recv(std::string& buff, std::string& sender_ip, int16_t
 		oldking::MyEasyLog::GetInstance().WriteLog(LOG_FATAL, "UdpServer", "recv err");
 		return ;
 	}
+	else 
+	{
+		c_buff[recv_result] = '\0';
+	}
 
 	buff = c_buff;
 	sender_ip = inet_ntoa(peer.sin_addr);

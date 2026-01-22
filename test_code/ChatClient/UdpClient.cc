@@ -44,8 +44,60 @@ bool oldking::UdpClient::init(std::string ip, uint16_t port)
 	server_.sin_family = AF_INET;
 
 	oldking::MyEasyLog::GetInstance().WriteLog(LOG_FATAL, "UdpClient", "init finish");
+	oldking::MyEasyLog::GetInstance().WriteLog(LOG_INFO, "UdpClient", "is_init_:" + std::string(((is_init_) ? "true" : "false")));
 
 	return true;
+}
+
+int16_t oldking::UdpClient::Send(const std::string& msg)
+{
+	oldking::MyEasyLog::GetInstance().WriteLog(LOG_FATAL, "UdpClient", "Send begin");
+	
+	if(!is_init_)
+	{
+		oldking::MyEasyLog::GetInstance().WriteLog(LOG_WARNING, "UdpClient", "UdpClient is not init!");
+		return -1;
+	}
+
+	int16_t sendresult = sendto(sockfd_, msg.c_str(), msg.length(), 0, (struct sockaddr *)&server_, sizeof(server_));
+
+	oldking::MyEasyLog::GetInstance().WriteLog(LOG_FATAL, "UdpClient", "Send finish");
+
+	return sendresult;
+}
+	
+int16_t oldking::UdpClient::Recv(std::string& msg)
+{
+	oldking::MyEasyLog::GetInstance().WriteLog(LOG_FATAL, "UdpClient", "Recv begin");
+	oldking::MyEasyLog::GetInstance().WriteLog(LOG_INFO, "UdpClient", "is_init_:" + std::string(((is_init_) ? "true" : "false")));
+
+	if(!is_init_)
+	{
+		oldking::MyEasyLog::GetInstance().WriteLog(LOG_WARNING, "UdpClient", "UdpClient is not init!");
+		return -1;
+	}
+	
+	char buffer[1024];
+
+	sockaddr_in server;
+	bzero(&server, sizeof(server));
+	socklen_t server_len;
+	bzero(&server_len, sizeof(server_len));
+
+	int16_t recv_len = recvfrom(sockfd_, buffer, sizeof(buffer) - 1, 0, (struct sockaddr *)&server, &server_len);	
+	if(recv_len > 0)
+	{
+		buffer[recv_len] = 0;
+		msg = buffer;
+	}
+	else 
+	{
+		return -1;
+	}
+
+	oldking::MyEasyLog::GetInstance().WriteLog(LOG_FATAL, "UdpClient", "Recv finish");
+	
+	return recv_len;
 }
 
 const oldking::UdpClient& oldking::UdpClient::operator<<(const std::string& msg)

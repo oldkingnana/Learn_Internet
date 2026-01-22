@@ -1,38 +1,23 @@
-#include <string>
-#include <iostream>
+#include "ChatClient.hh"
 
-#include "UdpClient.hh"
+#include <iostream>
 
 int main(int argc, char* argv[])
 {
-	if(argc < 3)
+	if(argc != 3)
 	{
-		std::cerr << "argv failed! program exit!" << std::endl;	
+		std::cout << "usage: ./ChatClient <ip> <port>" << std::endl;
 		return -1;
 	}
 
-	oldking::UdpClient client;
-	client.init(argv[1], std::stoi(argv[2]));
+	std::string ip = argv[1];
 
-	std::string input_buf;
-	std::string output_buf;
-	while(1)
-	{
-		std::getline(std::cin, input_buf);
-		if(input_buf != "quit")
-		{
-			client << input_buf;
-			usleep(1000);
-			client >> output_buf;
-			std::cout << "server say: " << output_buf << std::endl;
-		}
-		else
-		{
-			std::cout << "quit!" << std::endl;
-			break;
-		}
-	}
+	int16_t port = std::stoi(std::string(argv[2]));
+
+	oldking::ChatClient CC(ip, port);
+
+	CC.start();
+
 	return 0;
 }
-
 
