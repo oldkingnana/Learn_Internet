@@ -5,6 +5,7 @@
 #include <string>
 #include <sys/socket.h>
 #include <netinet/in.h>
+#include <unistd.h>
 
 #include "myeasylog.hpp"
 #include "UdpBase.hh"
@@ -28,14 +29,22 @@ namespace oldking
 		{
 			oldking::MyEasyLog::GetInstance().WriteLog(LOG_FATAL, "UdpClient", "constructor");
 		}
-
+		
+		void stop() {close(sockfd_);}
+		
 		~UdpClient()
 		{
 			oldking::MyEasyLog::GetInstance().WriteLog(LOG_FATAL, "UdpClient", "distructor");
 		}
 
 		bool init(std::string ip, uint16_t port);
-		
+	
+		int16_t Send(const std::string& msg);
+
+		int16_t Recv(std::string& msg);
+
+	private:
+
 		const UdpClient& operator<<(const std::string& msg);
 		
 		const UdpClient& operator>>(std::string& msg);

@@ -15,20 +15,17 @@ void oldking::ChatServer::start()
 	{
 		get_msg_();
 
-		for(const auto& it : client_list_)
+		for(const auto& it : client_map_)
 		{
 			task_arg* arg = new task_arg
 			{
 				this,
-				std::get<0>(waiting_queue_.front()), 
+				waiting_queue_.front().first, 
 				it.first,
 				it.second
 			};
 
-			if(
-					std::get<1>(waiting_queue_.front()) != it.first || 
-					std::get<2>(waiting_queue_.front()) != it.second
-				)
+			if(waiting_queue_.front().second != it.first)
 				TP_.SendTask(send_task_, (void*)arg);
 			else 
 				delete arg;
@@ -58,16 +55,24 @@ void oldking::ChatServer::get_msg_()
 			"ChatServer",
 			"buff: " + buff + " ip: " + sender_ip + " port: " + std::to_string(sender_port));
 
-	if(std::find(client_list_.begin(), client_list_.end(), std::pair<std::string, int16_t>(sender_ip, sender_port)) == client_list_.end())
+	if(client_map_.find(sender_ip) == client_map_.end())
 	{
-		client_list_.push_back(std::pair<std::string, uint16_t>(sender_ip, sender_port));	
+		client_map_[sender_ip] = sender_port;	
+		oldking::MyEasyLog::GetInstance().WriteLog(
+				LOG_DEBUG,
+				"ChatServer",
+				std::string("new client   ") + " ip: " + sender_ip + " port: " + std::to_string(sender_port));
+	}
+	else if(client_map_[sender_ip] != sender_port)
+	{
+		client_map_[sender_ip] = sender_port;	
 		oldking::MyEasyLog::GetInstance().WriteLog(
 				LOG_DEBUG,
 				"ChatServer",
 				std::string("new client   ") + " ip: " + sender_ip + " port: " + std::to_string(sender_port));
 	}
 
-	waiting_queue_.emplace(std::move(buff), std::move(sender_ip), std::move(sender_port));
+	waiting_queue_.emplace(std::move(buff), std::move(sender_ip));
 	
 	oldking::MyEasyLog::GetInstance().WriteLog(
 			LOG_INFO,
@@ -87,7 +92,7 @@ void oldking::ChatServer::send_msg_(const std::string& msg, const std::string& i
 			"ChatServer",
 			"msg: " + msg + " ip: " + ip + " port: " + std::to_string(port));
 
-	Udp_->send(ip + "/" + std::to_string(port) + " say: " + msg, ip, port);		
+	Udp_->send(ip + ": " + msg, ip, port);		
 	
 	oldking::MyEasyLog::GetInstance().WriteLog(
 			LOG_INFO,

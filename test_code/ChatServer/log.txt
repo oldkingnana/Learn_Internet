@@ -1,94 +1,248 @@
-[time]:2025-12-20 17:33:5 [level]:FATAL [filename]:UdpServer [pid]:1825120 [tid]:127485565237056 [line]:NONE [message]:UdpServer constructer 
-[time]:2025-12-20 17:33:5 [level]:FATAL [filename]:UdpServer [pid]:1825120 [tid]:127485565237056 [line]:NONE [message]:init begin 
-[time]:2025-12-20 17:33:5 [level]:FATAL [filename]:UdpServer [pid]:1825120 [tid]:127485565237056 [line]:NONE [message]:init finish 
-[time]:2025-12-20 17:33:5 [level]:FATAL [filename]:UdpServer [pid]:1825120 [tid]:127485565237056 [line]:NONE [message]:start begin 
-[time]:2025-12-20 17:34:2 [level]:FATAL [filename]:UdpServer [pid]:1825127 [tid]:132635784304448 [line]:NONE [message]:UdpServer constructer 
-[time]:2025-12-20 17:34:2 [level]:FATAL [filename]:UdpServer [pid]:1825127 [tid]:132635784304448 [line]:NONE [message]:init begin 
-[time]:2025-12-20 17:34:2 [level]:FATAL [filename]:UdpServer [pid]:1825127 [tid]:132635784304448 [line]:NONE [message]:init finish 
-[time]:2025-12-20 17:34:2 [level]:FATAL [filename]:UdpServer [pid]:1825127 [tid]:132635784304448 [line]:NONE [message]:start begin 
-[time]:2025-12-20 17:42:4 [level]:FATAL [filename]:UdpServer [pid]:1825344 [tid]:130025385383744 [line]:NONE [message]:UdpServer constructer 
-[time]:2025-12-20 17:42:4 [level]:FATAL [filename]:UdpServer [pid]:1825344 [tid]:130025385383744 [line]:NONE [message]:init begin 
-[time]:2025-12-20 17:42:4 [level]:FATAL [filename]:UdpServer [pid]:1825344 [tid]:130025385383744 [line]:NONE [message]:init finish 
-[time]:2025-12-20 17:42:4 [level]:FATAL [filename]:UdpServer [pid]:1825344 [tid]:130025385383744 [line]:NONE [message]:start begin 
-[time]:2025-12-20 17:46:0 [level]:FATAL [filename]:UdpServer [pid]:1825495 [tid]:129237284083520 [line]:NONE [message]:UdpServer constructer 
-[time]:2025-12-20 17:46:0 [level]:FATAL [filename]:UdpServer [pid]:1825495 [tid]:129237284083520 [line]:NONE [message]:init begin 
-[time]:2025-12-20 17:46:0 [level]:FATAL [filename]:UdpServer [pid]:1825495 [tid]:129237284083520 [line]:NONE [message]:init finish 
-[time]:2025-12-20 17:46:0 [level]:FATAL [filename]:UdpServer [pid]:1825495 [tid]:129237284083520 [line]:NONE [message]:start begin 
-[time]:2025-12-20 17:46:2 [level]:FATAL [filename]:UdpServer [pid]:1825502 [tid]:136895563315008 [line]:NONE [message]:UdpServer constructer 
-[time]:2025-12-20 17:46:2 [level]:FATAL [filename]:UdpServer [pid]:1825502 [tid]:136895563315008 [line]:NONE [message]:init begin 
-[time]:2025-12-20 17:46:2 [level]:FATAL [filename]:UdpServer [pid]:1825502 [tid]:136895563315008 [line]:NONE [message]:init finish 
-[time]:2025-12-20 17:46:2 [level]:FATAL [filename]:UdpServer [pid]:1825502 [tid]:136895563315008 [line]:NONE [message]:start begin 
-[time]:2025-12-20 17:47:5 [level]:FATAL [filename]:UdpServer [pid]:1825581 [tid]:126789331048256 [line]:NONE [message]:UdpServer constructer 
-[time]:2025-12-20 17:47:5 [level]:FATAL [filename]:UdpServer [pid]:1825581 [tid]:126789331048256 [line]:NONE [message]:init begin 
-[time]:2025-12-20 17:47:5 [level]:FATAL [filename]:UdpServer [pid]:1825581 [tid]:126789331048256 [line]:NONE [message]:init finish 
-[time]:2025-12-20 17:47:5 [level]:FATAL [filename]:UdpServer [pid]:1825581 [tid]:126789331048256 [line]:NONE [message]:start begin 
-[time]:2025-12-20 17:47:5 [level]:FATAL [filename]:UdpServer [pid]:1825581 [tid]:126789331048256 [line]:NONE [message]:waiting! 
-[time]:2025-12-20 17:48:0 [level]:FATAL [filename]:UdpServer [pid]:1825584 [tid]:123208515712832 [line]:NONE [message]:UdpServer constructer 
-[time]:2025-12-20 17:48:0 [level]:FATAL [filename]:UdpServer [pid]:1825584 [tid]:123208515712832 [line]:NONE [message]:init begin 
-[time]:2025-12-20 17:48:0 [level]:FATAL [filename]:UdpServer [pid]:1825584 [tid]:123208515712832 [line]:NONE [message]:init finish 
-[time]:2025-12-20 17:48:0 [level]:FATAL [filename]:UdpServer [pid]:1825584 [tid]:123208515712832 [line]:NONE [message]:start begin 
-[time]:2025-12-20 17:48:0 [level]:FATAL [filename]:UdpServer [pid]:1825584 [tid]:123208515712832 [line]:NONE [message]:waiting! 
-[time]:2025-12-20 18:04:0 [level]:FATAL [filename]:UdpServer [pid]:1826867 [tid]:140623266047808 [line]:NONE [message]:UdpServer constructer 
-[time]:2025-12-20 18:04:0 [level]:FATAL [filename]:UdpServer [pid]:1826867 [tid]:140623266047808 [line]:NONE [message]:init begin 
-[time]:2025-12-20 18:04:0 [level]:FATAL [filename]:UdpServer [pid]:1826867 [tid]:140623266047808 [line]:NONE [message]:init finish 
-[time]:2025-12-20 18:04:0 [level]:FATAL [filename]:UdpServer [pid]:1826867 [tid]:140623266047808 [line]:NONE [message]:start begin 
-[time]:2025-12-20 18:04:0 [level]:FATAL [filename]:UdpServer [pid]:1826867 [tid]:140623266047808 [line]:NONE [message]:waiting! 
-[time]:2025-12-20 18:17:0 [level]:FATAL [filename]:UdpServer [pid]:1827030 [tid]:131266180790080 [line]:NONE [message]:UdpServer constructer 
-[time]:2025-12-20 18:17:0 [level]:FATAL [filename]:UdpServer [pid]:1827030 [tid]:131266180790080 [line]:NONE [message]:init begin 
-[time]:2025-12-20 18:17:0 [level]:FATAL [filename]:UdpServer [pid]:1827030 [tid]:131266180790080 [line]:NONE [message]:init finish 
-[time]:2025-12-20 18:17:0 [level]:FATAL [filename]:UdpServer [pid]:1827030 [tid]:131266180790080 [line]:NONE [message]:start begin 
-[time]:2025-12-20 18:17:0 [level]:FATAL [filename]:UdpServer [pid]:1827030 [tid]:131266180790080 [line]:NONE [message]:waiting! 
-[time]:2025-12-20 18:17:2 [level]:FATAL [filename]:UdpServer [pid]:1827030 [tid]:131266180790080 [line]:NONE [message]:recv! 
-[time]:2025-12-20 18:17:2 [level]:INFO [filename]:UdpServer [pid]:1827030 [tid]:131266180790080 [line]:NONE [message]:peer ip: 36.187.97.20 peer port: -9520 
-[time]:2025-12-20 18:17:2 [level]:FATAL [filename]:test [pid]:1827030 [tid]:131266180790080 [line]:NONE [message]:in func 
-[time]:2025-12-20 18:17:2 [level]:FATAL [filename]:UdpServer [pid]:1827030 [tid]:131266180790080 [line]:NONE [message]:waiting! 
-[time]:2025-12-20 18:17:3 [level]:FATAL [filename]:UdpServer [pid]:1827030 [tid]:131266180790080 [line]:NONE [message]:recv! 
-[time]:2025-12-20 18:17:3 [level]:INFO [filename]:UdpServer [pid]:1827030 [tid]:131266180790080 [line]:NONE [message]:peer ip: 36.187.97.20 peer port: -9520 
-[time]:2025-12-20 18:17:3 [level]:FATAL [filename]:test [pid]:1827030 [tid]:131266180790080 [line]:NONE [message]:in func 
-[time]:2025-12-20 18:17:3 [level]:FATAL [filename]:UdpServer [pid]:1827030 [tid]:131266180790080 [line]:NONE [message]:waiting! 
-[time]:2025-12-20 18:17:3 [level]:FATAL [filename]:UdpServer [pid]:1827030 [tid]:131266180790080 [line]:NONE [message]:recv! 
-[time]:2025-12-20 18:17:3 [level]:INFO [filename]:UdpServer [pid]:1827030 [tid]:131266180790080 [line]:NONE [message]:peer ip: 36.187.97.20 peer port: -9520 
-[time]:2025-12-20 18:17:3 [level]:FATAL [filename]:test [pid]:1827030 [tid]:131266180790080 [line]:NONE [message]:in func 
-[time]:2025-12-20 18:17:3 [level]:FATAL [filename]:UdpServer [pid]:1827030 [tid]:131266180790080 [line]:NONE [message]:waiting! 
-[time]:2025-12-20 18:17:3 [level]:FATAL [filename]:UdpServer [pid]:1827030 [tid]:131266180790080 [line]:NONE [message]:recv! 
-[time]:2025-12-20 18:17:3 [level]:INFO [filename]:UdpServer [pid]:1827030 [tid]:131266180790080 [line]:NONE [message]:peer ip: 36.187.97.20 peer port: -9520 
-[time]:2025-12-20 18:17:3 [level]:FATAL [filename]:test [pid]:1827030 [tid]:131266180790080 [line]:NONE [message]:in func 
-[time]:2025-12-20 18:17:3 [level]:FATAL [filename]:UdpServer [pid]:1827030 [tid]:131266180790080 [line]:NONE [message]:waiting! 
-[time]:2025-12-20 18:21:0 [level]:FATAL [filename]:UdpServer [pid]:1827213 [tid]:135654527256384 [line]:NONE [message]:UdpServer constructer 
-[time]:2025-12-20 18:21:0 [level]:FATAL [filename]:UdpServer [pid]:1827213 [tid]:135654527256384 [line]:NONE [message]:init begin 
-[time]:2025-12-20 18:21:0 [level]:FATAL [filename]:UdpServer [pid]:1827213 [tid]:135654527256384 [line]:NONE [message]:init finish 
-[time]:2025-12-20 18:21:0 [level]:FATAL [filename]:UdpServer [pid]:1827213 [tid]:135654527256384 [line]:NONE [message]:start begin 
-[time]:2025-12-20 18:21:0 [level]:FATAL [filename]:UdpServer [pid]:1827213 [tid]:135654527256384 [line]:NONE [message]:waiting! 
-[time]:2025-12-20 18:21:1 [level]:FATAL [filename]:UdpServer [pid]:1827213 [tid]:135654527256384 [line]:NONE [message]:recv! 
-[time]:2025-12-20 18:21:1 [level]:INFO [filename]:UdpServer [pid]:1827213 [tid]:135654527256384 [line]:NONE [message]:peer ip: 36.187.97.20 peer port: -15085 
-[time]:2025-12-20 18:21:1 [level]:FATAL [filename]:test [pid]:1827213 [tid]:135654527256384 [line]:NONE [message]:in func 
-[time]:2025-12-20 18:21:1 [level]:FATAL [filename]:UdpServer [pid]:1827213 [tid]:135654527256384 [line]:NONE [message]:waiting! 
-[time]:2025-12-20 18:21:1 [level]:FATAL [filename]:UdpServer [pid]:1827213 [tid]:135654527256384 [line]:NONE [message]:recv! 
-[time]:2025-12-20 18:21:1 [level]:INFO [filename]:UdpServer [pid]:1827213 [tid]:135654527256384 [line]:NONE [message]:peer ip: 36.187.97.20 peer port: -15085 
-[time]:2025-12-20 18:21:1 [level]:FATAL [filename]:test [pid]:1827213 [tid]:135654527256384 [line]:NONE [message]:in func 
-[time]:2025-12-20 18:21:1 [level]:FATAL [filename]:UdpServer [pid]:1827213 [tid]:135654527256384 [line]:NONE [message]:waiting! 
-[time]:2025-12-20 18:21:1 [level]:FATAL [filename]:UdpServer [pid]:1827213 [tid]:135654527256384 [line]:NONE [message]:recv! 
-[time]:2025-12-20 18:21:1 [level]:INFO [filename]:UdpServer [pid]:1827213 [tid]:135654527256384 [line]:NONE [message]:peer ip: 36.187.97.20 peer port: -15085 
-[time]:2025-12-20 18:21:1 [level]:FATAL [filename]:test [pid]:1827213 [tid]:135654527256384 [line]:NONE [message]:in func 
-[time]:2025-12-20 18:21:1 [level]:FATAL [filename]:UdpServer [pid]:1827213 [tid]:135654527256384 [line]:NONE [message]:waiting! 
-[time]:2025-12-20 18:24:1 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:UdpServer constructer 
-[time]:2025-12-20 18:24:1 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:init begin 
-[time]:2025-12-20 18:24:1 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:init finish 
-[time]:2025-12-20 18:24:1 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:start begin 
-[time]:2025-12-20 18:24:1 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:waiting! 
-[time]:2025-12-20 18:24:2 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:recv! 
-[time]:2025-12-20 18:24:2 [level]:INFO [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:peer ip: 36.187.97.20 peer port: -30697 
-[time]:2025-12-20 18:24:2 [level]:FATAL [filename]:test [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:in func 
-[time]:2025-12-20 18:24:2 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:waiting! 
-[time]:2025-12-20 18:24:2 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:recv! 
-[time]:2025-12-20 18:24:2 [level]:INFO [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:peer ip: 36.187.97.20 peer port: -30697 
-[time]:2025-12-20 18:24:2 [level]:FATAL [filename]:test [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:in func 
-[time]:2025-12-20 18:24:2 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:waiting! 
-[time]:2025-12-20 18:55:3 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:recv! 
-[time]:2025-12-20 18:55:3 [level]:INFO [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:peer ip: 36.187.97.20 peer port: -30697 
-[time]:2025-12-20 18:55:3 [level]:FATAL [filename]:test [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:in func 
-[time]:2025-12-20 18:55:3 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:waiting! 
-[time]:2025-12-20 18:55:4 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:recv! 
-[time]:2025-12-20 18:55:4 [level]:INFO [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:peer ip: 36.187.97.20 peer port: -30697 
-[time]:2025-12-20 18:55:4 [level]:FATAL [filename]:test [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:in func 
-[time]:2025-12-20 18:55:4 [level]:FATAL [filename]:UdpServer [pid]:1827236 [tid]:126962021234496 [line]:NONE [message]:waiting! 
+
+[time]:2026-01-22 21:56:2 [level]:FATAL [filename]:UdpServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:UdpServer constructer 
+[time]:2026-01-22 21:56:2 [level]:INFO [filename]:mythread_pool [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:begin to constructor 
+[time]:2026-01-22 21:56:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:begin to constructor 
+[time]:2026-01-22 21:56:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:begin to constructor 
+[time]:2026-01-22 21:56:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:begin to constructor 
+[time]:2026-01-22 21:56:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: get info 
+[time]:2026-01-22 21:56:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: detach 
+[time]:2026-01-22 21:56:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: change stat to waitting 
+[time]:2026-01-22 21:56:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:change stat 
+[time]:2026-01-22 21:56:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 21:56:2 [level]:FATAL [filename]:UdpServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:init begin 
+[time]:2026-01-22 21:56:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: get info 
+[time]:2026-01-22 21:56:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: detach 
+[time]:2026-01-22 21:56:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: change stat to waitting 
+[time]:2026-01-22 21:56:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:change stat 
+[time]:2026-01-22 21:56:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 21:56:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: get info 
+[time]:2026-01-22 21:56:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: detach 
+[time]:2026-01-22 21:56:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: change stat to waitting 
+[time]:2026-01-22 21:56:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:change stat 
+[time]:2026-01-22 21:56:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 21:56:2 [level]:FATAL [filename]:UdpServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:init finish 
+[time]:2026-01-22 21:56:2 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:get_msg_ begin 
+[time]:2026-01-22 21:57:4 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:buff: a ip: 127.0.0.1 port: -8687 
+[time]:2026-01-22 21:57:4 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:new client    ip: 127.0.0.1 port: -8687 
+[time]:2026-01-22 21:57:4 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:get_msg_ finish 
+[time]:2026-01-22 21:57:4 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:get_msg_ begin 
+[time]:2026-01-22 21:57:5 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:buff: hh ip: 127.0.0.1 port: -25894 
+[time]:2026-01-22 21:57:5 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:new client    ip: 127.0.0.1 port: -25894 
+[time]:2026-01-22 21:57:5 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:get_msg_ finish 
+[time]:2026-01-22 21:57:5 [level]:INFO [filename]:mythread_pool [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 21:57:5 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:get_msg_ begin 
+[time]:2026-01-22 21:57:5 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 21:57:5 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:change stat 
+[time]:2026-01-22 21:57:5 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 21:57:5 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 21:57:5 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 21:57:5 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 21:57:5 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:msg: hh ip: 127.0.0.1 port: -8687 
+[time]:2026-01-22 21:57:5 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 21:57:5 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 21:58:0 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:buff: i love u ip: 127.0.0.1 port: -25894 
+[time]:2026-01-22 21:58:0 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:get_msg_ finish 
+[time]:2026-01-22 21:58:0 [level]:INFO [filename]:mythread_pool [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 21:58:0 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:get_msg_ begin 
+[time]:2026-01-22 21:58:0 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 21:58:0 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:change stat 
+[time]:2026-01-22 21:58:0 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 21:58:0 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 21:58:0 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 21:58:0 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 21:58:0 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:msg: i love u ip: 127.0.0.1 port: -8687 
+[time]:2026-01-22 21:58:0 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 21:58:0 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 21:58:2 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:buff: ok ip: 127.0.0.1 port: -8687 
+[time]:2026-01-22 21:58:2 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:get_msg_ finish 
+[time]:2026-01-22 21:58:2 [level]:INFO [filename]:mythread_pool [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 21:58:2 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:get_msg_ begin 
+[time]:2026-01-22 21:58:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 21:58:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:change stat 
+[time]:2026-01-22 21:58:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 21:58:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 21:58:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 21:58:2 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 21:58:2 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:msg: ok ip: 127.0.0.1 port: -25894 
+[time]:2026-01-22 21:58:2 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 21:58:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:00:0 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:buff: haha ip: 127.0.0.1 port: -24432 
+[time]:2026-01-22 22:00:0 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:new client    ip: 127.0.0.1 port: -24432 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:get_msg_ finish 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread_pool [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread_pool [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:get_msg_ begin 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:00:0 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:msg: haha ip: 127.0.0.1 port: -8687 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:00:0 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:msg: haha ip: 127.0.0.1 port: -25894 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:00:1 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:buff: ni hao ip: 127.0.0.1 port: -25894 
+[time]:2026-01-22 22:00:1 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:get_msg_ finish 
+[time]:2026-01-22 22:00:1 [level]:INFO [filename]:mythread_pool [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:00:1 [level]:INFO [filename]:mythread_pool [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:00:1 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:00:1 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:00:1 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:00:1 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:00:1 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:00:1 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:00:1 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:msg: ni hao ip: 127.0.0.1 port: -8687 
+[time]:2026-01-22 22:00:1 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:get_msg_ begin 
+[time]:2026-01-22 22:00:1 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:00:1 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:00:1 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:00:1 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:00:1 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:00:1 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:00:1 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:00:1 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:00:1 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:msg: ni hao ip: 127.0.0.1 port: -24432 
+[time]:2026-01-22 22:00:1 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:00:1 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:01:2 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:buff: ni hao wo shi yi ge xin ren ip: 127.0.0.1 port: -8741 
+[time]:2026-01-22 22:01:2 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:new client    ip: 127.0.0.1 port: -8741 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:get_msg_ finish 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:mythread_pool [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:mythread_pool [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:mythread_pool [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:01:2 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:msg: ni hao wo shi yi ge xin ren ip: 127.0.0.1 port: -8687 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:get_msg_ begin 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:01:2 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:msg: ni hao wo shi yi ge xin ren ip: 127.0.0.1 port: -25894 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:01:2 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:msg: ni hao wo shi yi ge xin ren ip: 127.0.0.1 port: -24432 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:01:3 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:buff: 你好 ip: 127.0.0.1 port: -8741 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:get_msg_ finish 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:mythread_pool [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:mythread_pool [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:mythread_pool [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:01:3 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:msg: 你好 ip: 127.0.0.1 port: -8687 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:01:3 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:msg: 你好 ip: 127.0.0.1 port: -25894 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:get_msg_ begin 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:01:3 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:msg: 你好 ip: 127.0.0.1 port: -24432 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:02:2 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:buff: 今天怎么杀人 ip: 127.0.0.1 port: -8741 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:get_msg_ finish 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:mythread_pool [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:mythread_pool [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:mythread_pool [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:02:2 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:msg: 今天怎么杀人 ip: 127.0.0.1 port: -8687 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:get_msg_ begin 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:02:2 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:msg: 今天怎么杀人 ip: 127.0.0.1 port: -25894 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:02:2 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:msg: 今天怎么杀人 ip: 127.0.0.1 port: -24432 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:02:3 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:buff: 不知道 ip: 127.0.0.1 port: -24432 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:get_msg_ finish 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:mythread_pool [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:mythread_pool [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:mythread_pool [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:02:3 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:msg: 不知道 ip: 127.0.0.1 port: -8687 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731340183360 [line]:NONE [message]:get_msg_ begin 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:02:3 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:msg: 不知道 ip: 127.0.0.1 port: -25894 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:02:3 [level]:DEBUG [filename]:ChatServer [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:msg: 不知道 ip: 127.0.0.1 port: -8741 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731319981760 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: wait & lock for task_queue 

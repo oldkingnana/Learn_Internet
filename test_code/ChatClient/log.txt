@@ -1,0 +1,164 @@
+
+[time]:2026-01-22 21:56:3 [level]:FATAL [filename]:UdpClient [pid]:725387 [tid]:135770462644032 [line]:NONE [message]:constructor 
+[time]:2026-01-22 21:56:3 [level]:INFO [filename]:mythread_pool [pid]:725387 [tid]:135770462644032 [line]:NONE [message]:begin to constructor 
+[time]:2026-01-22 21:56:3 [level]:INFO [filename]:mythread.hpp [pid]:725387 [tid]:135770462644032 [line]:NONE [message]:begin to constructor 
+[time]:2026-01-22 21:56:3 [level]:FATAL [filename]:UdpClient [pid]:725387 [tid]:135770462644032 [line]:NONE [message]:init begin 
+[time]:2026-01-22 21:56:3 [level]:FATAL [filename]:UdpClient [pid]:725387 [tid]:135770462644032 [line]:NONE [message]:init finish 
+[time]:2026-01-22 21:56:3 [level]:INFO [filename]:UdpClient [pid]:725387 [tid]:135770462644032 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 21:56:3 [level]:INFO [filename]:mythread_pool [pid]:725387 [tid]:135770462644032 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 21:56:3 [level]:INFO [filename]:mythread.hpp [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:entry:: get info 
+[time]:2026-01-22 21:56:3 [level]:INFO [filename]:mythread.hpp [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:entry:: detach 
+[time]:2026-01-22 21:56:3 [level]:INFO [filename]:mythread.hpp [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:entry:: change stat to waitting 
+[time]:2026-01-22 21:56:3 [level]:INFO [filename]:mythread.hpp [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:change stat 
+[time]:2026-01-22 21:56:3 [level]:INFO [filename]:mythread.hpp [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 21:56:3 [level]:INFO [filename]:mythread.hpp [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 21:56:3 [level]:INFO [filename]:mythread.hpp [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:change stat 
+[time]:2026-01-22 21:56:3 [level]:INFO [filename]:mythread.hpp [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 21:56:3 [level]:INFO [filename]:mythread.hpp [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 21:56:3 [level]:INFO [filename]:mythread.hpp [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 21:56:3 [level]:FATAL [filename]:UdpClient [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:Recv begin 
+[time]:2026-01-22 21:56:3 [level]:INFO [filename]:UdpClient [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 21:56:4 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272807118656 [line]:NONE [message]:constructor 
+[time]:2026-01-22 21:56:4 [level]:INFO [filename]:mythread_pool [pid]:725390 [tid]:132272807118656 [line]:NONE [message]:begin to constructor 
+[time]:2026-01-22 21:56:4 [level]:INFO [filename]:mythread.hpp [pid]:725390 [tid]:132272807118656 [line]:NONE [message]:begin to constructor 
+[time]:2026-01-22 21:56:4 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272807118656 [line]:NONE [message]:init begin 
+[time]:2026-01-22 21:56:4 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272807118656 [line]:NONE [message]:init finish 
+[time]:2026-01-22 21:56:4 [level]:INFO [filename]:UdpClient [pid]:725390 [tid]:132272807118656 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 21:56:4 [level]:INFO [filename]:mythread_pool [pid]:725390 [tid]:132272807118656 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 21:56:4 [level]:INFO [filename]:mythread.hpp [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:entry:: get info 
+[time]:2026-01-22 21:56:4 [level]:INFO [filename]:mythread.hpp [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:entry:: detach 
+[time]:2026-01-22 21:56:4 [level]:INFO [filename]:mythread.hpp [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:entry:: change stat to waitting 
+[time]:2026-01-22 21:56:4 [level]:INFO [filename]:mythread.hpp [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:change stat 
+[time]:2026-01-22 21:56:4 [level]:INFO [filename]:mythread.hpp [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 21:56:4 [level]:INFO [filename]:mythread.hpp [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 21:56:4 [level]:INFO [filename]:mythread.hpp [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:change stat 
+[time]:2026-01-22 21:56:4 [level]:INFO [filename]:mythread.hpp [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 21:56:4 [level]:INFO [filename]:mythread.hpp [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 21:56:4 [level]:INFO [filename]:mythread.hpp [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 21:56:4 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:Recv begin 
+[time]:2026-01-22 21:56:4 [level]:INFO [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 21:57:4 [level]:DEBUG [filename]:ChatClient [pid]:725390 [tid]:132272807118656 [line]:NONE [message]:buff: a 
+[time]:2026-01-22 21:57:4 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272807118656 [line]:NONE [message]:Send begin 
+[time]:2026-01-22 21:57:4 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272807118656 [line]:NONE [message]:Send finish 
+[time]:2026-01-22 21:57:5 [level]:DEBUG [filename]:ChatClient [pid]:725387 [tid]:135770462644032 [line]:NONE [message]:buff: hh 
+[time]:2026-01-22 21:57:5 [level]:FATAL [filename]:UdpClient [pid]:725387 [tid]:135770462644032 [line]:NONE [message]:Send begin 
+[time]:2026-01-22 21:57:5 [level]:FATAL [filename]:UdpClient [pid]:725387 [tid]:135770462644032 [line]:NONE [message]:Send finish 
+[time]:2026-01-22 21:57:5 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:Recv finish 
+[time]:2026-01-22 21:57:5 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:Recv begin 
+[time]:2026-01-22 21:57:5 [level]:INFO [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 21:58:0 [level]:DEBUG [filename]:ChatClient [pid]:725387 [tid]:135770462644032 [line]:NONE [message]:buff: i love u 
+[time]:2026-01-22 21:58:0 [level]:FATAL [filename]:UdpClient [pid]:725387 [tid]:135770462644032 [line]:NONE [message]:Send begin 
+[time]:2026-01-22 21:58:0 [level]:FATAL [filename]:UdpClient [pid]:725387 [tid]:135770462644032 [line]:NONE [message]:Send finish 
+[time]:2026-01-22 21:58:0 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:Recv finish 
+[time]:2026-01-22 21:58:0 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:Recv begin 
+[time]:2026-01-22 21:58:0 [level]:INFO [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 21:58:2 [level]:DEBUG [filename]:ChatClient [pid]:725390 [tid]:132272807118656 [line]:NONE [message]:buff: ok 
+[time]:2026-01-22 21:58:2 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272807118656 [line]:NONE [message]:Send begin 
+[time]:2026-01-22 21:58:2 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272807118656 [line]:NONE [message]:Send finish 
+[time]:2026-01-22 21:58:2 [level]:FATAL [filename]:UdpClient [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:Recv finish 
+[time]:2026-01-22 21:58:2 [level]:FATAL [filename]:UdpClient [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:Recv begin 
+[time]:2026-01-22 21:58:2 [level]:INFO [filename]:UdpClient [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 22:00:0 [level]:FATAL [filename]:UdpClient [pid]:725725 [tid]:123599621777216 [line]:NONE [message]:constructor 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread_pool [pid]:725725 [tid]:123599621777216 [line]:NONE [message]:begin to constructor 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread.hpp [pid]:725725 [tid]:123599621777216 [line]:NONE [message]:begin to constructor 
+[time]:2026-01-22 22:00:0 [level]:FATAL [filename]:UdpClient [pid]:725725 [tid]:123599621777216 [line]:NONE [message]:init begin 
+[time]:2026-01-22 22:00:0 [level]:FATAL [filename]:UdpClient [pid]:725725 [tid]:123599621777216 [line]:NONE [message]:init finish 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:UdpClient [pid]:725725 [tid]:123599621777216 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread.hpp [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:entry:: get info 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread.hpp [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:entry:: detach 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread.hpp [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:entry:: change stat to waitting 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread.hpp [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread.hpp [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread_pool [pid]:725725 [tid]:123599621777216 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread.hpp [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread.hpp [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread.hpp [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread.hpp [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:mythread.hpp [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:00:0 [level]:FATAL [filename]:UdpClient [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:Recv begin 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:UdpClient [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 22:00:0 [level]:DEBUG [filename]:ChatClient [pid]:725725 [tid]:123599621777216 [line]:NONE [message]:buff: haha 
+[time]:2026-01-22 22:00:0 [level]:FATAL [filename]:UdpClient [pid]:725725 [tid]:123599621777216 [line]:NONE [message]:Send begin 
+[time]:2026-01-22 22:00:0 [level]:FATAL [filename]:UdpClient [pid]:725725 [tid]:123599621777216 [line]:NONE [message]:Send finish 
+[time]:2026-01-22 22:00:0 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:Recv finish 
+[time]:2026-01-22 22:00:0 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:Recv begin 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 22:00:0 [level]:FATAL [filename]:UdpClient [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:Recv finish 
+[time]:2026-01-22 22:00:0 [level]:FATAL [filename]:UdpClient [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:Recv begin 
+[time]:2026-01-22 22:00:0 [level]:INFO [filename]:UdpClient [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 22:00:1 [level]:DEBUG [filename]:ChatClient [pid]:725387 [tid]:135770462644032 [line]:NONE [message]:buff: ni hao 
+[time]:2026-01-22 22:00:1 [level]:FATAL [filename]:UdpClient [pid]:725387 [tid]:135770462644032 [line]:NONE [message]:Send begin 
+[time]:2026-01-22 22:00:1 [level]:FATAL [filename]:UdpClient [pid]:725387 [tid]:135770462644032 [line]:NONE [message]:Send finish 
+[time]:2026-01-22 22:00:1 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:Recv finish 
+[time]:2026-01-22 22:00:1 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:Recv begin 
+[time]:2026-01-22 22:00:1 [level]:INFO [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 22:00:1 [level]:FATAL [filename]:UdpClient [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:Recv finish 
+[time]:2026-01-22 22:00:1 [level]:FATAL [filename]:UdpClient [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:Recv begin 
+[time]:2026-01-22 22:00:1 [level]:INFO [filename]:UdpClient [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 22:01:1 [level]:FATAL [filename]:UdpClient [pid]:725820 [tid]:124799383848768 [line]:NONE [message]:constructor 
+[time]:2026-01-22 22:01:1 [level]:INFO [filename]:mythread_pool [pid]:725820 [tid]:124799383848768 [line]:NONE [message]:begin to constructor 
+[time]:2026-01-22 22:01:1 [level]:INFO [filename]:mythread.hpp [pid]:725820 [tid]:124799383848768 [line]:NONE [message]:begin to constructor 
+[time]:2026-01-22 22:01:1 [level]:FATAL [filename]:UdpClient [pid]:725820 [tid]:124799383848768 [line]:NONE [message]:init begin 
+[time]:2026-01-22 22:01:1 [level]:FATAL [filename]:UdpClient [pid]:725820 [tid]:124799383848768 [line]:NONE [message]:init finish 
+[time]:2026-01-22 22:01:1 [level]:INFO [filename]:UdpClient [pid]:725820 [tid]:124799383848768 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 22:01:1 [level]:INFO [filename]:mythread_pool [pid]:725820 [tid]:124799383848768 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:01:1 [level]:INFO [filename]:mythread.hpp [pid]:725820 [tid]:124799374329536 [line]:NONE [message]:entry:: get info 
+[time]:2026-01-22 22:01:1 [level]:INFO [filename]:mythread.hpp [pid]:725820 [tid]:124799374329536 [line]:NONE [message]:entry:: detach 
+[time]:2026-01-22 22:01:1 [level]:INFO [filename]:mythread.hpp [pid]:725820 [tid]:124799374329536 [line]:NONE [message]:entry:: change stat to waitting 
+[time]:2026-01-22 22:01:1 [level]:INFO [filename]:mythread.hpp [pid]:725820 [tid]:124799374329536 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:01:1 [level]:INFO [filename]:mythread.hpp [pid]:725820 [tid]:124799374329536 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:01:1 [level]:INFO [filename]:mythread.hpp [pid]:725820 [tid]:124799374329536 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:01:1 [level]:INFO [filename]:mythread.hpp [pid]:725820 [tid]:124799374329536 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:01:1 [level]:INFO [filename]:mythread.hpp [pid]:725820 [tid]:124799374329536 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:01:1 [level]:INFO [filename]:mythread.hpp [pid]:725820 [tid]:124799374329536 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:01:1 [level]:INFO [filename]:mythread.hpp [pid]:725820 [tid]:124799374329536 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:01:1 [level]:FATAL [filename]:UdpClient [pid]:725820 [tid]:124799374329536 [line]:NONE [message]:Recv begin 
+[time]:2026-01-22 22:01:1 [level]:INFO [filename]:UdpClient [pid]:725820 [tid]:124799374329536 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 22:01:2 [level]:DEBUG [filename]:ChatClient [pid]:725820 [tid]:124799383848768 [line]:NONE [message]:buff: ni hao wo shi yi ge xin ren 
+[time]:2026-01-22 22:01:2 [level]:FATAL [filename]:UdpClient [pid]:725820 [tid]:124799383848768 [line]:NONE [message]:Send begin 
+[time]:2026-01-22 22:01:2 [level]:FATAL [filename]:UdpClient [pid]:725820 [tid]:124799383848768 [line]:NONE [message]:Send finish 
+[time]:2026-01-22 22:01:2 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:Recv finish 
+[time]:2026-01-22 22:01:2 [level]:FATAL [filename]:UdpClient [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:Recv finish 
+[time]:2026-01-22 22:01:2 [level]:FATAL [filename]:UdpClient [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:Recv begin 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:UdpClient [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 22:01:2 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:Recv begin 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 22:01:2 [level]:FATAL [filename]:UdpClient [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:Recv finish 
+[time]:2026-01-22 22:01:2 [level]:FATAL [filename]:UdpClient [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:Recv begin 
+[time]:2026-01-22 22:01:2 [level]:INFO [filename]:UdpClient [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 22:01:3 [level]:DEBUG [filename]:ChatClient [pid]:725820 [tid]:124799383848768 [line]:NONE [message]:buff: 你好 
+[time]:2026-01-22 22:01:3 [level]:FATAL [filename]:UdpClient [pid]:725820 [tid]:124799383848768 [line]:NONE [message]:Send begin 
+[time]:2026-01-22 22:01:3 [level]:FATAL [filename]:UdpClient [pid]:725820 [tid]:124799383848768 [line]:NONE [message]:Send finish 
+[time]:2026-01-22 22:01:3 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:Recv finish 
+[time]:2026-01-22 22:01:3 [level]:FATAL [filename]:UdpClient [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:Recv finish 
+[time]:2026-01-22 22:01:3 [level]:FATAL [filename]:UdpClient [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:Recv begin 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:UdpClient [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 22:01:3 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:Recv begin 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 22:01:3 [level]:FATAL [filename]:UdpClient [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:Recv finish 
+[time]:2026-01-22 22:01:3 [level]:FATAL [filename]:UdpClient [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:Recv begin 
+[time]:2026-01-22 22:01:3 [level]:INFO [filename]:UdpClient [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 22:02:2 [level]:DEBUG [filename]:ChatClient [pid]:725820 [tid]:124799383848768 [line]:NONE [message]:buff: 今天怎么杀人 
+[time]:2026-01-22 22:02:2 [level]:FATAL [filename]:UdpClient [pid]:725820 [tid]:124799383848768 [line]:NONE [message]:Send begin 
+[time]:2026-01-22 22:02:2 [level]:FATAL [filename]:UdpClient [pid]:725820 [tid]:124799383848768 [line]:NONE [message]:Send finish 
+[time]:2026-01-22 22:02:2 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:Recv finish 
+[time]:2026-01-22 22:02:2 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:Recv begin 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 22:02:2 [level]:FATAL [filename]:UdpClient [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:Recv finish 
+[time]:2026-01-22 22:02:2 [level]:FATAL [filename]:UdpClient [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:Recv begin 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:UdpClient [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 22:02:2 [level]:FATAL [filename]:UdpClient [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:Recv finish 
+[time]:2026-01-22 22:02:2 [level]:FATAL [filename]:UdpClient [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:Recv begin 
+[time]:2026-01-22 22:02:2 [level]:INFO [filename]:UdpClient [pid]:725725 [tid]:123599612544704 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 22:02:3 [level]:DEBUG [filename]:ChatClient [pid]:725725 [tid]:123599621777216 [line]:NONE [message]:buff: 不知道 
+[time]:2026-01-22 22:02:3 [level]:FATAL [filename]:UdpClient [pid]:725725 [tid]:123599621777216 [line]:NONE [message]:Send begin 
+[time]:2026-01-22 22:02:3 [level]:FATAL [filename]:UdpClient [pid]:725725 [tid]:123599621777216 [line]:NONE [message]:Send finish 
+[time]:2026-01-22 22:02:3 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:Recv finish 
+[time]:2026-01-22 22:02:3 [level]:FATAL [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:Recv begin 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:UdpClient [pid]:725390 [tid]:132272797779648 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 22:02:3 [level]:FATAL [filename]:UdpClient [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:Recv finish 
+[time]:2026-01-22 22:02:3 [level]:FATAL [filename]:UdpClient [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:Recv begin 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:UdpClient [pid]:725387 [tid]:135770453051072 [line]:NONE [message]:is_init_:true 
+[time]:2026-01-22 22:02:3 [level]:FATAL [filename]:UdpClient [pid]:725820 [tid]:124799374329536 [line]:NONE [message]:Recv finish 
+[time]:2026-01-22 22:02:3 [level]:FATAL [filename]:UdpClient [pid]:725820 [tid]:124799374329536 [line]:NONE [message]:Recv begin 
+[time]:2026-01-22 22:02:3 [level]:INFO [filename]:UdpClient [pid]:725820 [tid]:124799374329536 [line]:NONE [message]:is_init_:true 
