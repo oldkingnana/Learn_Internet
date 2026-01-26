@@ -12,6 +12,8 @@ namespace oldking
 		TcpBase(TcpBase& other) = delete;
 		TcpBase(TcpBase&& other) = delete;
 
+		TcpBase& operator=(TcpBase& other) = delete;
+
 		~TcpBase()
 		{}
 	};
