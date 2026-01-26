@@ -246,3 +246,135 @@
 [time]:2026-01-22 22:02:3 [level]:INFO [filename]:ChatServer [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:send_msg_ begin 
 [time]:2026-01-22 22:02:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731175278272 [line]:NONE [message]:entry:: wait & lock for task_queue 
 [time]:2026-01-22 22:02:3 [level]:INFO [filename]:mythread.hpp [pid]:725382 [tid]:123731330467520 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:08:5 [level]:FATAL [filename]:UdpServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:UdpServer constructer 
+[time]:2026-01-22 22:08:5 [level]:INFO [filename]:mythread_pool [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:begin to constructor 
+[time]:2026-01-22 22:08:5 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:begin to constructor 
+[time]:2026-01-22 22:08:5 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:begin to constructor 
+[time]:2026-01-22 22:08:5 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:begin to constructor 
+[time]:2026-01-22 22:08:5 [level]:FATAL [filename]:UdpServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:init begin 
+[time]:2026-01-22 22:08:5 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950296749760 [line]:NONE [message]:entry:: get info 
+[time]:2026-01-22 22:08:5 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950296749760 [line]:NONE [message]:entry:: detach 
+[time]:2026-01-22 22:08:5 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:entry:: get info 
+[time]:2026-01-22 22:08:5 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:entry:: detach 
+[time]:2026-01-22 22:08:5 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:entry:: change stat to waitting 
+[time]:2026-01-22 22:08:5 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:08:5 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:08:5 [level]:FATAL [filename]:UdpServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:init finish 
+[time]:2026-01-22 22:08:5 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:get_msg_ begin 
+[time]:2026-01-22 22:08:5 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:entry:: get info 
+[time]:2026-01-22 22:08:5 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:entry:: detach 
+[time]:2026-01-22 22:08:5 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:entry:: change stat to waitting 
+[time]:2026-01-22 22:08:5 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:08:5 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:08:5 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950296749760 [line]:NONE [message]:entry:: change stat to waitting 
+[time]:2026-01-22 22:08:5 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950296749760 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:08:5 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950296749760 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:13:2 [level]:DEBUG [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:buff: hello ip: 120.228.139.67 port: 18759 
+[time]:2026-01-22 22:13:2 [level]:DEBUG [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:new client    ip: 120.228.139.67 port: 18759 
+[time]:2026-01-22 22:13:2 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:get_msg_ finish 
+[time]:2026-01-22 22:13:2 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:get_msg_ begin 
+[time]:2026-01-22 22:13:3 [level]:DEBUG [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:buff: ? ip: 120.79.179.55 port: -12633 
+[time]:2026-01-22 22:13:3 [level]:DEBUG [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:new client    ip: 120.79.179.55 port: -12633 
+[time]:2026-01-22 22:13:3 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:get_msg_ finish 
+[time]:2026-01-22 22:13:3 [level]:INFO [filename]:mythread_pool [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:13:3 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:get_msg_ begin 
+[time]:2026-01-22 22:13:3 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:13:3 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:13:3 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:13:3 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:13:3 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:13:3 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:13:3 [level]:DEBUG [filename]:ChatServer [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:msg: ? ip: 120.228.139.67 port: 18759 
+[time]:2026-01-22 22:13:3 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:13:3 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:14:2 [level]:DEBUG [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:buff: haha ip: 120.228.139.67 port: 18759 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:get_msg_ finish 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:mythread_pool [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:get_msg_ begin 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:14:2 [level]:DEBUG [filename]:ChatServer [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:msg: haha ip: 120.79.179.55 port: -12633 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:14:2 [level]:DEBUG [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:buff: l ip: 120.79.179.55 port: -12633 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:get_msg_ finish 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:mythread_pool [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:get_msg_ begin 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950296749760 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950296749760 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950296749760 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950296749760 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950296749760 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950296749760 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:14:2 [level]:DEBUG [filename]:ChatServer [pid]:726027 [tid]:134950296749760 [line]:NONE [message]:msg: l ip: 120.228.139.67 port: 18759 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950296749760 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950296749760 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:14:2 [level]:DEBUG [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:buff: dsahjd ip: 120.79.179.55 port: -12633 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:get_msg_ finish 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:mythread_pool [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:get_msg_ begin 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:14:2 [level]:DEBUG [filename]:ChatServer [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:msg: dsahjd ip: 120.228.139.67 port: 18759 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:14:2 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:14:3 [level]:DEBUG [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:buff: djsklahbndjk ip: 120.228.139.67 port: 18759 
+[time]:2026-01-22 22:14:3 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:get_msg_ finish 
+[time]:2026-01-22 22:14:3 [level]:INFO [filename]:mythread_pool [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:14:3 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:get_msg_ begin 
+[time]:2026-01-22 22:14:3 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:14:3 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:14:3 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:14:3 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:14:3 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:14:3 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:14:3 [level]:DEBUG [filename]:ChatServer [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:msg: djsklahbndjk ip: 120.79.179.55 port: -12633 
+[time]:2026-01-22 22:14:3 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:14:3 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:14:4 [level]:DEBUG [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:buff: haha ip: 120.228.139.67 port: 18759 
+[time]:2026-01-22 22:14:4 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:get_msg_ finish 
+[time]:2026-01-22 22:14:4 [level]:INFO [filename]:mythread_pool [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:14:4 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:get_msg_ begin 
+[time]:2026-01-22 22:14:4 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950296749760 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:14:4 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950296749760 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:14:4 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950296749760 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:14:4 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950296749760 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:14:4 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950296749760 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:14:4 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950296749760 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:14:4 [level]:DEBUG [filename]:ChatServer [pid]:726027 [tid]:134950296749760 [line]:NONE [message]:msg: haha ip: 120.79.179.55 port: -12633 
+[time]:2026-01-22 22:14:4 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950296749760 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:14:4 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950296749760 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:15:0 [level]:DEBUG [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:buff: 今天杀谁 ip: 120.79.179.55 port: -12633 
+[time]:2026-01-22 22:15:0 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:get_msg_ finish 
+[time]:2026-01-22 22:15:0 [level]:INFO [filename]:mythread_pool [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:15:0 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:get_msg_ begin 
+[time]:2026-01-22 22:15:0 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:15:0 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:15:0 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:15:0 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:15:0 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:15:0 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:15:0 [level]:DEBUG [filename]:ChatServer [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:msg: 今天杀谁 ip: 120.228.139.67 port: 18759 
+[time]:2026-01-22 22:15:0 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:15:0 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950286264000 [line]:NONE [message]:entry:: wait & lock for task_queue 
+[time]:2026-01-22 22:15:1 [level]:DEBUG [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:buff: 杀我楼下那个 ip: 120.228.139.67 port: 18759 
+[time]:2026-01-22 22:15:1 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:get_msg_ finish 
+[time]:2026-01-22 22:15:1 [level]:INFO [filename]:mythread_pool [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:SendTask:: begin 
+[time]:2026-01-22 22:15:1 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950306473792 [line]:NONE [message]:get_msg_ begin 
+[time]:2026-01-22 22:15:1 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:entry:: change stat to running 
+[time]:2026-01-22 22:15:1 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:change stat 
+[time]:2026-01-22 22:15:1 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:entry:: get task & arg 
+[time]:2026-01-22 22:15:1 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:entry:: pop task from task queue 
+[time]:2026-01-22 22:15:1 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:entry unlock 
+[time]:2026-01-22 22:15:1 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:15:1 [level]:DEBUG [filename]:ChatServer [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:msg: 杀我楼下那个 ip: 120.79.179.55 port: -12633 
+[time]:2026-01-22 22:15:1 [level]:INFO [filename]:ChatServer [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:send_msg_ begin 
+[time]:2026-01-22 22:15:1 [level]:INFO [filename]:mythread.hpp [pid]:726027 [tid]:134950141560512 [line]:NONE [message]:entry:: wait & lock for task_queue 

@@ -1,89 +1,121 @@
 #include "TcpServer.hh"
-#include "mutex.hpp"
 #include "myeasylog.hpp"
 
+#include <strings.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <string>
 #include <arpa/inet.h>
 #include <unistd.h>
 
-bool oldking::TcpServer::init()
+void oldking::TcpServer::listen_peer()
 {
-	socket_fd_ = socket(AF_INET, SOCK_STREAM, 0);
-	if(socket_fd_ < 0)
+	int16_t listen_result = listen(listen_socket_fd_, 6);
+	if(listen_result < 0)
 	{
-		oldking::MyEasyLog::GetInstance().WriteLog(LOG_FATAL, FILENAME, "socket err");
+		oldking::MyEasyLog::GetInstance().WriteLog(LOG_FATAL, FILENAME, "listen err");
+		exit(LISTEN_ERR);
+	}
+}
+
+bool oldking::TcpServer::accept_peer(oldking::TcpServer::Peer& peer)
+{
+	sockaddr_in addr;
+	bzero(&addr, sizeof(addr));
+	socklen_t len;
+	int16_t sockfd = accept(listen_socket_fd_, (struct sockaddr *)(&addr), &len);	
+	if(sockfd < 0)
+	{
+		oldking::MyEasyLog::GetInstance().WriteLog(LOG_WARNING, FILENAME, "accept err");
 		return false;
 	}
 
-	struct sockaddr_in addr;
-	bzero(&addr, sizeof(addr));
+	Addr_in addr_in(addr);
+	Peer peer_tmp(sockfd, addr_in);
 
-	addr.sin_family = AF_INET;
-	addr.sin_addr.s_addr = INADDR_ANY;
-	addr.sin_port = htons(server_port_);
-	socklen_t addrlen = sizeof(addr);
+	peer = peer_tmp;
 
-	int16_t bind_result = bind(socket_fd_, (struct sockaddr*)(&addr), addrlen);
-	if(bind_result < 0)
+	for(auto& it : peer_list_)
 	{
-		oldking::MyEasyLog::GetInstance().WriteLog(LOG_FATAL, FILENAME, "bind err");
+		if(peer_tmp.sockfd_ == it.sockfd_)
+		{
+			it = peer_tmp;
+			return true;	
+		}
+	}	
+
+	peer_list_.push_back(peer_tmp);
+
+	return true;
+}
+
+bool oldking::TcpServer::send(const Peer& peer, const std::string& msg)
+{
+	if(write(peer.sockfd_, msg.c_str(), msg.length()) < 0)	
+	{
+		oldking::MyEasyLog::GetInstance().WriteLog(LOG_WARNING, FILENAME, "write err");
 		return false;
 	}
 
 	return true;
 }
 
-void oldking::TcpServer::start()
+bool oldking::TcpServer::recv(const Peer& peer, std::string& buff)
 {
-	state_ = RUNNING;
-
-	while(true)
+	char cbuff[MAX_STR];
+	int16_t read_len = read(peer.sockfd_, cbuff, MAX_STR - 1);
+	
+	if(read_len < 0)
 	{
-		char buff[1024];
-
-		struct sockaddr_in client_info;
-		socklen_t client_info_len = sizeof(client_info);
-
-		// receive
-		int16_t recv_result = recvfrom(
-				socket_fd_, 
-				buff, 
-				sizeof(buff) - 1, 
-				0, 
-				(struct sockaddr *)(&client_info), 
-				&client_info_len
-				);
-		if(recv_result < 0)
-		{
-			oldking::MyEasyLog::GetInstance().WriteLog(LOG_FATAL, FILENAME, "recv err");
-			exit(-1);
-		}
 		
-		// do
-		buff[1023] = 0;
-		std::string buff_str = buff;
-		std::string result_str = func_(buff);
-		
-		// send back
-		int16_t send_result = sendto(
-				socket_fd_, 
-				result_str.c_str(), 
-				result_str.length(), 
-				0, 
-				(struct sockaddr *)(&client_info), 
-				client_info_len
-				);
-
-		if(send_result < 0)
-		{
-			oldking::MyEasyLog::GetInstance().WriteLog(LOG_FATAL, FILENAME, "send err");
-			exit(-1);
-		}
+	}
+	else if(read_len == 0)
+	{
 
 	}
+	else 
+	{
+		
+	}
 
-	return ;
+	return true;
+}
+
+void oldking::TcpServer::init()
+{
+	// init
+	listen_socket_fd_ = socket(AF_INET, SOCK_STREAM, 0);
+	if(listen_socket_fd_ < 0)
+	{
+		oldking::MyEasyLog::GetInstance().WriteLog(LOG_FATAL, FILENAME, "socket err");
+		exit(SOCK_ERR);	
+	}
+
+	struct sockaddr_in addr_in = addr_in_.getAddr_in();
+
+	int16_t bind_result = bind(listen_socket_fd_, (struct sockaddr*)(&addr_in), sizeof(addr_in));
+	if(bind_result < 0)
+	{
+		oldking::MyEasyLog::GetInstance().WriteLog(LOG_FATAL, FILENAME, "bind err");
+		exit(BIND_ERR);	
+	}
+}
+
+void oldking::TcpServer::clear()
+{
+	for(auto it = peer_list_.begin(); it != peer_list_.end(); )
+	{
+		if(close(it->sockfd_) == -1)
+			oldking::MyEasyLog::GetInstance().WriteLog(LOG_WARNING, FILENAME, "close err, peer fd is " + std::to_string(it->sockfd_));
+		it = peer_list_.erase(it);
+	}
+
+	if(close(listen_socket_fd_))
+				oldking::MyEasyLog::GetInstance().WriteLog(LOG_WARNING, FILENAME, "close err, listen_socket_fd_ is " + std::to_string(listen_socket_fd_));
+}
+
+bool oldking::TcpServer::clear(const Peer& peer)
+{
+	
 }
 

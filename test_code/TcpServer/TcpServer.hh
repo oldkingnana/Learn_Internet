@@ -1,14 +1,21 @@
 #pragma once 
 
 #include "TcpBase.hh"
+#include "Addr.hh"
+#include "common.hh"
+#include "myeasylog.hpp"
 
 #include <string>
 #include <cstdint>
-#include <functional>
+#include <sys/socket.h>
+#include <unistd.h>
+#include <vector>
 
 namespace oldking 
 {
 	#define FILENAME "Tcpserver"
+
+	#define MAX_STR 1024
 
 	class TcpServer : public TcpBase 
 	{
@@ -17,32 +24,95 @@ namespace oldking
 		#define STARTING 1
 		#define RUNNING 2
 
+		class Peer;
+
 		// constructer & destructer
-		TcpServer(const std::string& server_ip, const uint16_t& server_port, std::function<std::string(std::string)> func)
-		: server_ip_(server_ip)
-		, server_port_(server_port)
-		, func_(func)
+		TcpServer(const uint16_t& server_port)
+		: addr_in_("0.0.0.0", server_port)
 		, state_(STARTING)
-		, socket_fd_(0)
-		{}
+		, listen_socket_fd_(-1)
+		{
+			init();
+		}
 
 		~TcpServer()
-		{}
+		{
+			clear();
+		}
 
 		// API
-		bool init();
+		
+	public:
+		bool send(const Peer& peer, const std::string& msg);
 
-		void start();
+		bool recv(const Peer& peer, std::string& buff);
+
+		void listen_peer();
+
+		bool accept_peer(Peer& peer);
 
 	private:
-		std::string server_ip_;
-		uint16_t server_port_;
-		std::function<std::string(std::string)> func_;
+		void init();
+
+		void clear();
+
+		bool clear(const Peer& peer);
+
+	public:
+		// Peer
+		class Peer 
+		{
+		public:
+			Peer()
+			: sockfd_(-1)
+			, addr_({})
+			{}
+
+			Peer(const int& sockfd, const Addr_in& addr_in)
+			: sockfd_(sockfd)
+			, addr_(addr_in)
+			{}
+
+			Peer(const Peer& other)
+			: sockfd_(other.sockfd_)
+			, addr_(other.addr_)
+			{}
+
+			Peer& operator=(const Peer& other)
+			{
+				sockfd_ = other.sockfd_;
+				addr_ = other.addr_;
+				return *this;
+			}
+
+			bool operator==(const Peer& other)
+			{
+				return sockfd_ == other.sockfd_ && 
+					   addr_ == other.addr_;
+			}
+
+			std::string getIP(){ return addr_.getIP(); }
+
+			std:: int16_t getPort(){ return addr_.getPort(); }
+
+			~Peer()
+			{}
+
+		friend bool oldking::TcpServer::send(const Peer& peer, const std::string& msg);
+		friend bool oldking::TcpServer::recv(const Peer& peer, std::string& buff);
+		friend void oldking::TcpServer::clear();
+		friend bool oldking::TcpServer::accept_peer(Peer& peer);
+
+		private:
+			int sockfd_;
+			Addr_in addr_;
+		};
+
+	private:
+		Addr_in addr_in_;
 		int16_t state_;
-		int16_t socket_fd_;
+		int16_t listen_socket_fd_;
+		std::vector<Peer> peer_list_;
 	};
 }
-
-
-
 
