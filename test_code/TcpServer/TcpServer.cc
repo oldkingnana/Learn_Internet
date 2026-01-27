@@ -1,4 +1,5 @@
 #include "TcpServer.hh"
+#include "common.hh"
 #include "myeasylog.hpp"
 
 #include <strings.h>
@@ -51,9 +52,13 @@ bool oldking::TcpServer::accept_peer(oldking::TcpServer::Peer& peer)
 
 bool oldking::TcpServer::send(const Peer& peer, const std::string& msg)
 {
-	if(write(peer.sockfd_, msg.c_str(), msg.length()) < 0)	
+	oldking::MyEasyLog::GetInstance().WriteLog(LOG_INFO, FILENAME, "send: " + msg);
+
+	// 不使用write,因为write没办法规避用户关闭fd后写入导致的信号杀死进程的问题
+	if(::send(peer.sockfd_, msg.c_str(), msg.length(), MSG_NOSIGNAL) < 0)	
 	{
 		oldking::MyEasyLog::GetInstance().WriteLog(LOG_WARNING, FILENAME, "write err");
+		erase(peer);
 		return false;
 	}
 
@@ -67,17 +72,21 @@ bool oldking::TcpServer::recv(const Peer& peer, std::string& buff)
 	
 	if(read_len < 0)
 	{
-		
+		oldking::MyEasyLog::GetInstance().WriteLog(LOG_ERROR, FILENAME, "read err");
+		exit(READ_ERR);	
 	}
 	else if(read_len == 0)
 	{
-
-	}
-	else 
-	{
-		
+		oldking::MyEasyLog::GetInstance().WriteLog(LOG_WARNING, FILENAME, "fd is close!");
+		erase(peer);			
+		return false;
 	}
 
+	cbuff[read_len] = 0;
+	buff = cbuff;
+
+	oldking::MyEasyLog::GetInstance().WriteLog(LOG_INFO, FILENAME, "recv: " + buff);
+	
 	return true;
 }
 
@@ -114,8 +123,18 @@ void oldking::TcpServer::clear()
 				oldking::MyEasyLog::GetInstance().WriteLog(LOG_WARNING, FILENAME, "close err, listen_socket_fd_ is " + std::to_string(listen_socket_fd_));
 }
 
-bool oldking::TcpServer::clear(const Peer& peer)
+bool oldking::TcpServer::erase(const Peer& peer)
 {
-	
+	for(const auto& it = peer_list_.begin(); it != peer_list_.end(); )
+	{
+		if(peer == *it)
+		{
+			oldking::MyEasyLog::GetInstance().WriteLog(LOG_INFO, FILENAME, "clear: ");
+			peer_list_.erase(it);
+			return true;
+		}
+	}
+
+	return false;
 }
 

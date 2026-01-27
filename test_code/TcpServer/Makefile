@@ -4,6 +4,7 @@ Server : test.cc TcpServer.cc
 
 .PHONY:clean
 clean:
-	rm -f Server
+	rm -f Server 
+	echo "" > log.txt
 
 
