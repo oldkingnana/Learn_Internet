@@ -45,7 +45,7 @@ namespace oldking
 		~Addr_in()
 		{}
 
-		bool operator==(const Addr_in& other)
+		bool operator==(const Addr_in& other) const 
 		{
 			return IP_ == other.IP_ && 
 				   port_ == other.port_;

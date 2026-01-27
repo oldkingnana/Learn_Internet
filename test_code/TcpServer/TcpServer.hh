@@ -50,13 +50,14 @@ namespace oldking
 		void listen_peer();
 
 		bool accept_peer(Peer& peer);
+		
+		bool erase(const Peer& peer);
 
 	private:
 		void init();
 
 		void clear();
 
-		bool clear(const Peer& peer);
 
 	public:
 		// Peer
@@ -78,18 +79,19 @@ namespace oldking
 			, addr_(other.addr_)
 			{}
 
-			Peer& operator=(const Peer& other)
+			Peer& operator=(const Peer& other) 
 			{
 				sockfd_ = other.sockfd_;
 				addr_ = other.addr_;
 				return *this;
 			}
 
-			bool operator==(const Peer& other)
+			bool operator==(const Peer& other) const 
 			{
 				return sockfd_ == other.sockfd_ && 
 					   addr_ == other.addr_;
 			}
+			
 
 			std::string getIP(){ return addr_.getIP(); }
 
@@ -102,6 +104,7 @@ namespace oldking
 		friend bool oldking::TcpServer::recv(const Peer& peer, std::string& buff);
 		friend void oldking::TcpServer::clear();
 		friend bool oldking::TcpServer::accept_peer(Peer& peer);
+		friend bool oldking::TcpServer::erase(const Peer& peer);
 
 		private:
 			int sockfd_;

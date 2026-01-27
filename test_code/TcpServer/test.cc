@@ -2,6 +2,7 @@
 #include <iostream>
 #include <ostream>
 #include <string>
+#include <vector>
 
 std::string func(std::string msg)
 {
@@ -35,15 +36,18 @@ int main(int argc, char *argv[])
 	std::cout << "ip -> " << ip_str << std::endl;
 	std::cout << "port -> " << port_str << std::endl;
 
+	oldking::TcpServer tcp(std::stoi(port_str));
 
-	oldking::TcpServer tcp(ip_str, std::stoi(port_str), func);
-	if(!tcp.init())
+	tcp.listen_peer();
+	oldking::TcpServer::Peer peer;
+	tcp.accept_peer(peer);
+	std::string buff;
+
+	while(tcp.recv(peer, buff))
 	{
-		std::cerr << "tcp init err" << std::endl;
-		return -1;
+		tcp.send(peer, buff);
+		buff.clear();
 	}
-
-	tcp.start();
 
 	return 0;
 }

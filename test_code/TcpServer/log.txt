@@ -1,3 +1,25 @@
-[time]:2026-01-18 20:51:4 [level]:FATAL [filename]:Tcpserver [pid]:400102 [tid]:124813107304256 [line]:NONE [message]:recv err 
-[time]:2026-01-18 20:59:0 [level]:FATAL [filename]:Tcpserver [pid]:402177 [tid]:132334180661056 [line]:NONE [message]:recv err 
-[time]:2026-01-20 19:56:1 [level]:FATAL [filename]:Tcpserver [pid]:533128 [tid]:140227550418752 [line]:NONE [message]:recv err 
+
+[time]:2026-01-27 19:07:3 [level]:WARNING [filename]:Tcpserver [pid]:1045111 [tid]:135831924037440 [line]:NONE [message]:fd is close! 
+[time]:2026-01-27 19:07:3 [level]:INFO [filename]:Tcpserver [pid]:1045111 [tid]:135831924037440 [line]:NONE [message]:clear:  
+[time]:2026-01-27 19:09:1 [level]:INFO [filename]:Tcpserver [pid]:1045174 [tid]:126634935113536 [line]:NONE [message]:recv: hello
+ 
+[time]:2026-01-27 19:09:1 [level]:INFO [filename]:Tcpserver [pid]:1045174 [tid]:126634935113536 [line]:NONE [message]:send: hello
+ 
+[time]:2026-01-27 19:09:1 [level]:INFO [filename]:Tcpserver [pid]:1045174 [tid]:126634935113536 [line]:NONE [message]:recv: ok
+ 
+[time]:2026-01-27 19:09:1 [level]:INFO [filename]:Tcpserver [pid]:1045174 [tid]:126634935113536 [line]:NONE [message]:send: ok
+ 
+[time]:2026-01-27 19:09:2 [level]:INFO [filename]:Tcpserver [pid]:1045174 [tid]:126634935113536 [line]:NONE [message]:recv: 666
+ 
+[time]:2026-01-27 19:09:2 [level]:INFO [filename]:Tcpserver [pid]:1045174 [tid]:126634935113536 [line]:NONE [message]:send: 666
+ 
+[time]:2026-01-27 19:09:2 [level]:INFO [filename]:Tcpserver [pid]:1045174 [tid]:126634935113536 [line]:NONE [message]:recv: haha
+ 
+[time]:2026-01-27 19:09:2 [level]:INFO [filename]:Tcpserver [pid]:1045174 [tid]:126634935113536 [line]:NONE [message]:send: haha
+ 
+[time]:2026-01-27 19:09:2 [level]:INFO [filename]:Tcpserver [pid]:1045174 [tid]:126634935113536 [line]:NONE [message]:recv: quit
+ 
+[time]:2026-01-27 19:09:2 [level]:INFO [filename]:Tcpserver [pid]:1045174 [tid]:126634935113536 [line]:NONE [message]:send: quit
+ 
+[time]:2026-01-27 19:09:3 [level]:WARNING [filename]:Tcpserver [pid]:1045174 [tid]:126634935113536 [line]:NONE [message]:fd is close! 
+[time]:2026-01-27 19:09:3 [level]:INFO [filename]:Tcpserver [pid]:1045174 [tid]:126634935113536 [line]:NONE [message]:clear:  
