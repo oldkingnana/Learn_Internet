@@ -4,33 +4,40 @@
 #include <functional>
 
 #include "TcpBase.hh"
+#include "Addr.hh"
 
 namespace oldking
 {
 	#define FILENAME "TcpClient"
 
+	#define MAX_BUFF 1024
+
 	class TcpClient : public TcpBase
 	{
 	public:
-		TcpClient(const std::string& ip, const int16_t& port, std::function<std::string(std::string)> func)
-		: ip_(ip)
-		, port_(port)
-		, socket_fd_(0)
-		, func_(func)
+		TcpClient(const std::string& ip, const int16_t& port)
+		: socket_fd_(0)
+		, addr_(ip, port)
+		, is_init_(false)
 		{}
-
-		bool init();
-
-		void start();
 
 		~TcpClient()
-		{}
+		{
+			close();
+		}
+
+		bool init();
+		
+		bool send(const std::string& msg);
+
+		bool recv(std::string& buff);
+
+		bool close();
 
 	private:
-		std::string ip_;
-		int16_t port_;
 		int16_t socket_fd_;
-		std::function<std::string(std::string)> func_;
+		Addr_in addr_;
+		bool is_init_;
 	};
 }
 
