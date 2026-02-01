@@ -5,5 +5,5 @@ Client : test.cc TcpClient.cc
 .PHONY:clean
 clean:
 	rm -f Client
-
+	echo "" > log.txt
 
