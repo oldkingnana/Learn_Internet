@@ -1,0 +1,12 @@
+
+[time]:2026-02-01 17:59:1 [level]:INFO [filename]:Socket [pid]:1480809 [tid]:126636758943552 [line]:NONE [message]:recv: 1 + 1
+ 
+[time]:2026-02-01 17:59:1 [level]:INFO [filename]:Socket [pid]:1480809 [tid]:126636758943552 [line]:NONE [message]:send: 2 
+[time]:2026-02-01 17:59:2 [level]:INFO [filename]:Socket [pid]:1480809 [tid]:126636758943552 [line]:NONE [message]:recv: 2 + 2
+ 
+[time]:2026-02-01 17:59:2 [level]:INFO [filename]:Socket [pid]:1480809 [tid]:126636758943552 [line]:NONE [message]:send: 4 
+[time]:2026-02-01 17:59:2 [level]:INFO [filename]:Socket [pid]:1480809 [tid]:126636758943552 [line]:NONE [message]:recv: 3 + 3
+ 
+[time]:2026-02-01 17:59:2 [level]:INFO [filename]:Socket [pid]:1480809 [tid]:126636758943552 [line]:NONE [message]:send: 6 
+[time]:2026-02-01 17:59:3 [level]:INFO [filename]:Socket [pid]:1480809 [tid]:126636758943552 [line]:NONE [message]:recv: quit
+ 
