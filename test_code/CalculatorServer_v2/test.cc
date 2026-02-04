@@ -6,21 +6,18 @@
 #include <functional>
 #include <memory>
 
-
-void func2(std::shared_ptr<oldking::ProtocolServer> protocol)
-{
-	oldking::CalculatorServer cal(protocol);
-}
-
-void func1(oldking::Socket sock)
-{
-	oldking::ProtocolServer(sock, func2);
-}
-
 int main()
 {
-	oldking::TcpServer(7777, );
-
-
+	oldking::TcpServer server(7777, [](oldking::Socket sock)->void
+		{
+			oldking::ProtocolServer PS(sock, [](oldking::ProtocolServer* pPS)->void
+				{
+					oldking::CalculatorServer cal(pPS);
+					cal.run();
+				});
+			PS.run();
+		});
+	server.run();
+	return 0;
 }
 

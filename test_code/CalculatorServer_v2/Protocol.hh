@@ -16,6 +16,14 @@ namespace oldking
 {
 	// <len>\r\n<functional part>\r\n
 
+	class ProtocolBase
+	{
+	public:
+		ProtocolBase() {}
+		ProtocolBase(const ProtocolBase& other) = delete;
+		ProtocolBase& operator=(const ProtocolBase& other) = delete;
+	};
+
 	struct Info 
 	{
 		int16_t x_;
@@ -28,10 +36,10 @@ namespace oldking
 		int16_t v_;
 	};
 
-	class ProtocolServer
+	class ProtocolServer : public ProtocolBase
 	{
 	public:
-		ProtocolServer(Socket sock, std::function<void(std::shared_ptr<ProtocolServer>)> func)
+		ProtocolServer(Socket sock, std::function<void(ProtocolServer*)> func)
 		: buff_({})
 		, sock_(std::make_unique<oldking::Socket>(sock))
 		, func_(func)
@@ -48,6 +56,8 @@ namespace oldking
 		
 		bool deliver(Result result);
 
+		void close() { sock_->close(); }
+
 	private:
 		std::string serialize(Result result);
 
@@ -56,13 +66,13 @@ namespace oldking
 	private:
 		std::string buff_;
 		std::unique_ptr<oldking::Socket> sock_;				
-		std::function<void(std::shared_ptr<ProtocolServer>)> func_;
+		std::function<void(ProtocolServer*)> func_;
 	};
 
-	class ProtocolClient
+	class ProtocolClient : public ProtocolBase
 	{
 	public:
-		ProtocolClient(Socket sock, std::function<void(std::shared_ptr<ProtocolClient>)> func)
+		ProtocolClient(Socket sock, std::function<void(ProtocolClient*)> func)
 		: buff_({})
 		, sock_(std::make_unique<oldking::Socket>(sock))
 		, func_(func)
@@ -78,6 +88,8 @@ namespace oldking
 		bool obtain(struct Result& result);
 
 		bool deliver(struct Info info);
+		
+		void close() { sock_->close(); }
 
 	private:
 		std::string serialize(struct Info info);
@@ -87,6 +99,6 @@ namespace oldking
 	private:
 		std::string buff_;
 		std::unique_ptr<oldking::Socket> sock_;
-		std::function<void(std::shared_ptr<ProtocolClient>)> func_;
+		std::function<void(ProtocolClient*)> func_;
 	};
 }
