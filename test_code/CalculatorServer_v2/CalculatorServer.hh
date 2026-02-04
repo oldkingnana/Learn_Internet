@@ -15,12 +15,14 @@ namespace oldking
 	class CalculatorServer
 	{
 	public:
-		CalculatorServer(std::shared_ptr<ProtocolServer> protocol)
+		CalculatorServer(ProtocolServer* protocol)
 		: protocol_(protocol)
 		{}
 
 		~CalculatorServer()
-		{}
+		{
+			protocol_->close();	
+		}
 
 		void run()
 		{
@@ -54,7 +56,7 @@ namespace oldking
 		}
 
 	private:
-		std::shared_ptr<ProtocolServer> protocol_;
+		ProtocolServer* protocol_;
 		oldking::Info info_;
 		oldking::Result result_;
 	};

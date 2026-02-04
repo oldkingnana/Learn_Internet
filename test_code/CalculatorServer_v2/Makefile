@@ -1,5 +1,5 @@
-Server : test.cc Socket.cc
-	g++ -std=c++20 test.cc Socket.cc -o Server
+Server : test.cc Socket.cc Protocol.cc
+	g++ -std=c++20 test.cc Socket.cc Protocol.cc -o Server -ljsoncpp
 
 .PHONY:clean
 clean: 
