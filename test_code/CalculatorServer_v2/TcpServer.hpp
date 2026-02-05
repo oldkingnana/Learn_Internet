@@ -20,7 +20,7 @@ namespace oldking
 	{
 	public:
 		// constructer & destructer
-		TcpServer(const uint16_t& server_port, std::function<void(oldking::Socket)> func)
+		TcpServer(const uint16_t& server_port, std::function<void(oldking::Socket&&)> func)
 		: addr_in_("0.0.0.0", server_port)
 		, listen_socket_fd_(-1)
 		, func_(func)
@@ -46,13 +46,14 @@ namespace oldking
 					close(listen_socket_fd_);
 					pid_t n = fork();
 					if(n == 0)
-						func_(sock);
+						func_(std::move(sock));
+					sock.close();
 					exit(OK);
 				}
 				else if(pid > 0)
 				{
 					// parent
-					sock.close();		
+					sock.close();
 				}
 				else 
 				{
@@ -119,7 +120,7 @@ namespace oldking
 	private:
 		Addr_in addr_in_;
 		int16_t listen_socket_fd_;
-		std::function<void(oldking::Socket)> func_;
+		std::function<void(oldking::Socket&&)> func_;
 	};
 
 }

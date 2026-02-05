@@ -20,9 +20,7 @@ namespace oldking
 		{}
 
 		~CalculatorServer()
-		{
-			protocol_->close();	
-		}
+		{}
 
 		void run()
 		{
@@ -51,7 +49,10 @@ namespace oldking
 						result_.v_ = static_cast<int16_t>(114514);
 						break;
 					}
+					protocol_->deliver(result_);
 				}
+				bzero(&info_, sizeof(info_));
+				bzero(&info_, sizeof(result_));
 			}
 		}
 
@@ -61,4 +62,3 @@ namespace oldking
 		oldking::Result result_;
 	};
 }
-

@@ -36,32 +36,33 @@ namespace oldking
 		int16_t v_;
 	};
 
-	class ProtocolServer : public ProtocolBase
+	class ProtocolClient : public ProtocolBase
 	{
 	public:
-		ProtocolServer(Socket&& sock, std::function<void(ProtocolServer*)> func)
+		ProtocolClient(Socket&& sock, std::function<void(ProtocolClient*)> func)
 		: buff_({})
 		, sock_(std::move(sock))
 		, func_(func)
 		{}
 
-		~ProtocolServer()
-		{}
-
+		~ProtocolClient()
+		{
+		}
+	
 		void run();
 
-		bool obtain(struct Info& info);
-		
-		bool deliver(Result result);
+		bool obtain(struct Result& result);
+
+		bool deliver(struct Info info);
 
 	private:
-		std::string serialize(Result result);
-
-		Info deserialize(std::string msg);
-
+		std::string serialize(struct Info info);
+		
+		Result deserialize(std::string msg);
+	
 	private:
 		std::string buff_;
-		oldking::Socket sock_;				
-		std::function<void(ProtocolServer*)> func_;
+		oldking::Socket sock_;
+		std::function<void(ProtocolClient*)> func_;
 	};
 }

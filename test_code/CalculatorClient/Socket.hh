@@ -58,18 +58,7 @@ namespace oldking
 		bool send(const std::string& msg);
 
 		bool recv(std::string& buff);
-
-		void close()
-		{
-			oldking::MyEasyLog::GetInstance().WriteLog(LOG_INFO, FILENAME_SOCK, "close begin!");
-			if(sockfd_ != -1) 
-			{
-				::close(sockfd_); 
-				sockfd_ = -1;
-			}
-			oldking::MyEasyLog::GetInstance().WriteLog(LOG_INFO, FILENAME_SOCK, "close finish!");
-		}
-
+		
 	private:
 		int sockfd_;
 		Addr_in addr_;
