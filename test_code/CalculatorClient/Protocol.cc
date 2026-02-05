@@ -1,4 +1,5 @@
 #include "Protocol.hh"
+#include "myeasylog.hpp"
 #include <memory>
 #include <string>
 
@@ -14,8 +15,14 @@
 // <number>\r\n<functional part>\r\n<number>
 // <number>\r\n<functional part>\r\n<number>\r\n
 // ...
-bool oldking::ProtocolServer::obtain(oldking::Info& info)
+
+//=================== client =====================
+
+
+bool oldking::ProtocolClient::obtain(struct Result& result)
 {
+	oldking::MyEasyLog::GetInstance().WriteLog(LOG_INFO, FILENAME_PROTOCOL, "obtain start!");
+
 	if(!sock_.recv(buff_))
 		return false;
 	
@@ -34,38 +41,42 @@ bool oldking::ProtocolServer::obtain(oldking::Info& info)
 		oldking::MyEasyLog::GetInstance().WriteLog(LOG_WARNING, FILENAME_PROTOCOL, "ProtocolServer->buffer failed");
 		return false;
 	}
-
+	
 	uint16_t msg_len = number_area_len + 2 + number + 2;
-	info = deserialize(buff_.substr(0, msg_len));
+	result = deserialize(buff_.substr(0, msg_len));
 	buff_.erase(0, msg_len);
 
+	oldking::MyEasyLog::GetInstance().WriteLog(LOG_INFO, FILENAME_PROTOCOL, "obtain finish!");
 	return true;
 }
 
-bool oldking::ProtocolServer::deliver(oldking::Result result)
+bool oldking::ProtocolClient::deliver(struct Info info)
 {
-	if(!sock_.send(serialize(result)))
+	if(!sock_.send(serialize(info)))
 		return false;
 	return true;
 }
 
-std::string oldking::ProtocolServer::serialize(oldking::Result result)
+std::string oldking::ProtocolClient::serialize(struct Info info)
 {
 	Json::Value v;
 	Json::FastWriter writer;
 
-	v["result"] = result.v_;
+	v["x"] = info.x_;
+	v["y"] = info.y_;
+	v["oper"] = info.oper_;
+
 	std::string s2 = writer.write(v);
 	std::string s1 = std::to_string(s2.size());
 
 	return s1 + "\r\n" + s2 + "\r\n";
 }
 
-oldking::Info oldking::ProtocolServer::deserialize(std::string msg)
+oldking::Result oldking::ProtocolClient::deserialize(std::string msg)
 {
-	Info info;
+	oldking::MyEasyLog::GetInstance().WriteLog(LOG_INFO, FILENAME_PROTOCOL, "deserialize start!");
+	Result result;
 	uint16_t number_area_len = msg.find_first_of("\r\n");
-	//std::cout << "number_area_len: " << number_area_len << std::endl;
 	uint16_t number = std::stoi(msg.substr(0, number_area_len));
 	auto buff = msg.substr(number_area_len + 2, number);
 	Json::Value v;
@@ -73,15 +84,20 @@ oldking::Info oldking::ProtocolServer::deserialize(std::string msg)
 	bool ok = reader.parse(buff, v);
 	if(ok)
 	{
-		info.x_ = v["x"].asInt();
-		info.y_ = v["y"].asInt();
-		info.oper_ = v["oper"].asInt();
+		result.v_ = v["result"].asInt();
 	}
-	return info;
+	oldking::MyEasyLog::GetInstance().WriteLog(LOG_INFO, FILENAME_PROTOCOL, "deserialize finish!");
+	return result;
 }
 
-void oldking::ProtocolServer::run()
+void oldking::ProtocolClient::run()
 {
+	oldking::MyEasyLog::GetInstance().WriteLog(LOG_INFO, FILENAME_PROTOCOL, "run start!");
 	func_(this);
+	oldking::MyEasyLog::GetInstance().WriteLog(LOG_INFO, FILENAME_PROTOCOL, "run finish!");
 }
+
+
+
+
 
