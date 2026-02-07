@@ -1,1 +1,162 @@
 
+[time]:2026-02-07 20:07:3 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 20:07:3 [level]:INFO [filename]:Socket [pid]:1943740 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 20:07:3 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 20:07:3 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 20:07:3 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 20:07:3 [level]:INFO [filename]:Socket [pid]:1943740 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 20:07:3 [level]:INFO [filename]:CALCULATORSERVER [pid]:1943741 [tid]:125631285782336 [line]:NONE [message]:run begin 
+[time]:2026-02-07 20:07:3 [level]:INFO [filename]:Socket [pid]:1943741 [tid]:125631285782336 [line]:NONE [message]:recv: 24
+{"oper":43,"x":1,"y":1}
+
+ 
+[time]:2026-02-07 20:07:3 [level]:INFO [filename]:Socket [pid]:1943741 [tid]:125631285782336 [line]:NONE [message]:send: 13
+{"result":2}
+
+ 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:Socket [pid]:1943741 [tid]:125631285782336 [line]:NONE [message]:recv: 24
+{"oper":43,"x":2,"y":2}
+
+ 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:Socket [pid]:1943741 [tid]:125631285782336 [line]:NONE [message]:send: 13
+{"result":4}
+
+ 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:Socket [pid]:1943741 [tid]:125631285782336 [line]:NONE [message]:recv: 24
+{"oper":43,"x":3,"y":3}
+
+ 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:Socket [pid]:1943741 [tid]:125631285782336 [line]:NONE [message]:send: 13
+{"result":6}
+
+ 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:Socket [pid]:1943741 [tid]:125631285782336 [line]:NONE [message]:recv: 24
+{"oper":43,"x":4,"y":4}
+
+ 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:Socket [pid]:1943741 [tid]:125631285782336 [line]:NONE [message]:send: 13
+{"result":8}
+
+ 
+[time]:2026-02-07 20:11:2 [level]:WARNING [filename]:Socket [pid]:1943741 [tid]:125631285782336 [line]:NONE [message]:fd is close! 
+[time]:2026-02-07 20:11:2 [level]:INFO [filename]:CALCULATORSERVER [pid]:1943741 [tid]:125631285782336 [line]:NONE [message]:run finish 
+[time]:2026-02-07 20:11:2 [level]:INFO [filename]:Socket [pid]:1943741 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 20:11:2 [level]:INFO [filename]:Socket [pid]:1943741 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 20:11:2 [level]:INFO [filename]:Socket [pid]:1943741 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 20:11:2 [level]:INFO [filename]:Socket [pid]:1943741 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:Socket [pid]:1943905 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:Socket [pid]:1943905 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:CALCULATORSERVER [pid]:1943906 [tid]:125631285782336 [line]:NONE [message]:run begin 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:Socket [pid]:1943906 [tid]:125631285782336 [line]:NONE [message]:recv: 24
+{"oper":43,"x":1,"y":1}
+
+ 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:Socket [pid]:1943906 [tid]:125631285782336 [line]:NONE [message]:send: 13
+{"result":2}
+
+ 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:Socket [pid]:1943906 [tid]:125631285782336 [line]:NONE [message]:recv: 24
+{"oper":43,"x":2,"y":2}
+
+ 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:Socket [pid]:1943906 [tid]:125631285782336 [line]:NONE [message]:send: 13
+{"result":4}
+
+ 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:Socket [pid]:1944204 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:Socket [pid]:1944204 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:CALCULATORSERVER [pid]:1944205 [tid]:125631285782336 [line]:NONE [message]:run begin 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:Socket [pid]:1944205 [tid]:125631285782336 [line]:NONE [message]:recv: 24
+{"oper":43,"x":2,"y":2}
+
+ 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:Socket [pid]:1944205 [tid]:125631285782336 [line]:NONE [message]:send: 13
+{"result":4}
+
+ 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:Socket [pid]:1944205 [tid]:125631285782336 [line]:NONE [message]:recv: 24
+{"oper":43,"x":1,"y":1}
+
+ 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:Socket [pid]:1944205 [tid]:125631285782336 [line]:NONE [message]:send: 13
+{"result":2}
+
+ 
+[time]:2026-02-07 20:12:2 [level]:WARNING [filename]:Socket [pid]:1944205 [tid]:125631285782336 [line]:NONE [message]:fd is close! 
+[time]:2026-02-07 20:12:2 [level]:INFO [filename]:CALCULATORSERVER [pid]:1944205 [tid]:125631285782336 [line]:NONE [message]:run finish 
+[time]:2026-02-07 20:12:2 [level]:INFO [filename]:Socket [pid]:1944205 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 20:12:2 [level]:INFO [filename]:Socket [pid]:1944205 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 20:12:2 [level]:INFO [filename]:Socket [pid]:1944205 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 20:12:2 [level]:INFO [filename]:Socket [pid]:1944205 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 20:12:2 [level]:WARNING [filename]:Socket [pid]:1943906 [tid]:125631285782336 [line]:NONE [message]:fd is close! 
+[time]:2026-02-07 20:12:2 [level]:INFO [filename]:CALCULATORSERVER [pid]:1943906 [tid]:125631285782336 [line]:NONE [message]:run finish 
+[time]:2026-02-07 20:12:2 [level]:INFO [filename]:Socket [pid]:1943906 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 20:12:2 [level]:INFO [filename]:Socket [pid]:1943906 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 20:12:2 [level]:INFO [filename]:Socket [pid]:1943906 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 20:12:2 [level]:INFO [filename]:Socket [pid]:1943906 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 20:15:4 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 20:15:4 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 20:15:4 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 20:15:4 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 20:15:4 [level]:INFO [filename]:Socket [pid]:1945221 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 20:15:4 [level]:INFO [filename]:Socket [pid]:1945221 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 20:15:4 [level]:INFO [filename]:CALCULATORSERVER [pid]:1945222 [tid]:125631285782336 [line]:NONE [message]:run begin 
+[time]:2026-02-07 20:15:4 [level]:WARNING [filename]:Socket [pid]:1945222 [tid]:125631285782336 [line]:NONE [message]:fd is close! 
+[time]:2026-02-07 20:15:4 [level]:INFO [filename]:CALCULATORSERVER [pid]:1945222 [tid]:125631285782336 [line]:NONE [message]:run finish 
+[time]:2026-02-07 20:15:4 [level]:INFO [filename]:Socket [pid]:1945222 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 20:15:4 [level]:INFO [filename]:Socket [pid]:1945222 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 20:15:4 [level]:INFO [filename]:Socket [pid]:1945222 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 20:15:4 [level]:INFO [filename]:Socket [pid]:1945222 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 20:24:5 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 20:24:5 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 20:24:5 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 20:24:5 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 20:24:5 [level]:INFO [filename]:Socket [pid]:1948076 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 20:24:5 [level]:INFO [filename]:Socket [pid]:1948076 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 20:24:5 [level]:INFO [filename]:CALCULATORSERVER [pid]:1948077 [tid]:125631285782336 [line]:NONE [message]:run begin 
+[time]:2026-02-07 20:25:0 [level]:INFO [filename]:Socket [pid]:1948077 [tid]:125631285782336 [line]:NONE [message]:recv: 24
+{"oper":43,"x":1,"y":1}
+
+ 
+[time]:2026-02-07 20:25:0 [level]:INFO [filename]:Socket [pid]:1948077 [tid]:125631285782336 [line]:NONE [message]:send: 13
+{"result":2}
+
+ 
+[time]:2026-02-07 20:25:0 [level]:INFO [filename]:Socket [pid]:1948077 [tid]:125631285782336 [line]:NONE [message]:recv: 24
+{"oper":42,"x":2,"y":2}
+
+ 
+[time]:2026-02-07 20:25:0 [level]:INFO [filename]:Socket [pid]:1948077 [tid]:125631285782336 [line]:NONE [message]:send: 13
+{"result":4}
+
+ 
+[time]:2026-02-07 23:26:1 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 23:26:1 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 23:26:1 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 23:26:1 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 23:26:1 [level]:INFO [filename]:Socket [pid]:2009286 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 23:26:1 [level]:INFO [filename]:Socket [pid]:2009286 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 23:26:1 [level]:INFO [filename]:CALCULATORSERVER [pid]:2009287 [tid]:125631285782336 [line]:NONE [message]:run begin 
+[time]:2026-02-07 23:26:2 [level]:WARNING [filename]:Socket [pid]:2009287 [tid]:125631285782336 [line]:NONE [message]:fd is close! 
+[time]:2026-02-07 23:26:2 [level]:INFO [filename]:CALCULATORSERVER [pid]:2009287 [tid]:125631285782336 [line]:NONE [message]:run finish 
+[time]:2026-02-07 23:26:2 [level]:INFO [filename]:Socket [pid]:2009287 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 23:26:2 [level]:INFO [filename]:Socket [pid]:2009287 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 23:26:2 [level]:INFO [filename]:Socket [pid]:2009287 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 23:26:2 [level]:INFO [filename]:Socket [pid]:2009287 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 23:26:2 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 23:26:2 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 23:26:2 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 23:26:2 [level]:INFO [filename]:Socket [pid]:1943639 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 23:26:2 [level]:INFO [filename]:Socket [pid]:2009339 [tid]:125631285782336 [line]:NONE [message]:close begin! 
+[time]:2026-02-07 23:26:2 [level]:INFO [filename]:Socket [pid]:2009339 [tid]:125631285782336 [line]:NONE [message]:close finish! 
+[time]:2026-02-07 23:26:2 [level]:INFO [filename]:CALCULATORSERVER [pid]:2009340 [tid]:125631285782336 [line]:NONE [message]:run begin 
+[time]:2026-02-07 23:26:2 [level]:INFO [filename]:Socket [pid]:2009340 [tid]:125631285782336 [line]:NONE [message]:recv: MGLNDD_120.79.179.55_7777
+ 

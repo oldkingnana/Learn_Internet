@@ -1,7 +1,7 @@
 #include "Protocol.hh"
+#include "common.hh"
 #include <memory>
 #include <string>
-
 
 //=================== server =====================
 
@@ -16,30 +16,32 @@
 // ...
 bool oldking::ProtocolServer::obtain(oldking::Info& info)
 {
-	if(!sock_.recv(buff_))
-		return false;
+	while(sock_.recv(buff_))
+	{
+		//check buffer
+		if(buff_.size() == 0 || buff_.find_first_of("\r\n") == std::string::npos)
+		{
+			oldking::MyEasyLog::GetInstance().WriteLog(LOG_WARNING, FILENAME_PROTOCOL, "ProtocolServer->buffer failed");
+			continue;
+		}
 	
-	//check buffer
-	if(buff_.size() == 0 || buff_.find_first_of("\r\n") == std::string::npos)
-	{
-		oldking::MyEasyLog::GetInstance().WriteLog(LOG_WARNING, FILENAME_PROTOCOL, "ProtocolServer->buffer failed");
-		return false;
+		uint16_t number_area_len = buff_.find_first_of("\r\n");
+		uint16_t number = std::stoi(buff_.substr(0, buff_.find_first_of("\r\n")));	
+	
+		if(buff_.size() - number_area_len - 4 < number)
+		{
+			oldking::MyEasyLog::GetInstance().WriteLog(LOG_WARNING, FILENAME_PROTOCOL, "ProtocolServer->buffer failed");
+			continue;
+		}
+		
+		// ok 
+		uint16_t msg_len = number_area_len + 2 + number + 2;
+		info = deserialize(buff_.substr(0, msg_len));
+		buff_.erase(0, msg_len);
+
+		return true;
 	}
-
-	uint16_t number_area_len = buff_.find_first_of("\r\n");
-	uint16_t number = std::stoi(buff_.substr(0, buff_.find_first_of("\r\n")));	
-
-	if(buff_.size() - number_area_len - 4 < number)
-	{
-		oldking::MyEasyLog::GetInstance().WriteLog(LOG_WARNING, FILENAME_PROTOCOL, "ProtocolServer->buffer failed");
-		return false;
-	}
-
-	uint16_t msg_len = number_area_len + 2 + number + 2;
-	info = deserialize(buff_.substr(0, msg_len));
-	buff_.erase(0, msg_len);
-
-	return true;
+	return false;
 }
 
 bool oldking::ProtocolServer::deliver(oldking::Result result)

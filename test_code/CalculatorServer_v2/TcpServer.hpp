@@ -48,7 +48,7 @@ namespace oldking
 					if(n == 0)
 						func_(std::move(sock));
 					sock.close();
-					exit(OK);
+					exit(OK_ERR);
 				}
 				else if(pid > 0)
 				{
