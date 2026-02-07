@@ -4,7 +4,7 @@
 
 enum ERRCODE 
 {
-	OK = 0,
+	OK_ERR = 0,
 	ADDR_ERR,
 	BIND_ERR,
 	SOCK_ERR,
@@ -18,5 +18,8 @@ enum ERRCODE
 #define FILENAME_SOCK "Socket"
 #define FILENAME_TCPSERVER "TcpServer"
 #define FILENAME_PROTOCOL "PROTOCOL"
+#define FILENAME_CAL "CALCULATORSERVER"
+
+
 
 

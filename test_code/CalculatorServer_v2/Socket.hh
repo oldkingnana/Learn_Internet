@@ -18,14 +18,12 @@ namespace oldking
 		Socket()
 		: sockfd_(DEFAULTFD)
 		, addr_({})
-		{
-		}
+		{}
 
 		Socket(const int& sockfd, const Addr_in& addr_in)
 		: sockfd_(sockfd)
 		, addr_(addr_in)
-		{
-		}
+		{}
 
 		Socket(const Socket& other) = delete;
 		

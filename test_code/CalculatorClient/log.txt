@@ -1,1 +1,149 @@
 
+[time]:2026-02-07 20:07:3 [level]:INFO [filename]:test [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:exe begin 
+[time]:2026-02-07 20:07:3 [level]:INFO [filename]:TcpServer [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:constructor 
+[time]:2026-02-07 20:07:3 [level]:INFO [filename]:TcpServer [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:run begin! 
+[time]:2026-02-07 20:07:3 [level]:INFO [filename]:TcpServer [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:get socket begin! 
+[time]:2026-02-07 20:07:3 [level]:INFO [filename]:TcpServer [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:get socket finish! 
+[time]:2026-02-07 20:07:3 [level]:INFO [filename]:TcpServer [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:get socket: 4 
+[time]:2026-02-07 20:07:3 [level]:INFO [filename]:PROTOCOL [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:run start! 
+[time]:2026-02-07 20:07:3 [level]:INFO [filename]:Socket [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:send: 24
+{"oper":43,"x":1,"y":1}
+
+ 
+[time]:2026-02-07 20:07:3 [level]:INFO [filename]:PROTOCOL [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:obtain start! 
+[time]:2026-02-07 20:07:3 [level]:INFO [filename]:Socket [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:recv: 13
+{"result":2}
+
+ 
+[time]:2026-02-07 20:07:3 [level]:INFO [filename]:PROTOCOL [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:deserialize start! 
+[time]:2026-02-07 20:07:3 [level]:INFO [filename]:PROTOCOL [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:deserialize finish! 
+[time]:2026-02-07 20:07:3 [level]:INFO [filename]:PROTOCOL [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:obtain finish! 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:Socket [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:send: 24
+{"oper":43,"x":2,"y":2}
+
+ 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:PROTOCOL [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:obtain start! 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:Socket [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:recv: 13
+{"result":4}
+
+ 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:PROTOCOL [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:deserialize start! 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:PROTOCOL [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:deserialize finish! 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:PROTOCOL [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:obtain finish! 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:Socket [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:send: 24
+{"oper":43,"x":3,"y":3}
+
+ 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:PROTOCOL [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:obtain start! 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:Socket [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:recv: 13
+{"result":6}
+
+ 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:PROTOCOL [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:deserialize start! 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:PROTOCOL [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:deserialize finish! 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:PROTOCOL [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:obtain finish! 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:Socket [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:send: 24
+{"oper":43,"x":4,"y":4}
+
+ 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:PROTOCOL [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:obtain start! 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:Socket [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:recv: 13
+{"result":8}
+
+ 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:PROTOCOL [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:deserialize start! 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:PROTOCOL [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:deserialize finish! 
+[time]:2026-02-07 20:07:4 [level]:INFO [filename]:PROTOCOL [pid]:1943739 [tid]:125671427524416 [line]:NONE [message]:obtain finish! 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:test [pid]:1943904 [tid]:126538719455040 [line]:NONE [message]:exe begin 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:TcpServer [pid]:1943904 [tid]:126538719455040 [line]:NONE [message]:constructor 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:TcpServer [pid]:1943904 [tid]:126538719455040 [line]:NONE [message]:run begin! 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:TcpServer [pid]:1943904 [tid]:126538719455040 [line]:NONE [message]:get socket begin! 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:TcpServer [pid]:1943904 [tid]:126538719455040 [line]:NONE [message]:get socket finish! 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:TcpServer [pid]:1943904 [tid]:126538719455040 [line]:NONE [message]:get socket: 4 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:PROTOCOL [pid]:1943904 [tid]:126538719455040 [line]:NONE [message]:run start! 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:Socket [pid]:1943904 [tid]:126538719455040 [line]:NONE [message]:send: 24
+{"oper":43,"x":1,"y":1}
+
+ 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:PROTOCOL [pid]:1943904 [tid]:126538719455040 [line]:NONE [message]:obtain start! 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:Socket [pid]:1943904 [tid]:126538719455040 [line]:NONE [message]:recv: 13
+{"result":2}
+
+ 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:PROTOCOL [pid]:1943904 [tid]:126538719455040 [line]:NONE [message]:deserialize start! 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:PROTOCOL [pid]:1943904 [tid]:126538719455040 [line]:NONE [message]:deserialize finish! 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:PROTOCOL [pid]:1943904 [tid]:126538719455040 [line]:NONE [message]:obtain finish! 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:Socket [pid]:1943904 [tid]:126538719455040 [line]:NONE [message]:send: 24
+{"oper":43,"x":2,"y":2}
+
+ 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:PROTOCOL [pid]:1943904 [tid]:126538719455040 [line]:NONE [message]:obtain start! 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:Socket [pid]:1943904 [tid]:126538719455040 [line]:NONE [message]:recv: 13
+{"result":4}
+
+ 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:PROTOCOL [pid]:1943904 [tid]:126538719455040 [line]:NONE [message]:deserialize start! 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:PROTOCOL [pid]:1943904 [tid]:126538719455040 [line]:NONE [message]:deserialize finish! 
+[time]:2026-02-07 20:11:3 [level]:INFO [filename]:PROTOCOL [pid]:1943904 [tid]:126538719455040 [line]:NONE [message]:obtain finish! 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:test [pid]:1944203 [tid]:124273172932416 [line]:NONE [message]:exe begin 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:TcpServer [pid]:1944203 [tid]:124273172932416 [line]:NONE [message]:constructor 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:TcpServer [pid]:1944203 [tid]:124273172932416 [line]:NONE [message]:run begin! 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:TcpServer [pid]:1944203 [tid]:124273172932416 [line]:NONE [message]:get socket begin! 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:TcpServer [pid]:1944203 [tid]:124273172932416 [line]:NONE [message]:get socket finish! 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:TcpServer [pid]:1944203 [tid]:124273172932416 [line]:NONE [message]:get socket: 4 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:PROTOCOL [pid]:1944203 [tid]:124273172932416 [line]:NONE [message]:run start! 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:Socket [pid]:1944203 [tid]:124273172932416 [line]:NONE [message]:send: 24
+{"oper":43,"x":2,"y":2}
+
+ 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:PROTOCOL [pid]:1944203 [tid]:124273172932416 [line]:NONE [message]:obtain start! 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:Socket [pid]:1944203 [tid]:124273172932416 [line]:NONE [message]:recv: 13
+{"result":4}
+
+ 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:PROTOCOL [pid]:1944203 [tid]:124273172932416 [line]:NONE [message]:deserialize start! 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:PROTOCOL [pid]:1944203 [tid]:124273172932416 [line]:NONE [message]:deserialize finish! 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:PROTOCOL [pid]:1944203 [tid]:124273172932416 [line]:NONE [message]:obtain finish! 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:Socket [pid]:1944203 [tid]:124273172932416 [line]:NONE [message]:send: 24
+{"oper":43,"x":1,"y":1}
+
+ 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:PROTOCOL [pid]:1944203 [tid]:124273172932416 [line]:NONE [message]:obtain start! 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:Socket [pid]:1944203 [tid]:124273172932416 [line]:NONE [message]:recv: 13
+{"result":2}
+
+ 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:PROTOCOL [pid]:1944203 [tid]:124273172932416 [line]:NONE [message]:deserialize start! 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:PROTOCOL [pid]:1944203 [tid]:124273172932416 [line]:NONE [message]:deserialize finish! 
+[time]:2026-02-07 20:12:1 [level]:INFO [filename]:PROTOCOL [pid]:1944203 [tid]:124273172932416 [line]:NONE [message]:obtain finish! 
+[time]:2026-02-07 20:24:5 [level]:INFO [filename]:test [pid]:1948075 [tid]:132126279489344 [line]:NONE [message]:exe begin 
+[time]:2026-02-07 20:24:5 [level]:INFO [filename]:TcpServer [pid]:1948075 [tid]:132126279489344 [line]:NONE [message]:constructor 
+[time]:2026-02-07 20:24:5 [level]:INFO [filename]:TcpServer [pid]:1948075 [tid]:132126279489344 [line]:NONE [message]:run begin! 
+[time]:2026-02-07 20:24:5 [level]:INFO [filename]:TcpServer [pid]:1948075 [tid]:132126279489344 [line]:NONE [message]:get socket begin! 
+[time]:2026-02-07 20:24:5 [level]:INFO [filename]:TcpServer [pid]:1948075 [tid]:132126279489344 [line]:NONE [message]:get socket finish! 
+[time]:2026-02-07 20:24:5 [level]:INFO [filename]:TcpServer [pid]:1948075 [tid]:132126279489344 [line]:NONE [message]:get socket: 4 
+[time]:2026-02-07 20:24:5 [level]:INFO [filename]:PROTOCOL [pid]:1948075 [tid]:132126279489344 [line]:NONE [message]:run start! 
+[time]:2026-02-07 20:25:0 [level]:INFO [filename]:Socket [pid]:1948075 [tid]:132126279489344 [line]:NONE [message]:send: 24
+{"oper":43,"x":1,"y":1}
+
+ 
+[time]:2026-02-07 20:25:0 [level]:INFO [filename]:PROTOCOL [pid]:1948075 [tid]:132126279489344 [line]:NONE [message]:obtain start! 
+[time]:2026-02-07 20:25:0 [level]:INFO [filename]:Socket [pid]:1948075 [tid]:132126279489344 [line]:NONE [message]:recv: 13
+{"result":2}
+
+ 
+[time]:2026-02-07 20:25:0 [level]:INFO [filename]:PROTOCOL [pid]:1948075 [tid]:132126279489344 [line]:NONE [message]:deserialize start! 
+[time]:2026-02-07 20:25:0 [level]:INFO [filename]:PROTOCOL [pid]:1948075 [tid]:132126279489344 [line]:NONE [message]:deserialize finish! 
+[time]:2026-02-07 20:25:0 [level]:INFO [filename]:PROTOCOL [pid]:1948075 [tid]:132126279489344 [line]:NONE [message]:obtain finish! 
+[time]:2026-02-07 20:25:0 [level]:INFO [filename]:Socket [pid]:1948075 [tid]:132126279489344 [line]:NONE [message]:send: 24
+{"oper":42,"x":2,"y":2}
+
+ 
+[time]:2026-02-07 20:25:0 [level]:INFO [filename]:PROTOCOL [pid]:1948075 [tid]:132126279489344 [line]:NONE [message]:obtain start! 
+[time]:2026-02-07 20:25:0 [level]:INFO [filename]:Socket [pid]:1948075 [tid]:132126279489344 [line]:NONE [message]:recv: 13
+{"result":4}
+
+ 
+[time]:2026-02-07 20:25:0 [level]:INFO [filename]:PROTOCOL [pid]:1948075 [tid]:132126279489344 [line]:NONE [message]:deserialize start! 
+[time]:2026-02-07 20:25:0 [level]:INFO [filename]:PROTOCOL [pid]:1948075 [tid]:132126279489344 [line]:NONE [message]:deserialize finish! 
+[time]:2026-02-07 20:25:0 [level]:INFO [filename]:PROTOCOL [pid]:1948075 [tid]:132126279489344 [line]:NONE [message]:obtain finish! 

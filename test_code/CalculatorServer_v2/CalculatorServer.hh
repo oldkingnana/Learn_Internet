@@ -24,6 +24,7 @@ namespace oldking
 
 		void run()
 		{
+			oldking::MyEasyLog::GetInstance().WriteLog(LOG_INFO, FILENAME_CAL, "run begin");
 			while(true)
 			{
 				if(protocol_->obtain(info_))
@@ -49,11 +50,16 @@ namespace oldking
 						result_.v_ = static_cast<int16_t>(114514);
 						break;
 					}
-					protocol_->deliver(result_);
+					if(!protocol_->deliver(result_))
+						break;
+					bzero(&info_, sizeof(info_));
+					bzero(&info_, sizeof(result_));
 				}
-				bzero(&info_, sizeof(info_));
-				bzero(&info_, sizeof(result_));
+				else 
+					break;
 			}
+			oldking::MyEasyLog::GetInstance().WriteLog(LOG_INFO, FILENAME_CAL, "run finish");
+			return ;
 		}
 
 	private:
