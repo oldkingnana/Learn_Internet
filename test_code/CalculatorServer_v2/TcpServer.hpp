@@ -13,6 +13,7 @@
 #include <unistd.h>
 #include <vector>
 #include <functional>
+#include <sys/wait.h>
 
 namespace oldking 
 {
@@ -54,6 +55,8 @@ namespace oldking
 				{
 					// parent
 					sock.close();
+					int stat;
+					waitpid(-1, &stat, 0);	
 				}
 				else 
 				{
