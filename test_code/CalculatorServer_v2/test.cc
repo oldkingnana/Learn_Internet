@@ -5,9 +5,12 @@
 
 #include <functional>
 #include <memory>
+#include <unistd.h>
 
 int main()
 {
+	daemon(1, 0);
+
 	oldking::TcpServer server(7777, [](oldking::Socket&& sock)->void
 		{
 			oldking::ProtocolServer PS(std::move(sock), [](oldking::ProtocolServer* pPS)->void
