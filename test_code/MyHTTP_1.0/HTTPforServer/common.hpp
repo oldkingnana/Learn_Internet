@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <unordered_map>
 
 enum ERRCODE 
 {
@@ -21,6 +22,14 @@ enum ERRCODE
 #define FILENAME_HTTPFORSERVER "HTTPforServer"
 #define FILENAME_CAL "CALCULATORSERVER"
 
+#define WEBROOT "./webroot"
 
-
-
+static std::unordered_map<std::string, std::string> mime_map = 
+{
+	{".html", "text/html; charset=UTF-8"},
+	{".css", "text/css"},
+    {".js", "application/javascript"},
+    {".png", "image/png"},
+    {".jpg", "image/jpeg"},
+    {".ico", "image/x-icon"}
+};

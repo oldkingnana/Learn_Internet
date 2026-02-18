@@ -1,5 +1,5 @@
 #include "Socket.hh"
-#include "common.hh"
+#include "common.hpp"
 
 bool oldking::Socket::operator==(const Socket& other) const 
 {

@@ -7,7 +7,7 @@
 #include <arpa/inet.h>
 
 #include "myeasylog.hpp"
-#include "common.hh"
+#include "common.hpp"
 
 namespace oldking
 {

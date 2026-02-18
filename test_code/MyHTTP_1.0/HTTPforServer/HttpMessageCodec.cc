@@ -1,5 +1,5 @@
 #include "HttpMessageCodec.hh"
-#include "common.hh"
+#include "common.hpp"
 #include <memory>
 #include <string>
 #include <unordered_map>
@@ -24,7 +24,7 @@ bool oldking::HttpMessageCodec::obtain(oldking::HTTPReqObj& obj)
 	}
 
 	std::string req_and_header = buff_.substr(0, buff_.find("\r\n\r\n") + 2);
-	std::cout << "req_and_header->" << req_and_header;
+	// std::cout << "req_and_header->" << req_and_header;
 	buff_.erase(0, buff_.find("\r\n\r\n") + 2);
 
 	// get request line
@@ -35,7 +35,7 @@ bool oldking::HttpMessageCodec::obtain(oldking::HTTPReqObj& obj)
 		exit(PROTOCOL_ERR);
 	}
 	std::string request_line = req_and_header.substr(0, request_line_len);
-	std::cout << "request->" << request_line;
+	// std::cout << "request->" << request_line;
 	req_and_header.erase(0, request_line_len + 2);
 	deserialize_req_line(request_line, obj);
 	oldking::MyEasyLog::GetInstance().WriteLog(LOG_INFO, FILENAME_HTTPFORSERVER, std::string("get request line: ") + "\n" + 
@@ -53,7 +53,7 @@ bool oldking::HttpMessageCodec::obtain(oldking::HTTPReqObj& obj)
 	else 
 	{
 		std::string header = req_and_header;
-		std::cout << "header->" << header;
+		// std::cout << "header->" << header;
 		req_and_header.clear();
 		deserialize_header(header, obj);
 		oldking::MyEasyLog::GetInstance().WriteLog(LOG_INFO, FILENAME_HTTPFORSERVER, std::string("get header: "));
