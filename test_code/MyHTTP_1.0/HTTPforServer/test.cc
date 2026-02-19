@@ -45,39 +45,51 @@ int main()
 			// Message parsing
 
 			oldking::HTTPResObj res;
-			res.version_ = "HTTP/1.1";
-			res.res_code_ = "200";
-			res.res_state_ = "OK";
-			res.header_["Connection"] = "close";
-			
+			// check path 
 			if(req.req_target_ == "/")
 			{
-				res.header_["Content-Type"] = "text/html; charset=UTF-8";
-				if(!oldking::Util::ReadFile(WEBROOT + std::string("/index.html"), res.data_))
+				if(oldking::Util::ReadFile(WEBROOT + std::string("/index.html"), res.data_))
 				{
-					// err
-				}
-			}
-			else
-			{
-				std::string exten;
-				if(oldking::Util::GetFileExten(req.req_target_, exten))
-				{
-					res.header_["Content-Type"] = mime_map[exten];
+					res.header_["Content-Type"] = "text/html; charset=UTF-8";
+					res.res_code_ = "200";
+					res.res_state_ = "OK";
 				}
 				else 
 				{
 					// err
-				}
-
-				if(!oldking::Util::ReadFile(WEBROOT + req.req_target_, res.data_))
-				{
-					// err	
+					res.res_code_ = "404";
+					res.res_state_ = "Not Found";
 				}
 			}
+			else 
+			{
+				std::string exten;
+				if(oldking::Util::GetFileExten(req.req_target_, exten))
+				{
+					if(!oldking::Util::ReadFile(WEBROOT + req.req_target_, res.data_))
+					{
+						res.header_["Content-Type"] = mime_map[exten];
+						res.res_code_ = "200";
+						res.res_state_ = "OK";
+					}
+					else 
+					{
+						// err
+						res.res_code_ = "404";
+						res.res_state_ = "Not Found";
+					}
+				}
+				else 
+				{
+					// err 
+					res.res_code_ = "404";
+					res.res_state_ = "Not Found";
+				}
+			}
+			res.version_ = "HTTP/1.1";
+			res.header_["Connection"] = "close";
  
 			res.header_["Content-Length"] = std::to_string(res.data_.length());
-
 
 			std::cout << "send response message: " << std::endl << 
 			"response line:" << std::endl << 	
