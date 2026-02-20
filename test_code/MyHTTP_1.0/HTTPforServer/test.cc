@@ -57,6 +57,7 @@ int main()
 				else 
 				{
 					// err
+					oldking::Util::ReadFile(WEBROOT + std::string("/404.html"), res.data_);
 					res.res_code_ = "404";
 					res.res_state_ = "Not Found";
 				}
@@ -66,7 +67,7 @@ int main()
 				std::string exten;
 				if(oldking::Util::GetFileExten(req.req_target_, exten))
 				{
-					if(!oldking::Util::ReadFile(WEBROOT + req.req_target_, res.data_))
+					if(oldking::Util::ReadFile(WEBROOT + req.req_target_, res.data_))
 					{
 						res.header_["Content-Type"] = mime_map[exten];
 						res.res_code_ = "200";
@@ -75,6 +76,7 @@ int main()
 					else 
 					{
 						// err
+						oldking::Util::ReadFile(WEBROOT + std::string("/404.html"), res.data_);
 						res.res_code_ = "404";
 						res.res_state_ = "Not Found";
 					}
@@ -82,11 +84,12 @@ int main()
 				else 
 				{
 					// err 
+					oldking::Util::ReadFile(WEBROOT + std::string("/404.html"), res.data_);
 					res.res_code_ = "404";
 					res.res_state_ = "Not Found";
 				}
 			}
-			res.version_ = "HTTP/1.1";
+			res.version_ = "HTTP/1.0";
 			res.header_["Connection"] = "close";
  
 			res.header_["Content-Length"] = std::to_string(res.data_.length());
