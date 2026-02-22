@@ -23,17 +23,15 @@ namespace oldking
 	class HttpMessageCodec : public ProtocolBase
 	{
 	public:
-		HttpMessageCodec(std::shared_ptr<Socket> sock, std::function<void(HttpMessageCodec*)> func)
+		HttpMessageCodec(std::shared_ptr<Socket> sock)
 		: buff_({})
 		, sock_(sock)
-		, func_(func)
 		{}
 
 		~HttpMessageCodec()
 		{}
 
 		// ---------------public API---------------
-		void run();
 
 		bool obtain(struct HTTPReqObj& obj);
 		
@@ -59,6 +57,5 @@ namespace oldking
 	private:
 		std::string buff_;
 		std::shared_ptr<oldking::Socket> sock_;				
-		std::function<void(HttpMessageCodec*)> func_;
 	};
 }

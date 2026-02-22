@@ -2,6 +2,7 @@
 
 #include <string>
 #include <unordered_map>
+#include <unordered_set>
 
 enum ERRCODE 
 {
@@ -32,4 +33,10 @@ static std::unordered_map<std::string, std::string> mime_map =
     {".png", "image/png"},
     {".jpg", "image/jpeg"},
     {".ico", "image/x-icon"}
+};
+		
+static std::unordered_set<std::string> method_list = 
+{
+	"GET",
+	"POST"
 };

@@ -98,11 +98,6 @@ bool oldking::HttpMessageCodec::deliver(oldking::HTTPResObj obj)
 	return true;
 }
 
-void oldking::HttpMessageCodec::run()
-{
-	func_(this);
-}
-
 // ------serialize & deserialize API-------
 
 std::string oldking::HttpMessageCodec::serialize(oldking::HTTPResObj obj)
