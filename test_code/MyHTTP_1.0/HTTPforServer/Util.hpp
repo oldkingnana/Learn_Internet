@@ -1,5 +1,6 @@
 #pragma once 
 
+#include <ios>
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -18,14 +19,21 @@ namespace oldking
 
 		static bool ReadFile(const std::string& path, std::string& data)
 		{
-			std::ifstream in(path);
+			std::ifstream in(path, std::ios::binary);
+			// std::cout << "path: " << path << std::endl;
 			if(!in.is_open())
 				return false;
-			std::string line;
-			while(std::getline(in, line))
-			{
-				data += line;
-			}
+			
+			in.seekg(0, std::ios::end);
+			std::streamsize size = in.tellg();
+			in.seekg(0, std::ios::beg);
+
+			if(size < 0)
+				return false;
+
+			data.resize(size);
+			in.read(&data[0], size);
+
 			in.close();
 			return true;
 		}

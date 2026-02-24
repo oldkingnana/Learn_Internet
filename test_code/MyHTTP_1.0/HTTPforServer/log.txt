@@ -1,1 +1,183 @@
 
+[time]:2026-02-24 22:31:3 [level]:INFO [filename]:TcpServer [pid]:3313658 [tid]:134886137501504 [line]:NONE [message]:init! 
+[time]:2026-02-24 22:31:3 [level]:INFO [filename]:TcpServer [pid]:3313658 [tid]:134886137501504 [line]:NONE [message]:listen! 
+[time]:2026-02-24 22:31:3 [level]:INFO [filename]:TcpServer [pid]:3313658 [tid]:134886137501504 [line]:NONE [message]:accept! 
+[time]:2026-02-24 22:31:3 [level]:INFO [filename]:Socket [pid]:3313658 [tid]:134886137501504 [line]:NONE [message]:~Socket! 
+[time]:2026-02-24 22:31:3 [level]:INFO [filename]:Socket [pid]:3313659 [tid]:134886137501504 [line]:NONE [message]:~Socket! 
+[time]:2026-02-24 22:31:3 [level]:INFO [filename]:HTTPforServer [pid]:3313660 [tid]:134886137501504 [line]:NONE [message]:obtain! 
+[time]:2026-02-24 22:31:3 [level]:INFO [filename]:TcpServer [pid]:3313658 [tid]:134886137501504 [line]:NONE [message]:accept! 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:Socket [pid]:3313660 [tid]:134886137501504 [line]:NONE [message]:recv: GET /a/b.html HTTP/1.1
+Host: 120.79.179.55:7777
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+
+ 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313660 [tid]:134886137501504 [line]:NONE [message]:get request line: 
+method: GET
+req_target: /a/b.html
+version: HTTP/1.1 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313660 [tid]:134886137501504 [line]:NONE [message]:get kv->  Host: 120.79.179.55:7777 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313660 [tid]:134886137501504 [line]:NONE [message]:get kv->  User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313660 [tid]:134886137501504 [line]:NONE [message]:get kv->  Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313660 [tid]:134886137501504 [line]:NONE [message]:get kv->  Accept-Encoding: gzip, deflate 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313660 [tid]:134886137501504 [line]:NONE [message]:get kv->  Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313660 [tid]:134886137501504 [line]:NONE [message]:get kv->  Cache-Control: max-age=0 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313660 [tid]:134886137501504 [line]:NONE [message]:get kv->  Upgrade-Insecure-Requests: 1 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313660 [tid]:134886137501504 [line]:NONE [message]:get header:  
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313660 [tid]:134886137501504 [line]:NONE [message]:Cache-Control: max-age=0 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313660 [tid]:134886137501504 [line]:NONE [message]:Upgrade-Insecure-Requests: 1 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313660 [tid]:134886137501504 [line]:NONE [message]:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313660 [tid]:134886137501504 [line]:NONE [message]:Accept-Encoding: gzip, deflate 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313660 [tid]:134886137501504 [line]:NONE [message]:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313660 [tid]:134886137501504 [line]:NONE [message]:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313660 [tid]:134886137501504 [line]:NONE [message]:Host: 120.79.179.55:7777 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313660 [tid]:134886137501504 [line]:NONE [message]:obtain finish 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:Socket [pid]:3313660 [tid]:134886137501504 [line]:NONE [message]:send: HTTP/1.0 404 Not Found
+Date: Tue, 24 Feb 2026 14:31:40 GMT
+Content-Length: 1166
+Connection: close
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>404 Not Found</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            margin-top: 100px;
+        }
+
+        img {
+            width: 300px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 64px;
+            margin: 0;
+        }
+
+        p {
+            font-size: 20px;
+            color: #aaa;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background: #ff4757;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background: #ff6b81;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/404_logo.png" alt="404 Logo">
+        <h1>404</h1>
+        <p>The page you requested was not found.</p>
+        <a href="/">Go Back Home</a>
+    </div>
+</body>
+</html>
+ 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:Socket [pid]:3313660 [tid]:134886137501504 [line]:NONE [message]:~Socket! 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:Socket [pid]:3313658 [tid]:134886137501504 [line]:NONE [message]:~Socket! 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:Socket [pid]:3313661 [tid]:134886137501504 [line]:NONE [message]:~Socket! 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313662 [tid]:134886137501504 [line]:NONE [message]:obtain! 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:Socket [pid]:3313662 [tid]:134886137501504 [line]:NONE [message]:recv: GET /404_logo.png HTTP/1.1
+Host: 120.79.179.55:7777
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Referer: http://120.79.179.55:7777/a/b.html
+
+ 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313662 [tid]:134886137501504 [line]:NONE [message]:get request line: 
+method: GET
+req_target: /404_logo.png
+version: HTTP/1.1 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313662 [tid]:134886137501504 [line]:NONE [message]:get kv->  Host: 120.79.179.55:7777 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313662 [tid]:134886137501504 [line]:NONE [message]:get kv->  User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313662 [tid]:134886137501504 [line]:NONE [message]:get kv->  Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313662 [tid]:134886137501504 [line]:NONE [message]:get kv->  Accept-Encoding: gzip, deflate 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313662 [tid]:134886137501504 [line]:NONE [message]:get kv->  Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313662 [tid]:134886137501504 [line]:NONE [message]:get kv->  Referer: http://120.79.179.55:7777/a/b.html 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313662 [tid]:134886137501504 [line]:NONE [message]:get header:  
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313662 [tid]:134886137501504 [line]:NONE [message]:Referer: http://120.79.179.55:7777/a/b.html 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313662 [tid]:134886137501504 [line]:NONE [message]:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313662 [tid]:134886137501504 [line]:NONE [message]:Accept-Encoding: gzip, deflate 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313662 [tid]:134886137501504 [line]:NONE [message]:Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313662 [tid]:134886137501504 [line]:NONE [message]:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313662 [tid]:134886137501504 [line]:NONE [message]:Host: 120.79.179.55:7777 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313662 [tid]:134886137501504 [line]:NONE [message]:obtain finish 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:TcpServer [pid]:3313658 [tid]:134886137501504 [line]:NONE [message]:accept! 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:Socket [pid]:3313662 [tid]:134886137501504 [line]:NONE [message]:send: HTTP/1.0 200 OK
+Date: Tue, 24 Feb 2026 14:31:40 GMT
+Content-Length: 39000
+Connection: close
+Content-Type: image/png
+
+‰PNG
+
+ 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:Socket [pid]:3313662 [tid]:134886137501504 [line]:NONE [message]:~Socket! 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:Socket [pid]:3313658 [tid]:134886137501504 [line]:NONE [message]:~Socket! 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:Socket [pid]:3313663 [tid]:134886137501504 [line]:NONE [message]:~Socket! 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313664 [tid]:134886137501504 [line]:NONE [message]:obtain! 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:Socket [pid]:3313664 [tid]:134886137501504 [line]:NONE [message]:recv: GET /favicon.ico HTTP/1.1
+Host: 120.79.179.55:7777
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+Referer: http://120.79.179.55:7777/a/b.html
+
+ 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313664 [tid]:134886137501504 [line]:NONE [message]:get request line: 
+method: GET
+req_target: /favicon.ico
+version: HTTP/1.1 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313664 [tid]:134886137501504 [line]:NONE [message]:get kv->  Host: 120.79.179.55:7777 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313664 [tid]:134886137501504 [line]:NONE [message]:get kv->  User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313664 [tid]:134886137501504 [line]:NONE [message]:get kv->  Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313664 [tid]:134886137501504 [line]:NONE [message]:get kv->  Accept-Encoding: gzip, deflate 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313664 [tid]:134886137501504 [line]:NONE [message]:get kv->  Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313664 [tid]:134886137501504 [line]:NONE [message]:get kv->  Referer: http://120.79.179.55:7777/a/b.html 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313664 [tid]:134886137501504 [line]:NONE [message]:get header:  
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313664 [tid]:134886137501504 [line]:NONE [message]:Referer: http://120.79.179.55:7777/a/b.html 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313664 [tid]:134886137501504 [line]:NONE [message]:Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313664 [tid]:134886137501504 [line]:NONE [message]:Accept-Encoding: gzip, deflate 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313664 [tid]:134886137501504 [line]:NONE [message]:Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313664 [tid]:134886137501504 [line]:NONE [message]:User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313664 [tid]:134886137501504 [line]:NONE [message]:Host: 120.79.179.55:7777 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:HTTPforServer [pid]:3313664 [tid]:134886137501504 [line]:NONE [message]:obtain finish 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:TcpServer [pid]:3313658 [tid]:134886137501504 [line]:NONE [message]:accept! 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:Socket [pid]:3313664 [tid]:134886137501504 [line]:NONE [message]:send: HTTP/1.0 200 OK
+Date: Tue, 24 Feb 2026 14:31:40 GMT
+Content-Length: 4286
+Connection: close
+Content-Type: image/x-icon
+
+ 
+[time]:2026-02-24 22:31:4 [level]:INFO [filename]:Socket [pid]:3313664 [tid]:134886137501504 [line]:NONE [message]:~Socket! 
