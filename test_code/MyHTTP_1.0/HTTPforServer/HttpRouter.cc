@@ -1,12 +1,19 @@
 #include "HttpRouter.hh"
 #include "HTTPObj.hpp"
+#include "HttpConnection.hh"
 #include "Util.hpp"
+#include "myeasylog.hpp"
 
 void oldking::HttpRouter::run()
 {
 	HTTPReqObj req;
-	if(!connection_->obtain(req))
+	
+	auto req_result = connection_->obtain(req);
+	if(req_result != oldking::HttpConnection::req_err::REQ_OK)
+	{
+		oldking::MyEasyLog::GetInstance().WriteLog(LOG_WARNING, "HttpRouter", "bad request!");
 		return ;
+	}
 
 	oldking::HTTPResObj res;
 	// check path 
@@ -62,4 +69,15 @@ void oldking::HttpRouter::run()
 	connection_->deliver(res);
 	return ;
 }
+
+void oldking::HttpRouter::get()
+{
+		
+}
+
+void oldking::HttpRouter::post()
+{
+
+}
+
 

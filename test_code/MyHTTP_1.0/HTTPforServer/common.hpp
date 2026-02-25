@@ -34,7 +34,7 @@ static std::unordered_map<std::string, std::string> mime_map =
     {".jpg", "image/jpeg"},
     {".ico", "image/x-icon"}
 };
-		
+	
 static std::unordered_set<std::string> method_list = 
 {
 	"GET",

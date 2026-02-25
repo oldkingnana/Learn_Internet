@@ -8,11 +8,12 @@
 
 namespace oldking 
 {
+	// 业务分发
 	class HttpRouter
 	{
 	public:
 		HttpRouter(std::shared_ptr<Socket> sock)
-		: connection_(std::make_unique<HttpConnection>(sock))
+		: sock_(std::make_shared<Socket>(sock))
 		{}
 		
 		~HttpRouter()
@@ -21,6 +22,6 @@ namespace oldking
 		void run();
 
 	private:
-		std::unique_ptr<oldking::HttpConnection> connection_;
+		std::shared_ptr<oldking::Socket> sock_;
 	};
 }

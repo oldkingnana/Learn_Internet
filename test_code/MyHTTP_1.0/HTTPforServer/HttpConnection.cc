@@ -5,57 +5,36 @@
 #include <sstream>
 #include <iomanip>
 
-bool oldking::HttpConnection::obtain(HTTPReqObj& obj)
+oldking::HttpConnection::req_err oldking::HttpConnection::obtain(HTTPReqObj& obj)
 {
 	HTTPReqObj req;
 	
 	// get req
 	MsgCodec_->obtain(req);
 
-	// check
-	bool is_OK = true;
+	// check 
+	req_err check_result = req_check(req, this);
 
-	// check length & method
-	if(req.header_.find("Content-Length") != req.header_.end() && std::stoi(req.header_["Content-Length"]) >= 0)
-		is_OK = false;
-
-	if(method_list.find(req.method_) == method_list.end())
-		is_OK = false;
-
-	if(is_OK == false)
-	{
-		HTTPResObj err_res;
-		err_res.res_code_ = "400";
-		err_res.res_state_ = "Bad Request";
-		err_res.version_ = "HTTP/1.0";
-		err_res.header_["Content-Length"] = "0";
-		deliver(err_res);
-	}
-
-	// version check - ? 
-
-	if(is_OK)
-	{
+	if(check_result == req_err::REQ_OK)
 		obj = req;
-	}
 
-	return is_OK;
+	return check_result;
 }
 
-bool oldking::HttpConnection::deliver(HTTPResObj obj)
+oldking::HttpConnection::res_err oldking::HttpConnection::deliver(HTTPResObj obj)
 {
 	if(obj.res_code_ == "")
-		return false;
+		return res_err::RES_CODE_UNKNOWN;
 	if(obj.res_state_ == "")
-		return false;
+		return res_err::RES_STATE_ERR;
 	if(obj.version_ == "")
-		return false;
+		return res_err::RES_VERSION_ERR;
 
 	// length check 
 	if(obj.header_.find("Content-Length") == obj.header_.end())
-		return false;
-	if(std::stoi(obj.header_["Content-Length"]) != static_cast<int>(obj.data_.length()))
-		return false;
+		return res_err::RES_LENGTH_NOT_FOUND;
+	if(std::stoul(obj.header_["Content-Length"]) != obj.data_.length())
+		return res_err::RES_LENGTH_ERR;
 
 	// add Date
 	std::time_t now = std::time(nullptr);
@@ -69,5 +48,77 @@ bool oldking::HttpConnection::deliver(HTTPResObj obj)
 	// add Server - ?
 
 	MsgCodec_->deliver(obj);	
-	return true;
+	return res_err::RES_OK;
 }
+
+oldking::HttpConnection::req_err oldking::HttpConnection::req_check(HTTPReqObj& obj, HttpConnection* pthis)
+{
+	if(obj.req_target_ == "")
+	{
+		pthis->deliver(res_for_bad_req());
+		return REQ_PATH_ERR;
+	}
+	if(obj.version_ == "")
+	{
+		pthis->deliver(res_for_bad_req());
+		return REQ_VERSION_ERR;
+	}
+
+	// ! Not perfect enough !
+	if(obj.method_ == "GET")
+	{
+		return check_get(obj, pthis);
+	}
+	else if(obj.method_ == "POST")
+	{
+		return check_post(obj, pthis);
+	}
+	else 
+	{
+		return req_err::REQ_METHOD_UNKNOWN;
+	}
+}
+
+oldking::HttpConnection::req_err oldking::HttpConnection::check_get(HTTPReqObj& obj, HttpConnection* pthis)
+{
+	// check length & method
+	if(obj.header_.find("Content-Length") != obj.header_.end() && std::stoul(obj.header_["Content-Length"]) != obj.data_.length())
+	{
+		pthis->deliver(res_for_bad_req());
+		return req_err::REQ_LENGTH_ERR;
+	}
+
+	// version check - ?
+	
+	return req_err::REQ_OK;	
+}
+
+oldking::HttpConnection::req_err oldking::HttpConnection::check_post(HTTPReqObj& obj, HttpConnection* pthis)
+{
+	// check length & method
+	if(obj.header_.find("Content-Length") == obj.header_.end())
+	{
+		pthis->deliver(res_for_bad_req());
+		return req_err::REQ_LENGTH_NOT_FOUND;
+	}
+	else if(std::stoul(obj.header_["Content-Length"]) != obj.data_.length())
+	{
+		pthis->deliver(res_for_bad_req());
+		return req_err::REQ_LENGTH_ERR;
+	}
+
+	return req_err::REQ_OK;
+}
+
+oldking::HTTPResObj oldking::HttpConnection::res_for_bad_req()
+{
+	HTTPResObj err_res;
+	err_res.res_code_ = "400";
+	err_res.res_state_ = "Bad Request";
+	err_res.version_ = "HTTP/1.0";
+	err_res.header_["Content-Length"] = "0";
+	return err_res;
+}
+
+
+
