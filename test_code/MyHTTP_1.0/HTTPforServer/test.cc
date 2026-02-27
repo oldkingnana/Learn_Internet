@@ -4,6 +4,7 @@
 #include "TcpServer.hpp"
 #include "Util.hpp"
 #include "common.hpp"
+#include "HttpServer.hh"
 #include "HttpRouter.hh"
 
 #include <memory>
@@ -16,7 +17,11 @@ int main()
 	{
 		std::unique_ptr<oldking::TcpServer> TS(std::make_unique<oldking::TcpServer>(7777, [](std::shared_ptr<oldking::Socket> sock)->void
 		{
-			oldking::HttpRouter HTTPS(sock);
+			oldking::HttpRouter router;	
+
+			
+
+			oldking::HttpServer HTTPS(sock, router);
 			HTTPS.run();
 		}));
 		TS->run();

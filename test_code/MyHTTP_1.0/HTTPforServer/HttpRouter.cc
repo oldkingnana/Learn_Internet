@@ -4,80 +4,54 @@
 #include "Util.hpp"
 #include "myeasylog.hpp"
 
-void oldking::HttpRouter::run()
+void oldking::HttpRouter::addRouter(
+		const oldking::RouterKey& key,  
+		std::function<HTTPResObj(const oldking::HTTPReqObj&)> func)
 {
-	HTTPReqObj req;
-	
-	auto req_result = connection_->obtain(req);
-	if(req_result != oldking::HttpConnection::req_err::REQ_OK)
+	func_map_.insert({key, func});
+	return;
+}
+
+oldking::HTTPResObj oldking::HttpRouter::routing(const oldking::HTTPReqObj& req)
+{
+	RouterKey k;
+	k.method = req.method_;
+	k.path = req.req_target_;
+
+	// 动态路由
+	if(func_map_.find(k) != func_map_.end())
 	{
-		oldking::MyEasyLog::GetInstance().WriteLog(LOG_WARNING, "HttpRouter", "bad request!");
-		return ;
+		return func_map_[k](req);
 	}
 
+	// 静态路由
 	oldking::HTTPResObj res;
-	// check path 
-	if(req.req_target_ == "/")
+	std::string exten;
+	if(req.req_target_ == "/" && oldking::Util::ReadFile(WEBROOT + std::string("/index.html"), res.data_))
 	{
-		if(oldking::Util::ReadFile(WEBROOT + std::string("/index.html"), res.data_))
-		{
-			res.header_["Content-Type"] = "text/html; charset=UTF-8";
-			res.res_code_ = "200";
-			res.res_state_ = "OK";
-		}
-		else 
-		{
-			// err
-			oldking::Util::ReadFile(WEBROOT + std::string("/404.html"), res.data_);
-			res.res_code_ = "404";
-			res.res_state_ = "Not Found";
-		}
+		res.header_["Content-Type"] = "text/html; charset=UTF-8";
+		res.res_code_ = "200";
+		res.res_state_ = "OK";
+	}
+	else if(oldking::Util::GetFileExten(req.req_target_, exten) && oldking::Util::ReadFile(WEBROOT + req.req_target_, res.data_))
+	{
+		res.header_["Content-Type"] = mime_map[exten];
+		res.res_code_ = "200";
+		res.res_state_ = "OK";
 	}
 	else 
 	{
-		std::string exten;
-		if(oldking::Util::GetFileExten(req.req_target_, exten))
-		{
-			if(oldking::Util::ReadFile(WEBROOT + req.req_target_, res.data_))
-			{
-				res.header_["Content-Type"] = mime_map[exten];
-				res.res_code_ = "200";
-				res.res_state_ = "OK";
-			}
-			else 
-			{
-				// err
-				oldking::Util::ReadFile(WEBROOT + std::string("/404.html"), res.data_);
-				res.res_code_ = "404";
-				res.res_state_ = "Not Found";
-			}
-		}
-		else 
-		{
-			// err 
-			oldking::Util::ReadFile(WEBROOT + std::string("/404.html"), res.data_);
-			res.res_code_ = "404";
-			res.res_state_ = "Not Found";
-		}
+		// 404 
+		oldking::Util::ReadFile(WEBROOT + std::string("/404.html"), res.data_);
+		res.res_code_ = "404";
+		res.res_state_ = "Not Found";
 	}
-
 	res.version_ = "HTTP/1.0";
 	res.header_["Connection"] = "close";
  
 	res.header_["Content-Length"] = std::to_string(res.data_.length());
-	
-	connection_->deliver(res);
-	return ;
-}
-
-void oldking::HttpRouter::get()
-{
 		
-}
-
-void oldking::HttpRouter::post()
-{
-
+	return res;
 }
 
 
